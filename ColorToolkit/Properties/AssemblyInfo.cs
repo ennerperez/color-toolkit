@@ -6,18 +6,18 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Cambie estos atributos para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("ColorToolkit")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Color Toolkit for Devigners")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Enner Pérez")]
 [assembly: AssemblyProduct("ColorToolkit")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCopyright("Copyright © Enner Pérez 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible como false, los tipos de este ensamblado no estarán visibles 
 // para los componentes COM.  Si necesita obtener acceso a un tipo de este ensamblado desde 
 // COM, establezca el atributo ComVisible como true en este tipo.
-[assembly: ComVisible(false)]
+[assembly: ComVisible(true)]
 
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
 [assembly: Guid("579e5039-9e14-452f-a97b-a11521956d4e")]
