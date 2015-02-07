@@ -195,5 +195,23 @@ namespace ColorToolkit
             _FormSwatches.Show();
         }
 
+        private void buttonPicture_Click(object sender, EventArgs e)
+        {
+            this.openFileDialogPicture.ShowDialog();
+        }
+
+        private void openFileDialogPicture_FileOk(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                Bitmap bmp = (Bitmap)Image.FromFile(this.openFileDialogPicture.FileName);
+                this.Color = ExtensionMethods.GetDominantColor(bmp);
+                this.setColor();
+            }
+            catch 
+            {
+            }
+        }
+
     }
 }

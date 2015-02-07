@@ -332,34 +332,35 @@ namespace ColorToolkit
             return ChangeColorBrightness(color,  (float)(-1 * percent / 100.0));
         }
 
-        public static Color GetDominantColor(Image bmp)
+        public static Color GetDominantColor(Bitmap bmp)
         {
-            int num = 0;
-            int num2 = 0;
-            int num3 = 0;
-            int num4 = 0;
-            int i = 0;
-            checked
+            //Used for tally
+            int r = 0;
+            int g = 0;
+            int b = 0;
+
+            int total = 0;
+
+            for (int x = 0; x < bmp.Width; x++)
             {
-                while (i < bmp.Width)
+                for (int y = 0; y < bmp.Height; y++)
                 {
-                    int j = 0;
-                    while (j < bmp.Height)
-                    {
-                        Color pixel = new Bitmap(bmp).GetPixel(i, j);
-                        num += (int)pixel.R;
-                        num2 += (int)pixel.G;
-                        num3 += (int)pixel.B;
-                        Math.Max(Interlocked.Increment(ref num4), num4 - 1);
-                        Math.Max(Interlocked.Increment(ref j), j - 1);
-                    }
-                    Math.Max(Interlocked.Increment(ref i), i - 1);
+                    Color clr = bmp.GetPixel(x, y);
+
+                    r += clr.R;
+                    g += clr.G;
+                    b += clr.B;
+
+                    total++;
                 }
-                num = (int)Math.Round((double)num / (double)num4);
-                num2 = (int)Math.Round((double)num2 / (double)num4);
-                num3 = (int)Math.Round((double)num3 / (double)num4);
-                return Color.FromArgb(num, num2, num3);
             }
+
+            //Calculate average
+            r /= total;
+            g /= total;
+            b /= total;
+
+            return Color.FromArgb(r, g, b);
         }
 
 

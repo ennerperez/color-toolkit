@@ -54,6 +54,7 @@
             this.textBoxV = new System.Windows.Forms.NumericUpDown();
             this.textBoxS2 = new System.Windows.Forms.NumericUpDown();
             this.buttonCopyHSV = new System.Windows.Forms.Button();
+            this.openFileDialogPicture = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxB)).BeginInit();
@@ -292,6 +293,7 @@
             this.buttonPicture.Size = new System.Drawing.Size(25, 25);
             this.buttonPicture.TabIndex = 10;
             this.buttonPicture.UseVisualStyleBackColor = true;
+            this.buttonPicture.Click += new System.EventHandler(this.buttonPicture_Click);
             // 
             // buttonSwatches
             // 
@@ -384,6 +386,10 @@
             this.buttonCopyHSV.UseVisualStyleBackColor = true;
             this.buttonCopyHSV.Visible = false;
             // 
+            // openFileDialogPicture
+            // 
+            this.openFileDialogPicture.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialogPicture_FileOk);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -457,6 +463,7 @@
         private System.Windows.Forms.NumericUpDown textBoxV;
         private System.Windows.Forms.NumericUpDown textBoxS2;
         private System.Windows.Forms.Button buttonCopyHSV;
+        private System.Windows.Forms.OpenFileDialog openFileDialogPicture;
     }
 }
 
