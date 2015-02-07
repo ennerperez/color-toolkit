@@ -85,7 +85,8 @@ namespace ColorToolkit
         }
         private void textBoxHEX_Leave(object sender, EventArgs e)
         {
-            this.Color = General.FromHex(this.textBoxHEX.Text, 255);
+            if (!this.textBoxHEX.Text.StartsWith("#")) { this.textBoxHEX.Text = "#" + this.textBoxHEX.Text.Trim(); }
+            this.Color = ExtensionMethods.FromHEX(this.textBoxHEX.Text);
             this.setColor();
         }
 
@@ -123,14 +124,17 @@ namespace ColorToolkit
                 {
                     this.textBoxH.Value = 0;
                     this.textBoxS.Value = 0;
-                    this.textBoxV.Value = 0;
+                    this.textBoxL.Value = 0;
                 }
             }
         }
         private void textBoxHSV_Leave(object sender, EventArgs e)
         {
-            int[] _RGB = Colors.HSV_RGB((float)(this.textBoxH.Value), (float)(this.textBoxS.Value), (float)(this.textBoxV.Value));
-            this.Color = Color.FromArgb(_RGB[0], _RGB[1], _RGB[2]);
+            //long[] _RGB = Colors.HSL_RGB((long)(this.textBoxH.Value), (long)(this.textBoxS.Value), (long)(this.textBoxL.Value));
+            //this.Color = Color.FromArgb((int)_RGB[0], (int)_RGB[1], (int)_RGB[2]);
+
+            HSLColor _HSL = new HSLColor((double)(this.textBoxH.Value), (double)(this.textBoxS.Value), (double)(this.textBoxL.Value));
+            this.Color = _HSL;
             this.setColor();
         }
 
@@ -142,9 +146,9 @@ namespace ColorToolkit
         {
             Clipboard.SetText(String.Join(",", new string[] { this.textBoxR.Value.ToString(), this.textBoxG.Value.ToString(), this.textBoxB.Value.ToString() }));
         }
-        private void buttonCopiarHSV_Click(object sender, EventArgs e)
+        private void buttonCopiarHSL_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(String.Join(",", new string[] { this.textBoxH.Value.ToString(), this.textBoxS.Value.ToString(), this.textBoxV.Value.ToString() }));
+            Clipboard.SetText(String.Join(",", new string[] { this.textBoxH.Value.ToString(), this.textBoxS.Value.ToString(), this.textBoxL.Value.ToString() }));
         }
 
         private void getScreenColor()
@@ -170,17 +174,25 @@ namespace ColorToolkit
         private void setColor()
         {
             this.panelColor.BackColor = this.Color;
-            this.textBoxHEX.Text = General.ToHex(this.Color);
+            this.textBoxHEX.Text = ExtensionMethods.ToHEX(this.Color);
 
             this.textBoxR.Value = this.Color.R;
             this.textBoxG.Value = this.Color.G;
             this.textBoxB.Value = this.Color.B;
 
-            //float[] _HSV = Colors.RGB_HSV(this.Color.R, this.Color.G, this.Color.B);
+            HSLColor _HSL = new HSLColor(this.Color);
 
-            //this.textBoxH.Value = Convert.ToDecimal(_HSV[0]);
-            //this.textBoxS.Value = Convert.ToDecimal(_HSV[1]);
-            //this.textBoxV.Value = Convert.ToDecimal(_HSV[2]);
+           // long[] _HSL = Colors.RGB_HSL(this.Color.R, this.Color.G, this.Color.B);
+
+            this.textBoxH.Value = (int)_HSL.Hue;
+            this.textBoxS.Value = (int)_HSL.Saturation;
+            this.textBoxL.Value = (int)_HSL.Luminosity;
+        }
+
+        private void buttonSwatches_Click(object sender, EventArgs e)
+        {
+            FormSwatches _FormSwatches = new FormSwatches(this.Color);
+            _FormSwatches.Show();
         }
 
     }
@@ -208,28 +220,8 @@ public static class General
         return new int[] { maxx - minx, maxy - miny };
     }
 
-    public static Color FromHex(string hex, int alpha = 255)
-    {
-        Color result = default(Color);
-        try
-        {
-            result = ColorTranslator.FromHtml(hex);
-        }
-        catch //(Exception ex)       
-        {
-            throw new Exception("Hexadecimal string is not a valid color format");
-        }
-        return result;
-    }
-
-    public static string ToHex(Color source)
-    {
-        return General.ToHex((int)source.R, (int)source.G, (int)source.B);
-    }
-    public static string ToHex(int r, int g, int b)
-    {
-        return "#" + ColorTranslator.FromHtml(string.Format("#{0:X2}{1:X2}{2:X2}", r, g, b)).Name.Remove(0, 2);
-    }
+   
+   
 
 
 }

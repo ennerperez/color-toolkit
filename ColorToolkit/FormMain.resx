@@ -169,7 +169,7 @@
         YII=
 </value>
   </data>
-  <data name="buttonCopyHSV.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="buttonCopyHSL.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF0SURBVDhPhZPdTsJAEIW5M9GHkcTnkHsTE8WQyHMZ
@@ -185,6 +185,49 @@
   <metadata name="colorDialogPicker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="buttonPicture.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAH3SURBVDhPnZPNS5RRGMXfPyEIgghaJNn0BULrKKJF
+        Nla0cNmyXSshNaGxGWfMRnNILQ1kZtTRPjSJVFCKUWgRzTRYMfYdFeKiD2qRQZv4dZ73fW0MhbADh+c+
+        9znnzL3cd5zqC5PfjkUnCDaJEY9VkXFxbHU2jWF68wGOc1TNolaff8En8av4XfyxChd9/pTeQtyAw/pF
+        F7lyyO/kY/4EZ/IQEhsfLaPt5aDhoScP6jSC41QuBWQVMLOdpw9aiT2G+BNI5Ipcyda7tVV9fBaiBU8e
+        DPsBSyf4crea4v0W4nNwSex8Ad2jm+m+HXBrl/qOIrQpyPAnIBgedzfansn4HC6LPS+1nqqj/WaA9uEK
+        t1rfYyEKNywLcBfusFfG5CtIv4VYah3Ng9s4P7Sb5kw5UfXJN57OsCIg9RoGJMjIPPROV5ju4mzvRkLp
+        LTT276BjupOM9lPSGFZc4ZqGw+9hRLz1AUYX4Pq8jnxyvVutH9G+6Qy+rxRwNX+KZOE06UKtWEd6toG+
+        uQiJfRvcar3NTWcoBfiv0DJRwcXJvSSm9pd47wCJ7EGvqre56Qy+T88Y9gJqkpuo7dtKfX/gbw6U1jY3
+        ncH36UPyr7BW+D7HOeJ902uG71NA6MZMlf6JlXqWQ+f+TdOZ/njsjt5EAUKZuOc/uAtwfgNC5+sy+cBh
+        OgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="buttonSwatches.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAILSURBVDhPnZFPSJNxGMd/0h+EoA5FoKfmnAcdGugE
+        za1DbmERg1x0mhRFp0LpYheFgjoLHYNuzi2zyCLon1SnyKG5zDG34euKAmlMPERI7NPz/t53m/Ng0AMf
+        fg9fnufD7/e+ClD5OoP8YYPCwW9s1v5GSQ29Uwy9UVwXRl8rnanF86hEv8Xnc7IqsRbIcv5umsLYCpt7
+        LMHgW8X4Vw8TuQ5GXtkCWbq6cV+jEqGKYP2QwfqVDBuXDP7s/qWHh94rbs8d4M7cfkZmbEGyH2fumkYl
+        z1YE7MtCrbDXgJqCHh6OK4Y/Km4Io9JrwVoAtXbCprcikGrfhln/zMoC9xQ0Twpytjy3jMf8C3T7P9EV
+        mOdoMK6zaZl+bPPE3CwJWmNw+YuQBPdTS9ATiDNwE8K3oC34QWfm4upYUTO1VdAiAt8L4aXcwhZ0n5zH
+        H87RO5CjNTirs0cyPdNm8XCroD4CdSZRqJ+2BO4+A/epFZqFhjNZnUVletwmslUgVfVxzMA+d8zKAhJy
+        LAiLwqr1yzJeJxmfg7TXQcrToDMmHRA7YvFA+rLAXP55DwqCYQlSPY1wMUTxQoil9kZLEHVSnA1riDi3
+        CdJdkBVKAq+LH6c7+d7XyVJHSSDSZzJjMiF9WZDYJU+oqXrCsreJ5eMuUj4XSU+TJYi5rEWTqPQlgVTV
+        xzED+9wxq9zgv0H9BYhDDQj0hihYAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="buttonCopyHSV.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
+        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAF0SURBVDhPhZPdTsJAEIW5M9GHkcTnkHsTE8WQyHMZ
+        oID9IyTqK8i915IISqG1LbQVoWSdMy5rqxW+5GSXZfbsnG1b6vX7vmHbQjdNcQsZBo+GZQnTtp9K+0Dh
+        fziOAyNNlhaDk8HzcKgEbhoNHmFCnTRk+V/QLngZjcVo/MojeBwMlEmXYqFTHCaj6XI7GdCfYDJxhDOZ
+        8jifL3htS6vTkbNvctG2BjPXFa7nsTCfzmYs0Gy3qbMRz39F05WBHwQ5vfs+C8DgjToD2WiIowwWi6hQ
+        AAau66nfW3B/yiBJPgoFmpomwjDkeNlo2KueQpqmIl2v86I1AIMojkVAJtlobIC3cB+IsFx+iiiKc9HY
+        gG4yxGWo11iqq+tCo8fXos139w9itVpTpGUuGhsQx9f1+sVVrXYOXVarZ6eVSgWdxUnCjxSbN5vNT0wZ
+        jS9RckQ6zOiAOuOiXeAQqi3G6vXmMOGvNBONRWuIjRpZXkiZdLJbpfIXwQvNhTAS2SsAAAAASUVORK5C
+        YII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAMAICAQAAEABADoAgAANgAAACAgAAABAAgAqAgAAB4DAAAgIAAAAQAgAKgQAADGCwAAKAAAACAA

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace ColorToolkit
@@ -7,90 +8,122 @@ namespace ColorToolkit
     public static class Colors
     {
 
-        public static float[] RGB_HSL(int R, int G, int B)
+        public static long[] RGB_HSL(int R, int G, int B)
         {
-            float var_R = (R / 255);                     //RGB from 0 to 255
-            float var_G = (G / 255);
-            float var_B = (B / 255);
+            long lMin;
+            long lMax;
+            long lDelta;
+            float nTemp;
+            
+            lMax = (R > G ? (R > B ? R : B) : (G > B? G : B));
+            lMin = (R < G ? (R < B ? R : B) : (G < B? G : B));
 
-            float var_Min = (var_R > var_G ? (var_G > var_B) ? var_B : var_G : var_R);    //Min. value of RGB
-            float var_Max = (var_R < var_G ? (var_G < var_B) ? var_B : var_G : var_R);   //Max. value of RGB
-            float del_Max = var_Max - var_Min;            //Delta RGB value
+            long L = (lMax * 100) / 255;
+            long S = 0;
+            long H = 0;
 
-            float H = 0;
-            float S = 0;
-            float L = (var_Max + var_Min) / 2;
-
-            if (del_Max == 0)                     //This is a gray, no chroma...
+            if (lMax > 0)
             {
-                H = 0;                        //HSL results from 0 to 1
-                S = 0;
+                lDelta = lMax - lMin;
+                S = (lDelta / lMax) * 100;
+                if (lDelta > 0)
+                {
+                    if (lMax == R)
+                    {
+                        nTemp = (G - B) / lDelta;
+                    }
+                    else if (lMax == G)
+                    {
+                        nTemp = 2 + (B - R) / lDelta;
+                    }
+                    else
+                    {
+                        nTemp = 4 + (R - G) / lDelta;
+                    }
+                    H = (long)nTemp * 60;
+                    if (H < 0)
+                    {
+                        H = H + 360;
+                    }
+                }
             }
-            else                                    //Chromatic data...
-            {
-                if (L < (0.5)) S = del_Max / (var_Max + var_Min);
-                else S = del_Max / (2 - var_Max - var_Min);
 
-                float del_R = (((var_Max - var_R) / 6) + (del_Max / 2)) / del_Max;
-                float del_G = (((var_Max - var_G) / 6) + (del_Max / 2)) / del_Max;
-                float del_B = (((var_Max - var_B) / 6) + (del_Max / 2)) / del_Max;
-
-                if (var_R == var_Max) H = del_B - del_G;
-                else if (var_G == var_Max) H = (1 / 3) + del_R - del_B;
-                else if (var_B == var_Max) H = (2 / 3) + del_G - del_R;
-
-                if (H < 0) H += 1;
-                if (H > 1) H -= 1;
-            }
-
-            return new float[] { H, S, L };
+            return new long[] { H, S, L };
 
         }
-        public static int[] HSL_RGB(float H, float S, float L)
+        public static long[] HSL_RGB(long H, long S, long L)
         {
 
-            int R = 0;
-            int G = 0;
-            int B = 0;
+            long R = 0;
+            long G = 0;
+            long B = 0;
 
-            if (S == 0)                       //HSL from 0 to 1
+            float nH;
+            float nS;
+            float nL;
+            float nF;
+            float nP;
+            float nQ;
+            float nT;
+            long lH;
+
+            if (S > 0)
             {
-                R = Convert.ToInt16(L * 255);                     //RGB results from 0 to 255
-                G = Convert.ToInt16(L * 255);
-                B = Convert.ToInt16(L * 255);
+
+                nH = H / 60;
+                nL = L / 100;
+                nS = S / 100;
+
+                lH = (int)nH;
+                nF = nH - lH;
+                nP = nL * (1 - nS);
+                nQ = nL * (1 - nS * nF);
+                nT = nL * (1 - nS * (1 - nF));
+                switch (lH)
+                {
+                    case 0:
+                        R = (long)(nL * 255);
+                        G = (long)(nT * 255);
+                        B = (long)(nP * 255);
+                        break;             
+                    case 1:
+                        R = (long)(nQ * 255);
+                        G = (long)(nL * 255);
+                        B = (long)(nP * 255);
+                        break;
+                    case 2:
+                        R = (long)(nP * 255);
+                        G = (long)(nL * 255);
+                        B = (long)(nT * 255);
+                        break;
+                    case 3:
+                        R = (long)(nP * 255);
+                        G = (long)(nQ * 255);
+                        B = (long)(nL * 255);
+                        break;
+                    case 4:
+                        R = (long)(nT * 255);
+                        G = (long)(nP * 255);
+                        B = (long)(nL * 255);
+                        break;
+                    case 5:
+                        R = (long)(nL * 255);
+                        G = (long)(nP * 255);
+                        B = (long)(nQ * 255);
+                        break;
+                }
             }
             else
             {
-                float var_1 = 0;
-                float var_2 = 0;
-
-                if (L < (0.5))
-                {
-                    var_2 = L * (1 + S);
-                }
-                else
-                {
-                    var_2 = (L + S) - (S * L);
-                }
-
-                var_1 = 2 * L - var_2;
-
-                R = Convert.ToInt16(255 * HUE_RGB(var_1, var_2, H + (1 / 3)));
-                G = Convert.ToInt16(255 * HUE_RGB(var_1, var_2, H));
-                B = Convert.ToInt16(255 * HUE_RGB(var_1, var_2, H - (1 / 3)));
+                R = (L * 255) / 100;
+                G = R;
+                B = R;
             }
-            return new int[] { R, G, B };
+
+            return new long[] { R, G, B };
 
         }
-        private static float HUE_RGB(float v1, float v2, float vH)
-        {
-            if (vH < 0) vH += 1;
-            if (vH > 1) vH -= 1;
-            if ((6 * vH) < 1) return (v1 + (v2 - v1) * 6 * vH);
-            if ((2 * vH) < 1) return (v2);
-            if ((3 * vH) < 2) return (v1 + (v2 - v1) * ((2 / 3) - vH) * 6);
-            return (v1);
-        }
+        
 
         public static float[] RGB_HSV(int R, int G, int B)
         {
@@ -218,5 +251,86 @@ namespace ColorToolkit
             return new int[] { (C * (1 - K) + K), (M * (1 - K) + K), (Y * (1 - K) + K) };
         }
 
+               
+        public static string RGB_HEX(int r, int g, int b)
+        {
+            return "#" + ColorTranslator.FromHtml(string.Format("#{0:X2}{1:X2}{2:X2}", r, g, b)).Name.Remove(0, 2);
+        }
+        public static int[] HEX_RGB(string hex, int alpha = 255)
+        {
+            Color result = default(Color);
+            if (!hex.StartsWith("#")) { hex = "#" + hex; }
+            try
+            {
+                result = ColorTranslator.FromHtml(hex);
+            }
+            catch //(Exception ex)       
+            {
+                throw new Exception("Hexadecimal string is not a valid color format");
+            }
+            return new int[] {result.R, result.G, result.B};
+        }
+
+
+
     }
+
+    public static class ExtensionMethods
+    {
+
+        public static string ToHEX(System.Drawing.Color source)
+        {
+            return Colors.RGB_HEX((int)source.R, (int)source.G, (int)source.B);
+        }
+
+        public static System.Drawing.Color FromHEX(string hex)
+        {
+            int[] rgb = Colors.HEX_RGB(hex);
+            return System.Drawing.Color.FromArgb(rgb[0], rgb[1], rgb[2]);
+        }
+
+        /// <summary>
+        /// Creates color with corrected brightness.
+        /// </summary>
+        /// <param name="color">Color to correct.</param>
+        /// <param name="correctionFactor">The brightness correction factor. Must be between -1 and 1. 
+        /// Negative values produce darker colors.</param>
+        /// <returns>
+        /// Corrected <see cref="Color"/> structure.
+        /// </returns>
+        public static Color ChangeColorBrightness(Color color, float correctionFactor)
+        {
+            float red = (float)color.R;
+            float green = (float)color.G;
+            float blue = (float)color.B;
+
+            if (correctionFactor < 0)
+            {
+                correctionFactor = 1 + correctionFactor;
+                red *= correctionFactor;
+                green *= correctionFactor;
+                blue *= correctionFactor;
+            }
+            else
+            {
+                red = (255 - red) * correctionFactor + red;
+                green = (255 - green) * correctionFactor + green;
+                blue = (255 - blue) * correctionFactor + blue;
+            }
+
+            return Color.FromArgb(color.A, (int)red, (int)green, (int)blue);
+        }
+
+        public static Color LightenBy(Color color, int percent)
+        {
+            return ChangeColorBrightness( color, (float)(percent / 100.0));
+        }
+
+        public static Color DarkenBy(Color color, int percent)
+        {
+            return ChangeColorBrightness(color,  (float)(-1 * percent / 100.0));
+        }
+
+    }
+
 }
