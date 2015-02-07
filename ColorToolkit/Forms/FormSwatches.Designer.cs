@@ -164,11 +164,11 @@
             this.label50.Dock = System.Windows.Forms.DockStyle.Right;
             this.label50.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.ForeColor = System.Drawing.Color.Black;
-            this.label50.Location = new System.Drawing.Point(252, 15);
+            this.label50.Location = new System.Drawing.Point(253, 15);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(57, 17);
+            this.label50.Size = new System.Drawing.Size(56, 17);
             this.label50.TabIndex = 1;
-            this.label50.Text = "#F44336";
+            this.label50.Text = "#FFEBEE";
             this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
@@ -204,11 +204,11 @@
             this.label100.Dock = System.Windows.Forms.DockStyle.Right;
             this.label100.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label100.ForeColor = System.Drawing.Color.Black;
-            this.label100.Location = new System.Drawing.Point(252, 15);
+            this.label100.Location = new System.Drawing.Point(248, 15);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(57, 17);
+            this.label100.Size = new System.Drawing.Size(61, 17);
             this.label100.TabIndex = 1;
-            this.label100.Text = "#F44336";
+            this.label100.Text = "#FFCDD2";
             this.label100.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
@@ -244,11 +244,11 @@
             this.label200.Dock = System.Windows.Forms.DockStyle.Right;
             this.label200.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label200.ForeColor = System.Drawing.Color.Black;
-            this.label200.Location = new System.Drawing.Point(252, 15);
+            this.label200.Location = new System.Drawing.Point(250, 15);
             this.label200.Name = "label200";
-            this.label200.Size = new System.Drawing.Size(57, 17);
+            this.label200.Size = new System.Drawing.Size(59, 17);
             this.label200.TabIndex = 1;
-            this.label200.Text = "#F44336";
+            this.label200.Text = "#EF9A9A";
             this.label200.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
@@ -284,11 +284,11 @@
             this.label300.Dock = System.Windows.Forms.DockStyle.Right;
             this.label300.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label300.ForeColor = System.Drawing.Color.Black;
-            this.label300.Location = new System.Drawing.Point(252, 15);
+            this.label300.Location = new System.Drawing.Point(251, 15);
             this.label300.Name = "label300";
-            this.label300.Size = new System.Drawing.Size(57, 17);
+            this.label300.Size = new System.Drawing.Size(58, 17);
             this.label300.TabIndex = 1;
-            this.label300.Text = "#F44336";
+            this.label300.Text = "#E57373";
             this.label300.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label10
@@ -328,7 +328,7 @@
             this.label400.Name = "label400";
             this.label400.Size = new System.Drawing.Size(57, 17);
             this.label400.TabIndex = 1;
-            this.label400.Text = "#F44336";
+            this.label400.Text = "#EF5350";
             this.label400.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label12
@@ -364,11 +364,11 @@
             this.label900.Dock = System.Windows.Forms.DockStyle.Right;
             this.label900.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label900.ForeColor = System.Drawing.Color.White;
-            this.label900.Location = new System.Drawing.Point(252, 15);
+            this.label900.Location = new System.Drawing.Point(249, 15);
             this.label900.Name = "label900";
-            this.label900.Size = new System.Drawing.Size(57, 17);
+            this.label900.Size = new System.Drawing.Size(60, 17);
             this.label900.TabIndex = 1;
-            this.label900.Text = "#F44336";
+            this.label900.Text = "#B71C1C";
             this.label900.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label14
@@ -404,11 +404,11 @@
             this.label800.Dock = System.Windows.Forms.DockStyle.Right;
             this.label800.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label800.ForeColor = System.Drawing.Color.White;
-            this.label800.Location = new System.Drawing.Point(252, 15);
+            this.label800.Location = new System.Drawing.Point(250, 15);
             this.label800.Name = "label800";
-            this.label800.Size = new System.Drawing.Size(57, 17);
+            this.label800.Size = new System.Drawing.Size(59, 17);
             this.label800.TabIndex = 1;
-            this.label800.Text = "#F44336";
+            this.label800.Text = "#C62828";
             this.label800.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label16
@@ -444,11 +444,11 @@
             this.label700.Dock = System.Windows.Forms.DockStyle.Right;
             this.label700.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label700.ForeColor = System.Drawing.Color.White;
-            this.label700.Location = new System.Drawing.Point(252, 15);
+            this.label700.Location = new System.Drawing.Point(251, 15);
             this.label700.Name = "label700";
-            this.label700.Size = new System.Drawing.Size(57, 17);
+            this.label700.Size = new System.Drawing.Size(58, 17);
             this.label700.TabIndex = 1;
-            this.label700.Text = "#F44336";
+            this.label700.Text = "#D32F2F";
             this.label700.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label18
@@ -484,11 +484,11 @@
             this.label600.Dock = System.Windows.Forms.DockStyle.Right;
             this.label600.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label600.ForeColor = System.Drawing.Color.White;
-            this.label600.Location = new System.Drawing.Point(252, 15);
+            this.label600.Location = new System.Drawing.Point(251, 15);
             this.label600.Name = "label600";
-            this.label600.Size = new System.Drawing.Size(57, 17);
+            this.label600.Size = new System.Drawing.Size(58, 17);
             this.label600.TabIndex = 1;
-            this.label600.Text = "#F44336";
+            this.label600.Text = "#E53935";
             this.label600.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label20
@@ -564,11 +564,11 @@
             this.labelA700.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelA700.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelA700.ForeColor = System.Drawing.Color.White;
-            this.labelA700.Location = new System.Drawing.Point(252, 15);
+            this.labelA700.Location = new System.Drawing.Point(249, 15);
             this.labelA700.Name = "labelA700";
-            this.labelA700.Size = new System.Drawing.Size(57, 17);
+            this.labelA700.Size = new System.Drawing.Size(60, 17);
             this.labelA700.TabIndex = 1;
-            this.labelA700.Text = "#F44336";
+            this.labelA700.Text = "#D50000";
             this.labelA700.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label24
@@ -604,11 +604,11 @@
             this.labelA400.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelA400.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelA400.ForeColor = System.Drawing.Color.White;
-            this.labelA400.Location = new System.Drawing.Point(252, 15);
+            this.labelA400.Location = new System.Drawing.Point(253, 15);
             this.labelA400.Name = "labelA400";
-            this.labelA400.Size = new System.Drawing.Size(57, 17);
+            this.labelA400.Size = new System.Drawing.Size(56, 17);
             this.labelA400.TabIndex = 1;
-            this.labelA400.Text = "#F44336";
+            this.labelA400.Text = "#FF1744";
             this.labelA400.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label26
@@ -644,11 +644,11 @@
             this.labelA200.Dock = System.Windows.Forms.DockStyle.Right;
             this.labelA200.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelA200.ForeColor = System.Drawing.Color.White;
-            this.labelA200.Location = new System.Drawing.Point(252, 15);
+            this.labelA200.Location = new System.Drawing.Point(253, 15);
             this.labelA200.Name = "labelA200";
-            this.labelA200.Size = new System.Drawing.Size(57, 17);
+            this.labelA200.Size = new System.Drawing.Size(56, 17);
             this.labelA200.TabIndex = 1;
-            this.labelA200.Text = "#F44336";
+            this.labelA200.Text = "#FF5252";
             this.labelA200.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label28
@@ -688,7 +688,7 @@
             this.labelA100.Name = "labelA100";
             this.labelA100.Size = new System.Drawing.Size(57, 17);
             this.labelA100.TabIndex = 1;
-            this.labelA100.Text = "#F44336";
+            this.labelA100.Text = "#FF8A80";
             this.labelA100.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label30

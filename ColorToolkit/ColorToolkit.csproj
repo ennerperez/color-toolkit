@@ -43,26 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Colors.cs" />
-    <Compile Include="FormMain.cs">
+    <Compile Include="Structures\Colors.cs" />
+    <Compile Include="Forms\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
+    <Compile Include="Forms\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSwatches.cs">
+    <Compile Include="Forms\FormSwatches.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSwatches.Designer.cs">
+    <Compile Include="Forms\FormSwatches.Designer.cs">
       <DependentUpon>FormSwatches.cs</DependentUpon>
     </Compile>
-    <Compile Include="HSLColor.cs" />
+    <Compile Include="Structures\HSLColor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormMain.resx">
+    <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSwatches.resx">
+    <EmbeddedResource Include="Forms\FormSwatches.resx">
       <DependentUpon>FormSwatches.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
