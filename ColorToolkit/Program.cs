@@ -16,5 +16,25 @@ namespace ColorToolkit
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormMain());
         }
+
+        public static System.Drawing.Rectangle GetWorkingArea()
+        {
+            int minx, miny, maxx, maxy;
+            minx = miny = int.MaxValue;
+            maxx = maxy = int.MinValue;
+
+            foreach (Screen screen in Screen.AllScreens)
+            {
+                var bounds = screen.Bounds;
+                minx = Math.Min(minx, bounds.X);
+                miny = Math.Min(miny, bounds.Y);
+                maxx = Math.Max(maxx, bounds.Right);
+                maxy = Math.Max(maxy, bounds.Bottom);
+            }
+
+            return new System.Drawing.Rectangle(0, 0, (maxx - minx), (maxy - miny));
+        }
+
+
     }
 }

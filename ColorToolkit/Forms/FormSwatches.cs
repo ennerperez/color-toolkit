@@ -72,6 +72,12 @@ namespace ColorToolkit
             this.panelA700.BackColor = ExtensionMethods.DarkenBy(this.panel700.BackColor, 60);
             this.labelA700.Text = ExtensionMethods.ToHEX(this.panelA700.BackColor).ToUpper();
 
+            // Resolution fix
+            if (this.Height > Program.GetWorkingArea().Height)
+            {
+                this.Height = this.MinimumSize.Height;
+            }
+
 
         }
 

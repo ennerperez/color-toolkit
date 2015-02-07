@@ -201,7 +201,6 @@
             // 
             // labelHSL
             // 
-            this.labelHSL.Enabled = false;
             this.labelHSL.Location = new System.Drawing.Point(105, 74);
             this.labelHSL.Name = "labelHSL";
             this.labelHSL.Size = new System.Drawing.Size(35, 25);
@@ -307,7 +306,6 @@
             // 
             // labelHSV
             // 
-            this.labelHSV.Enabled = false;
             this.labelHSV.Location = new System.Drawing.Point(105, 105);
             this.labelHSV.Name = "labelHSV";
             this.labelHSV.Size = new System.Drawing.Size(35, 25);
@@ -325,7 +323,6 @@
             this.tableLayoutPanelHSV.Controls.Add(this.textBoxH2, 0, 0);
             this.tableLayoutPanelHSV.Controls.Add(this.textBoxV, 2, 0);
             this.tableLayoutPanelHSV.Controls.Add(this.textBoxS2, 1, 0);
-            this.tableLayoutPanelHSV.Enabled = false;
             this.tableLayoutPanelHSV.Location = new System.Drawing.Point(146, 105);
             this.tableLayoutPanelHSV.Name = "tableLayoutPanelHSV";
             this.tableLayoutPanelHSV.RowCount = 1;
@@ -380,7 +377,6 @@
             // 
             this.buttonCopyHSV.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonCopyHSV.BackgroundImage")));
             this.buttonCopyHSV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonCopyHSV.Enabled = false;
             this.buttonCopyHSV.Location = new System.Drawing.Point(360, 105);
             this.buttonCopyHSV.Name = "buttonCopyHSV";
             this.buttonCopyHSV.Size = new System.Drawing.Size(25, 25);
@@ -392,7 +388,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(462, 111);
+            this.ClientSize = new System.Drawing.Size(424, 111);
             this.Controls.Add(this.labelHSV);
             this.Controls.Add(this.tableLayoutPanelHSV);
             this.Controls.Add(this.buttonCopyHSV);
@@ -413,7 +409,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(478, 150);
+            this.MinimumSize = new System.Drawing.Size(440, 150);
             this.Name = "FormMain";
             this.Text = "Color Toolkit";
             this.TopMost = true;

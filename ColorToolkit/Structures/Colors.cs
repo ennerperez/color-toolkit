@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Text;
+using System.Threading;
 
 namespace ColorToolkit
 {
@@ -330,6 +331,37 @@ namespace ColorToolkit
         {
             return ChangeColorBrightness(color,  (float)(-1 * percent / 100.0));
         }
+
+        public static Color GetDominantColor(Image bmp)
+        {
+            int num = 0;
+            int num2 = 0;
+            int num3 = 0;
+            int num4 = 0;
+            int i = 0;
+            checked
+            {
+                while (i < bmp.Width)
+                {
+                    int j = 0;
+                    while (j < bmp.Height)
+                    {
+                        Color pixel = new Bitmap(bmp).GetPixel(i, j);
+                        num += (int)pixel.R;
+                        num2 += (int)pixel.G;
+                        num3 += (int)pixel.B;
+                        Math.Max(Interlocked.Increment(ref num4), num4 - 1);
+                        Math.Max(Interlocked.Increment(ref j), j - 1);
+                    }
+                    Math.Max(Interlocked.Increment(ref i), i - 1);
+                }
+                num = (int)Math.Round((double)num / (double)num4);
+                num2 = (int)Math.Round((double)num2 / (double)num4);
+                num3 = (int)Math.Round((double)num3 / (double)num4);
+                return Color.FromArgb(num, num2, num3);
+            }
+        }
+
 
     }
 

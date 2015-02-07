@@ -153,7 +153,7 @@ namespace ColorToolkit
 
         private void getScreenColor()
         {
-            Bitmap bitmap = new Bitmap(General.GetWorkingArea()[0], General.GetWorkingArea()[1]);
+            Bitmap bitmap = new Bitmap(Program.GetWorkingArea().Width, Program.GetWorkingArea().Height);
             Point mousePosition = Control.MousePosition;
             checked
             {
@@ -196,32 +196,4 @@ namespace ColorToolkit
         }
 
     }
-}
-
-
-public static class General
-{
-
-    public static int[] GetWorkingArea()
-    {
-        int minx, miny, maxx, maxy;
-        minx = miny = int.MaxValue;
-        maxx = maxy = int.MinValue;
-
-        foreach (Screen screen in Screen.AllScreens)
-        {
-            var bounds = screen.Bounds;
-            minx = Math.Min(minx, bounds.X);
-            miny = Math.Min(miny, bounds.Y);
-            maxx = Math.Max(maxx, bounds.Right);
-            maxy = Math.Max(maxy, bounds.Bottom);
-        }
-
-        return new int[] { maxx - minx, maxy - miny };
-    }
-
-   
-   
-
-
 }
