@@ -25,37 +25,42 @@ namespace ColorToolkit
 
             // LIGHT
 
-            this.panel50.BackColor = ExtensionMethods.LightenBy(this.Color, 90);
+            //000-255-
+            //000-001
+            //(0.13*255)
+
+            this.panel50.BackColor =  ExtensionMethods.LightenBy(this.Color, 85);
             this.label50.Text = ExtensionMethods.ToHEX(this.panel50.BackColor).ToUpper();
 
-            this.panel100.BackColor = ExtensionMethods.LightenBy(this.Color, 60);
+            this.panel100.BackColor = ExtensionMethods.LightenBy(this.Color, 70);
             this.label100.Text = ExtensionMethods.ToHEX(this.panel100.BackColor).ToUpper();
 
-            this.panel200.BackColor = ExtensionMethods.LightenBy(this.Color, 45);
+            this.panel200.BackColor = ExtensionMethods.LightenBy(this.Color, 50);
             this.label200.Text = ExtensionMethods.ToHEX(this.panel200.BackColor).ToUpper();
 
-            this.panel300.BackColor = ExtensionMethods.LightenBy(this.Color, 30);
+            this.panel300.BackColor = ExtensionMethods.LightenBy(this.Color, 31);
             this.label300.Text = ExtensionMethods.ToHEX(this.panel300.BackColor).ToUpper();
 
-            this.panel400.BackColor = ExtensionMethods.LightenBy(this.Color, 10);
+            this.panel400.BackColor = ExtensionMethods.LightenBy(this.Color, 13);
             this.label400.Text = ExtensionMethods.ToHEX(this.panel400.BackColor).ToUpper();
 
+
             // BASE COLOR
-            this.panel500.BackColor = ExtensionMethods.ChangeColorBrightness(this.Color, 0.0f);
+            this.panel500.BackColor = this.Color;
             this.label500.Text = ExtensionMethods.ToHEX(this.panel500.BackColor).ToUpper();
 
             // DARK
 
-            this.panel600.BackColor = ExtensionMethods.DarkenBy(this.Color, 10);
+            this.panel600.BackColor = ExtensionMethods.DarkenBy(this.Color, 3);
             this.label600.Text = ExtensionMethods.ToHEX(this.panel600.BackColor).ToUpper();
 
-            this.panel700.BackColor = ExtensionMethods.DarkenBy(this.Color, 20);
+            this.panel700.BackColor = ExtensionMethods.DarkenBy(this.Color, 18);
             this.label700.Text = ExtensionMethods.ToHEX(this.panel700.BackColor).ToUpper();
 
-            this.panel800.BackColor = ExtensionMethods.DarkenBy(this.Color, 30);
+            this.panel800.BackColor = ExtensionMethods.DarkenBy(this.Color, 36);
             this.label800.Text = ExtensionMethods.ToHEX(this.panel800.BackColor).ToUpper();
 
-            this.panel900.BackColor = ExtensionMethods.DarkenBy(this.Color, 40);
+            this.panel900.BackColor = ExtensionMethods.DarkenBy(this.Color, 48);
             this.label900.Text = ExtensionMethods.ToHEX(this.panel900.BackColor).ToUpper();
 
             // OTHERS

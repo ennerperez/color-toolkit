@@ -13,6 +13,10 @@ namespace ColorToolkit
         public FormMain()
         {
             InitializeComponent();
+#if DEBUG
+            this.Color = ExtensionMethods.FromHEX("#F44336");
+            setColor();
+#endif
         }
 
         protected override void OnActivated(EventArgs e)
@@ -182,7 +186,7 @@ namespace ColorToolkit
 
             HSLColor _HSL = new HSLColor(this.Color);
 
-           // long[] _HSL = Colors.RGB_HSL(this.Color.R, this.Color.G, this.Color.B);
+            // long[] _HSL = Colors.RGB_HSL(this.Color.R, this.Color.G, this.Color.B);
 
             this.textBoxH.Value = (int)_HSL.Hue;
             this.textBoxS.Value = (int)_HSL.Saturation;
@@ -208,7 +212,7 @@ namespace ColorToolkit
                 this.Color = ExtensionMethods.GetDominantColor(bmp);
                 this.setColor();
             }
-            catch 
+            catch
             {
             }
         }

@@ -281,13 +281,15 @@ namespace ColorToolkit
 
         public static string ToHEX(System.Drawing.Color source)
         {
-            return Colors.RGB_HEX((int)source.R, (int)source.G, (int)source.B);
+            //return Colors.RGB_HEX((int)source.R, (int)source.G, (int)source.B);
+            return ColorTranslator.ToHtml(source);
         }
 
         public static System.Drawing.Color FromHEX(string hex)
         {
-            int[] rgb = Colors.HEX_RGB(hex);
-            return System.Drawing.Color.FromArgb(rgb[0], rgb[1], rgb[2]);
+            //int[] rgb = Colors.HEX_RGB(hex);
+            //return System.Drawing.Color.FromArgb(rgb[0], rgb[1], rgb[2]);
+            return ColorTranslator.FromHtml(hex);
         }
 
         /// <summary>
