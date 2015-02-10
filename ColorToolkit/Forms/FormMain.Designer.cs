@@ -47,7 +47,7 @@
             this.textBoxS = new System.Windows.Forms.NumericUpDown();
             this.colorDialogPicker = new System.Windows.Forms.ColorDialog();
             this.buttonPicture = new System.Windows.Forms.Button();
-            this.buttonSwatches = new System.Windows.Forms.Button();
+            this.buttonQSwatch = new System.Windows.Forms.Button();
             this.labelHSV = new System.Windows.Forms.Label();
             this.tableLayoutPanelHSV = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxH2 = new System.Windows.Forms.NumericUpDown();
@@ -55,6 +55,8 @@
             this.textBoxS2 = new System.Windows.Forms.NumericUpDown();
             this.buttonCopyHSV = new System.Windows.Forms.Button();
             this.openFileDialogPicture = new System.Windows.Forms.OpenFileDialog();
+            this.buttonOpenSwatch = new System.Windows.Forms.Button();
+            this.openFileDialogSwatch = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxB)).BeginInit();
@@ -295,16 +297,16 @@
             this.buttonPicture.UseVisualStyleBackColor = true;
             this.buttonPicture.Click += new System.EventHandler(this.buttonPicture_Click);
             // 
-            // buttonSwatches
+            // buttonQSwatch
             // 
-            this.buttonSwatches.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonSwatches.BackgroundImage")));
-            this.buttonSwatches.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.buttonSwatches.Location = new System.Drawing.Point(391, 43);
-            this.buttonSwatches.Name = "buttonSwatches";
-            this.buttonSwatches.Size = new System.Drawing.Size(25, 25);
-            this.buttonSwatches.TabIndex = 11;
-            this.buttonSwatches.UseVisualStyleBackColor = true;
-            this.buttonSwatches.Click += new System.EventHandler(this.buttonSwatches_Click);
+            this.buttonQSwatch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonQSwatch.BackgroundImage")));
+            this.buttonQSwatch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonQSwatch.Location = new System.Drawing.Point(391, 43);
+            this.buttonQSwatch.Name = "buttonQSwatch";
+            this.buttonQSwatch.Size = new System.Drawing.Size(25, 25);
+            this.buttonQSwatch.TabIndex = 11;
+            this.buttonQSwatch.UseVisualStyleBackColor = true;
+            this.buttonQSwatch.Click += new System.EventHandler(this.buttonQSwatch_Click);
             // 
             // labelHSV
             // 
@@ -388,17 +390,40 @@
             // 
             // openFileDialogPicture
             // 
+            this.openFileDialogPicture.DefaultExt = "*.jpg";
+            this.openFileDialogPicture.Filter = "Valid files|*.bmp;*.gif;*.jpeg;*.jpg;*.png|All files|*.*";
+            this.openFileDialogPicture.Multiselect = true;
             this.openFileDialogPicture.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialogPicture_FileOk);
+            // 
+            // buttonOpenSwatch
+            // 
+            this.buttonOpenSwatch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buttonOpenSwatch.BackgroundImage")));
+            this.buttonOpenSwatch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonOpenSwatch.Location = new System.Drawing.Point(391, 74);
+            this.buttonOpenSwatch.Name = "buttonOpenSwatch";
+            this.buttonOpenSwatch.Size = new System.Drawing.Size(25, 25);
+            this.buttonOpenSwatch.TabIndex = 15;
+            this.buttonOpenSwatch.UseVisualStyleBackColor = true;
+            this.buttonOpenSwatch.Click += new System.EventHandler(this.buttonOpenSwatch_Click);
+            // 
+            // openFileDialogSwatch
+            // 
+            this.openFileDialogSwatch.DefaultExt = "*.ase";
+            this.openFileDialogSwatch.Filter = "Valid files|*.ase;*.aco|Adobe Swatch Exchange File|*.ase|Adobe Photoshop Color Fi" +
+    "le|*.aco|All files|*.*";
+            this.openFileDialogSwatch.Multiselect = true;
+            this.openFileDialogSwatch.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialogSwatch_FileOk);
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(424, 111);
+            this.Controls.Add(this.buttonOpenSwatch);
             this.Controls.Add(this.labelHSV);
             this.Controls.Add(this.tableLayoutPanelHSV);
             this.Controls.Add(this.buttonCopyHSV);
-            this.Controls.Add(this.buttonSwatches);
+            this.Controls.Add(this.buttonQSwatch);
             this.Controls.Add(this.buttonPicture);
             this.Controls.Add(this.labelHSL);
             this.Controls.Add(this.tableLayoutPanelHSL);
@@ -456,7 +481,7 @@
         private System.Windows.Forms.NumericUpDown textBoxS;
         private System.Windows.Forms.ColorDialog colorDialogPicker;
         private System.Windows.Forms.Button buttonPicture;
-        private System.Windows.Forms.Button buttonSwatches;
+        private System.Windows.Forms.Button buttonQSwatch;
         private System.Windows.Forms.Label labelHSV;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelHSV;
         private System.Windows.Forms.NumericUpDown textBoxH2;
@@ -464,6 +489,8 @@
         private System.Windows.Forms.NumericUpDown textBoxS2;
         private System.Windows.Forms.Button buttonCopyHSV;
         private System.Windows.Forms.OpenFileDialog openFileDialogPicture;
+        private System.Windows.Forms.Button buttonOpenSwatch;
+        private System.Windows.Forms.OpenFileDialog openFileDialogSwatch;
     }
 }
 

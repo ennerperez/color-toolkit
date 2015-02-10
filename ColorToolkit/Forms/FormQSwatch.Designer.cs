@@ -1,6 +1,6 @@
 ﻿namespace ColorToolkit
 {
-    partial class FormSwatches
+    partial class FormQSwatch
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSwatches));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQSwatch));
             this.panelPrimary = new System.Windows.Forms.Panel();
             this.panelPrimaryInternal = new System.Windows.Forms.Panel();
             this.labelPrimary = new System.Windows.Forms.Label();
@@ -704,7 +704,7 @@
             this.label30.Text = "A100";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // FormSwatches
+            // FormQSwatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -731,7 +731,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximumSize = new System.Drawing.Size(340, 810);
             this.MinimumSize = new System.Drawing.Size(340, 405);
-            this.Name = "FormSwatches";
+            this.Name = "FormQSwatch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Paleta";
             this.Load += new System.EventHandler(this.FormSwatches_Load);

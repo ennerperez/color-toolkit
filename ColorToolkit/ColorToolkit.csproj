@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\BufferedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Structures\Colors.cs" />
     <Compile Include="Forms\FormMain.cs">
       <SubType>Form</SubType>
@@ -50,20 +53,27 @@
     <Compile Include="Forms\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormSwatches.cs">
+    <Compile Include="Forms\FormQSwatch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormSwatches.Designer.cs">
-      <DependentUpon>FormSwatches.cs</DependentUpon>
+    <Compile Include="Forms\FormQSwatch.Designer.cs">
+      <DependentUpon>FormQSwatch.cs</DependentUpon>
     </Compile>
     <Compile Include="Structures\HSLColor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\FormSwatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSwatch.designer.cs">
+      <DependentUpon>FormSwatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Structures\Swatch.cs" />
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FormSwatches.resx">
-      <DependentUpon>FormSwatches.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormQSwatch.resx">
+      <DependentUpon>FormQSwatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,6 +84,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Content Include="Swatches\Material.ase">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Forms\FormSwatch.resx">
+      <DependentUpon>FormSwatch.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

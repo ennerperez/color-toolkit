@@ -8,13 +8,14 @@ using System.Windows.Forms;
 
 namespace ColorToolkit
 {
+
     public partial class FormMain : Form
     {
         public FormMain()
         {
             InitializeComponent();
 #if DEBUG
-            this.Color = ExtensionMethods.FromHEX("#F44336");
+            this.Color = Colors.FromHEX("#F44336");
             setColor();
 #endif
         }
@@ -90,7 +91,7 @@ namespace ColorToolkit
         private void textBoxHEX_Leave(object sender, EventArgs e)
         {
             if (!this.textBoxHEX.Text.StartsWith("#")) { this.textBoxHEX.Text = "#" + this.textBoxHEX.Text.Trim(); }
-            this.Color = ExtensionMethods.FromHEX(this.textBoxHEX.Text);
+            this.Color = Colors.FromHEX(this.textBoxHEX.Text);
             this.setColor();
         }
 
@@ -178,7 +179,7 @@ namespace ColorToolkit
         private void setColor()
         {
             this.panelColor.BackColor = this.Color;
-            this.textBoxHEX.Text = ExtensionMethods.ToHEX(this.Color);
+            this.textBoxHEX.Text = Colors.ToHEX(this.Color);
 
             this.textBoxR.Value = this.Color.R;
             this.textBoxG.Value = this.Color.G;
@@ -193,10 +194,10 @@ namespace ColorToolkit
             this.textBoxL.Value = (int)_HSL.Luminosity;
         }
 
-        private void buttonSwatches_Click(object sender, EventArgs e)
+        private void buttonQSwatch_Click(object sender, EventArgs e)
         {
-            FormSwatches _FormSwatches = new FormSwatches(this.Color);
-            _FormSwatches.Show();
+            FormQSwatch _FormQSwatch = new FormQSwatch(this.Color);
+            _FormQSwatch.Show();
         }
 
         private void buttonPicture_Click(object sender, EventArgs e)
@@ -206,14 +207,42 @@ namespace ColorToolkit
 
         private void openFileDialogPicture_FileOk(object sender, CancelEventArgs e)
         {
-            try
+            foreach (string item in this.openFileDialogPicture.FileNames)
             {
-                Bitmap bmp = (Bitmap)Image.FromFile(this.openFileDialogPicture.FileName);
-                this.Color = ExtensionMethods.GetDominantColor(bmp);
-                this.setColor();
+                try
+                {
+                    Image file = Image.FromFile(item);
+                    this.Color = Colors.GetDominantColor(file);
+                    this.setColor();
+
+                    //FormSwatch _FormSwatch = new FormSwatch(Colors.GetPalette(file));
+                    //_FormSwatch.Show();
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
-            catch
+        }
+
+        private void buttonOpenSwatch_Click(object sender, EventArgs e)
+        {
+            this.openFileDialogSwatch.ShowDialog();
+        }
+
+        private void openFileDialogSwatch_FileOk(object sender, CancelEventArgs e)
+        {
+            foreach (string item in this.openFileDialogSwatch.FileNames)
             {
+                try
+                {
+                    FormSwatch _FormSwatch = new FormSwatch(item);
+                    _FormSwatch.Show();
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
 
