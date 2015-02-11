@@ -36,20 +36,18 @@ namespace ColorToolkit
         private void panelColor_MouseClick(object sender, MouseEventArgs e)
         {
             MouseButtons button = e.Button;
-            if (button == MouseButtons.Right)
+            if (button == MouseButtons.Left)
             {
-                if (this.colorDialogPicker.ShowDialog() == DialogResult.OK)
-                {
-                    this.Color = this.colorDialogPicker.Color;
-                    this.setColor();
-                }
+                this.Cursor = Cursors.Cross;
             }
-            else
+        }
+        private void panelColor_DoubleClick(object sender, EventArgs e)
+        {
+            this.colorDialogPicker.Color = this.Color;
+            if (this.colorDialogPicker.ShowDialog() == DialogResult.OK)
             {
-                if (button == MouseButtons.Left)
-                {
-                    this.Cursor = Cursors.Cross;
-                }
+                this.Color = this.colorDialogPicker.Color;
+                this.setColor();
             }
         }
         private void panelColor_MouseDown(object sender, MouseEventArgs e)
@@ -90,9 +88,19 @@ namespace ColorToolkit
         }
         private void textBoxHEX_Leave(object sender, EventArgs e)
         {
+
             if (!this.textBoxHEX.Text.StartsWith("#")) { this.textBoxHEX.Text = "#" + this.textBoxHEX.Text.Trim(); }
-            this.Color = Colors.FromHEX(this.textBoxHEX.Text);
-            this.setColor();
+
+            if (!System.Text.RegularExpressions.Regex.IsMatch("#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})", this.textBoxHEX.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+            {
+                this.Color = Colors.FromHEX(this.textBoxHEX.Text);
+                this.setColor();
+            }
+            else
+            {
+                this.textBoxHEX.Text = Colors.ToHEX(System.Drawing.Color.FromArgb((int)this.textBoxR.Value, (int)this.textBoxG.Value, (int)this.textBoxB.Value));
+            }
+
         }
 
         private void textBoxRGB_KeyDown(object sender, KeyEventArgs e)
@@ -117,32 +125,6 @@ namespace ColorToolkit
             this.setColor();
         }
 
-        private void textBoxHSV_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Return)
-            {
-                this.buttonCopyRGB.PerformClick();
-            }
-            else
-            {
-                if (e.KeyCode == Keys.Escape)
-                {
-                    this.textBoxH.Value = 0;
-                    this.textBoxS.Value = 0;
-                    this.textBoxL.Value = 0;
-                }
-            }
-        }
-        private void textBoxHSV_Leave(object sender, EventArgs e)
-        {
-            //long[] _RGB = Colors.HSL_RGB((long)(this.textBoxH.Value), (long)(this.textBoxS.Value), (long)(this.textBoxL.Value));
-            //this.Color = Color.FromArgb((int)_RGB[0], (int)_RGB[1], (int)_RGB[2]);
-
-            HSLColor _HSL = new HSLColor((double)(this.textBoxH.Value), (double)(this.textBoxS.Value), (double)(this.textBoxL.Value));
-            this.Color = _HSL;
-            this.setColor();
-        }
-
         private void buttonCopiarHEX_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(this.textBoxHEX.Text);
@@ -150,10 +132,6 @@ namespace ColorToolkit
         private void buttonCopiarRGB_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(String.Join(",", new string[] { this.textBoxR.Value.ToString(), this.textBoxG.Value.ToString(), this.textBoxB.Value.ToString() }));
-        }
-        private void buttonCopiarHSL_Click(object sender, EventArgs e)
-        {
-            Clipboard.SetText(String.Join(",", new string[] { this.textBoxH.Value.ToString(), this.textBoxS.Value.ToString(), this.textBoxL.Value.ToString() }));
         }
 
         private void getScreenColor()
@@ -184,14 +162,6 @@ namespace ColorToolkit
             this.textBoxR.Value = this.Color.R;
             this.textBoxG.Value = this.Color.G;
             this.textBoxB.Value = this.Color.B;
-
-            HSLColor _HSL = new HSLColor(this.Color);
-
-            // long[] _HSL = Colors.RGB_HSL(this.Color.R, this.Color.G, this.Color.B);
-
-            this.textBoxH.Value = (int)_HSL.Hue;
-            this.textBoxS.Value = (int)_HSL.Saturation;
-            this.textBoxL.Value = (int)_HSL.Luminosity;
         }
 
         private void buttonQSwatch_Click(object sender, EventArgs e)
@@ -214,9 +184,6 @@ namespace ColorToolkit
                     Image file = Image.FromFile(item);
                     this.Color = Colors.GetDominantColor(file);
                     this.setColor();
-
-                    //FormSwatch _FormSwatch = new FormSwatch(Colors.GetPalette(file));
-                    //_FormSwatch.Show();
                 }
                 catch (Exception ex)
                 {
@@ -245,6 +212,13 @@ namespace ColorToolkit
                 }
             }
         }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            FormAbout _FormAbout = new FormAbout();
+            _FormAbout.ShowDialog();
+        }
+
 
     }
 }
