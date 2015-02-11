@@ -302,9 +302,11 @@
             this.Controls.Add(this.panelColor);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(400, 119);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(400, 119);
             this.Name = "FormMain";
             this.Text = "Color Toolkit";
