@@ -1,0 +1,11 @@
+D:\Developments\GitHub\color-toolkit\ColorToolkit\bin\Debug\ColorToolkit.exe
+D:\Developments\GitHub\color-toolkit\ColorToolkit\bin\Debug\ColorToolkit.pdb
+D:\Developments\GitHub\color-toolkit\ColorToolkit\obj\Debug\ColorToolkit.FormMain.resources
+D:\Developments\GitHub\color-toolkit\ColorToolkit\obj\Debug\ColorToolkit.Properties.Resources.resources
+D:\Developments\GitHub\color-toolkit\ColorToolkit\obj\Debug\ColorToolkit.csproj.GenerateResource.Cache
+D:\Developments\GitHub\color-toolkit\ColorToolkit\obj\Debug\ColorToolkit.exe
+D:\Developments\GitHub\color-toolkit\ColorToolkit\obj\Debug\ColorToolkit.pdb
+D:\Developments\GitHub\color-toolkit\ColorToolkit\bin\Debug\Swatches\Material.ase
+D:\Developments\GitHub\color-toolkit\ColorToolkit\obj\Debug\ColorToolkit.FormQSwatch.resources
+D:\Developments\GitHub\color-toolkit\ColorToolkit\obj\Debug\FormSwatch.resources
+D:\Developments\GitHub\color-toolkit\ColorToolkit\obj\Debug\ColorToolkit.FormAbout.resources
