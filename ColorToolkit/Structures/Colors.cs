@@ -15,12 +15,25 @@ namespace System
         {
             public static string ToHEX(System.Drawing.Color source)
             {
-                //return Colors.RGB_HEX((int)source.R, (int)source.G, (int)source.B);
-                return ColorTranslator.ToHtml(source);
+                try
+                { 
+                    return ColorTranslator.ToHtml(source);
+                }
+                catch (Exception)
+                {
+                    return string.Empty;
+                }
             }
             public static Color FromHEX(string hex)
             {
-                return ColorTranslator.FromHtml(hex);
+                try
+                {
+                    return ColorTranslator.FromHtml(hex);
+                }
+                catch (Exception)
+                {
+                    return ColorTranslator.FromHtml("#0");
+                }               
             }
 
             public static string ToRGB(System.Drawing.Color source)
