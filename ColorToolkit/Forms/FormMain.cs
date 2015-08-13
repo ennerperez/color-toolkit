@@ -27,8 +27,15 @@ namespace ColorToolkit
         }
         protected override void OnDeactivate(EventArgs e)
         {
+            try
+            {
+                this.Opacity = 0.25;
+            }
+            catch (Exception)
+            {
+            }
+            
             base.OnDeactivate(e);
-            this.Opacity = 0.25;
         }
 
         public Color Color { get; set; }

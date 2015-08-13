@@ -22,7 +22,16 @@ namespace System
             {
                 return ColorTranslator.FromHtml(hex);
             }
-                        
+
+            public static string ToRGB(System.Drawing.Color source)
+            {
+                return string.Join(",", new string[] { source.R.ToString(), source.G.ToString(), source.B.ToString()} );
+            }
+            public static string ToRGBA(System.Drawing.Color source)
+            {
+                return string.Join(",", new string[] { source.R.ToString(), source.G.ToString(), source.B.ToString(), source.A.ToString() });
+            }
+
             public static Color ChangeColorBrightness(Color color, float correctionFactor)
             {
                 float red = (float)color.R;

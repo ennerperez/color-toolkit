@@ -76,7 +76,7 @@
             // 
             // labelHEX
             // 
-            this.labelHEX.Location = new System.Drawing.Point(74, 12);
+            this.labelHEX.Location = new System.Drawing.Point(74, 11);
             this.labelHEX.Name = "labelHEX";
             this.labelHEX.Size = new System.Drawing.Size(35, 25);
             this.labelHEX.TabIndex = 1;
@@ -306,7 +306,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(400, 119);
-            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(400, 119);
             this.Name = "FormMain";
             this.Text = "Color Toolkit";
