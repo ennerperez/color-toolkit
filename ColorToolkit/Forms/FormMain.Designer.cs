@@ -1,4 +1,4 @@
-﻿namespace ColorToolkit
+﻿namespace Toolkit.Forms
 {
     partial class FormMain
     {
@@ -65,7 +65,7 @@
             this.panelColor.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelColor.Location = new System.Drawing.Point(12, 12);
             this.panelColor.Name = "panelColor";
-            this.panelColor.Size = new System.Drawing.Size(56, 56);
+            this.panelColor.Size = new System.Drawing.Size(56, 57);
             this.panelColor.TabIndex = 0;
             this.toolTipMain.SetToolTip(this.panelColor, "Press for color picker / Double click for color  picker");
             this.panelColor.DoubleClick += new System.EventHandler(this.panelColor_DoubleClick);
@@ -288,7 +288,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(384, 80);
+            this.ClientSize = new System.Drawing.Size(384, 81);
             this.Controls.Add(this.buttonAbout);
             this.Controls.Add(this.buttonOpenSwatch);
             this.Controls.Add(this.buttonQSwatch);
@@ -305,8 +305,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(400, 119);
-            this.MinimumSize = new System.Drawing.Size(400, 119);
+            this.MaximumSize = new System.Drawing.Size(400, 120);
+            this.MinimumSize = new System.Drawing.Size(400, 120);
             this.Name = "FormMain";
             this.Text = "Color Toolkit";
             this.TopMost = true;

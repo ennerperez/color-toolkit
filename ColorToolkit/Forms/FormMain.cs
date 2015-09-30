@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ColorToolkit
+namespace Toolkit.Forms
 {
 
     public partial class FormMain : Form
@@ -15,7 +15,7 @@ namespace ColorToolkit
         {
             InitializeComponent();
 #if DEBUG
-            this.Color = Colors.FromHEX("#F44336");
+            this.Color = Helpers.FromHEX("#F44336");
             setColor();
 #endif
         }
@@ -100,12 +100,12 @@ namespace ColorToolkit
 
             if (!System.Text.RegularExpressions.Regex.IsMatch("#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})", this.textBoxHEX.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
             {
-                this.Color = Colors.FromHEX(this.textBoxHEX.Text);
+                this.Color = Helpers.FromHEX(this.textBoxHEX.Text);
                 this.setColor();
             }
             else
             {
-                this.textBoxHEX.Text = Colors.ToHEX(System.Drawing.Color.FromArgb((int)this.textBoxR.Value, (int)this.textBoxG.Value, (int)this.textBoxB.Value));
+                this.textBoxHEX.Text = Helpers.ToHEX(System.Drawing.Color.FromArgb((int)this.textBoxR.Value, (int)this.textBoxG.Value, (int)this.textBoxB.Value));
             }
 
         }
@@ -164,7 +164,7 @@ namespace ColorToolkit
         private void setColor()
         {
             this.panelColor.BackColor = this.Color;
-            this.textBoxHEX.Text = Colors.ToHEX(this.Color);
+            this.textBoxHEX.Text = Helpers.ToHEX(this.Color);
 
             this.textBoxR.Value = this.Color.R;
             this.textBoxG.Value = this.Color.G;
@@ -189,7 +189,7 @@ namespace ColorToolkit
                 try
                 {
                     Image file = Image.FromFile(item);
-                    this.Color = Colors.GetDominantColor(file);
+                    this.Color = Helpers.GetDominantColor(file);
                     this.setColor();
                 }
                 catch (Exception ex)

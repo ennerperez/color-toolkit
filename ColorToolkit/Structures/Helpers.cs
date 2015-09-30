@@ -11,12 +11,12 @@ namespace System
     namespace Drawing
     {
 
-        public static class Colors
+        public static class Helpers
         {
             public static string ToHEX(System.Drawing.Color source)
             {
                 try
-                { 
+                {
                     return ColorTranslator.ToHtml(source);
                 }
                 catch (Exception)
@@ -33,12 +33,12 @@ namespace System
                 catch (Exception)
                 {
                     return ColorTranslator.FromHtml("#0");
-                }               
+                }
             }
 
             public static string ToRGB(System.Drawing.Color source)
             {
-                return string.Join(",", new string[] { source.R.ToString(), source.G.ToString(), source.B.ToString()} );
+                return string.Join(",", new string[] { source.R.ToString(), source.G.ToString(), source.B.ToString() });
             }
             public static string ToRGBA(System.Drawing.Color source)
             {
@@ -67,7 +67,7 @@ namespace System
 
                 return Color.FromArgb(color.A, (int)red, (int)green, (int)blue);
             }
-            
+
             public static Color LightenBy(Color color, int percent)
             {
                 return ChangeColorBrightness(color, (float)(percent / 100.0));
@@ -126,11 +126,11 @@ namespace System
                         colors.Add(Color.FromArgb(arr[start], arr[start + 1], arr[start + 2]));
                     }
                 }
-                
+
                 return colors;
 
             }
-                        
+
         }
 
     }

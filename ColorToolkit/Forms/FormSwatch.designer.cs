@@ -1,31 +1,33 @@
-﻿    partial class FormSwatch
-  {
-    /// <summary>
-    /// Required designer variable.
-    /// </summary>
-    private System.ComponentModel.IContainer components = null;
-
-    /// <summary>
-    /// Clean up any resources being used.
-    /// </summary>
-    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-    protected override void Dispose(bool disposing)
+﻿namespace Toolkit.Forms
+{
+    partial class FormSwatch
     {
-      if (disposing && (components != null))
-      {
-        components.Dispose();
-      }
-      base.Dispose(disposing);
-    }
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-    #region Windows Form Designer generated code
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-    /// <summary>
-    /// Required method for Designer support - do not modify
-    /// the contents of this method with the code editor.
-    /// </summary>
-    private void InitializeComponent()
-    {
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSwatch));
             this.flowLayoutPanelColors = new System.Windows.Forms.FlowLayoutPanel();
@@ -66,12 +68,13 @@
             this.Load += new System.EventHandler(this.FormSwatch_Load);
             this.ResumeLayout(false);
 
+        }
+
+        #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelColors;
+        private System.Windows.Forms.ToolTip toolTipColor;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerLoadColor;
     }
 
-    #endregion
-
-    private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelColors;
-    private System.Windows.Forms.ToolTip toolTipColor;
-    private System.ComponentModel.BackgroundWorker backgroundWorkerLoadColor;
-  }
-
+}

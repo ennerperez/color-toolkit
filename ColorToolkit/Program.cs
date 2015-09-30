@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace ColorToolkit
+namespace Toolkit
 {
     static class Program
     {
@@ -14,7 +14,7 @@ namespace ColorToolkit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            Application.Run(new Forms.FormMain());
         }
 
         public static System.Drawing.Rectangle GetWorkingArea()

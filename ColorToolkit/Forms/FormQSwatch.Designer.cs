@@ -1,4 +1,4 @@
-﻿namespace ColorToolkit
+﻿namespace Toolkit.Forms
 {
     partial class FormQSwatch
     {

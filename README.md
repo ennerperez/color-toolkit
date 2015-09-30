@@ -1,2 +1,1 @@
-# color-toolkit
-Color ToolKit for Devigners
+# Color ToolKit for Devigners
