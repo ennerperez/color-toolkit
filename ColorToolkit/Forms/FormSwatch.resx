@@ -112,92 +112,87 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTipColor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="flowLayoutPanelColors.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="flowLayoutPanelColors.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="flowLayoutPanelColors.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="flowLayoutPanelColors.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="flowLayoutPanelColors.Size" type="System.Drawing.Size, System.Drawing">
+    <value>564, 441</value>
+  </data>
+  <data name="flowLayoutPanelColors.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanelColors.Name" xml:space="preserve">
+    <value>flowLayoutPanelColors</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanelColors.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanelColors.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanelColors.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="toolTipColor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="backgroundWorkerLoadColor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="backgroundWorkerLoadColor.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>136, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAEAAAABYAAAAWAAAAFgAA
-        ABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAA
-        ABYAAAAQAAAABQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAxAAAAQgAA
-        AEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAA
-        AEMAAABDAAAAQgAAADEAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFri4
-        uPO4uLj/t7e4/7a3uf+2t7n/tre6/7a3uv+2t7n/tre5/7a3uP+2t7f/t7i4/7e4uf+3ubn/t7m5/7e5
-        uf+3ubn/t7i5/7e4uP+4uLj/uLi48wAAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAWuLi5////////////////////////////////////////////////////////////////////
-        //////////////////////////////////+4uLn/AAAAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAABa3t7j////////Fb///nhL//58W//+gF///oBf//58W//+eEv//xnD//////96B
-        ev/HLyL/xzMm/8czJ//HMyf/xzMm/8cvIv/fgXn//////7e4uP8AAAAWAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAFra3uf///////54S///VZf//02D//9Ng///TYP//02D//9Vl//+g
-        FP/+////xjAk//+CX///fVv//31c//99XP//fVv//4Jf/8cvIv//////t7i5/wAAABYAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWtre6////////oBb//9Bn///KVf//ylX//8pV///K
-        Vf//0Gf//6IY//v////HNCj/94Fl//NxVf/zclX/83JV//NxVf/2gWX/xzIl//////+3ubn/AAAAFgAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABa2t7r///////+gFv//zWn//8JL///C
-        Tf//wk3//8JL///Naf//oxn/9////8g0Kf/wgWv/6mdO/+poUP/qaFD/6mdO//CBa//IMyX//////7e5
-        uf8AAAAWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFre4uv///////6IX///M
-        bP//u0H//7tD//+7Q///u0H//81s//+lGv/3////yjUq/+qCcP/iXEf/4l5I/+JeSP/iXEf/6YFw/8kz
-        Jf//////t7m5/wAAABYAAAAFAAAAEAAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAnvL2/////
-        ////pxj//89v//+3Nf//uDf//7g3//+3Nf//z2///6oa//v////ROSz/64d4/9tRP//ZUUD/2VFA/9hQ
-        Pv/lhHb/yTMl//////+3ubn/AAAAFgAAABALCwszAAAAQgAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAA
-        AEhhYWL/io6U/4daGP+HbEX/h21G/4dtRv+HbUb/h21G/4dtRf+IXBr/fouS/3EcFP9+SkX/5omA/+KI
-        f//hh37/4YZ9/+GFe//JMCH//////7e4uf8AAAAWAAAAFri4uPK4uLj/uLi3/7m5t/+6ubf/urm3/7q5
-        t/+6ubf/u7q4/7u7uv+7u73/u73A/7u9wv+8vcL/vL3C/7y9wv+8vcL/u73C/7u9wv+9wsT/xrCv/3UV
-        Df/VOSv/0DYo/881KP/PNCf/zTEk/9h5cP//////t7i4/wAAABYAAAAWubm4////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        ///BwcP/ko+V/////////f////v////7////+f//9vL3//////+3t7f/AAAAFgAAABa4uLf//////2l7
-        5v8HJdX/CynV/wwq1f8MKtX/CynV/wcl1f9qe+b//////2rE//8Gm///C53//wud//8Lnf//C53//wab
-        //9pw////////8a8v/8AZzD/AMFq/wC7Zv8AumX/ALpl/wC5Yv9DyZX//////7i3uP8AAAAWAAAAFrm5
-        t///////BiXV/1lm//9QXv//UV/+/1Ff/v9QXv//WWb//wkl1f////z/CJ3//2PN/f9Yyv3/Wcr9/1nK
-        /f9Yyv3/Y839/wab////////yru//xCBWP8x6qf/M+Sk/zLio/8y4qL/N+Wm/wC2X///////ure4/wAA
-        ABYAAAAWurm3//////8KKNX/Z3P6/0dX9v9IWPb/SFj2/0dX9v9ndPr/DSnV////+v8Nn///a8z+/0zB
-        /v9Nwf7/TcH+/0zB/v9rzP7/Cp3////////Ku7//E31W/yXinP8o3Jn/KNuY/yfbl/884KT/ALZh////
-        //+6t7j/AAAAFgAAABa6ubf//////woo1v9ygPX/PVDv/z9T7/8/U+//PVDv/3KA9v8NKdb////2/w2g
-        //93zv7/Qbr+/0O7/v9Du/7/Qbr+/3bO/v8Jnf///////8q8v/8We1X/G9qS/x7UkP8e04//HNOO/0Hb
-        ov8At2H//////7q3uP8AAAAWAAAAFrq5t///////CSfW/4CM8v8yR+j/NUvp/zVL6f8yR+j/gIzy/w0o
-        1v////P/DKD//4LR//81sv7/OLT+/zi0/v81sv7/gtH//wmd////////yry//xl6U/8Q1Ij/E8+G/xPO
-        hf8QzYT/R9mg/wC3Yv//////ure4/wAAABYAAAAWurm3//////8IJdb/jJrw/yM94f8mP+H/Jj/h/yM9
-        4f+NmvD/CyfX////7/8LoP//j9T//yWr//8orP//KKz//yWr//+P1P//B5z////////JvL//HnhU/wLM
-        ff8Fxnv/BcV6/wPFef9N1qD/ALdh//////+6t7j/AAAAFgAAABa5ubf//////wQi1v+cqPD/nqnw/5+q
-        8P+fqvD/nqnw/5yo8P8IJNf////s/wif//+c2P//ntj//5/Z//+f2f//ntj//5zY//8Em////////8m8
-        v/8gd1T/VNym/1XWo/9V1aL/VNWi/1HVoP8At1///////7q3uP8AAAAWAAAAFri4t///////YHHg/wYj
-        2/8KJtz/Cibc/wom3P8KJtz/ByTb/2Nz4P//+en/Yr/5/wWg//8Hof//CKH//wih//8Hof//BJ///1+8
-        +P//////xru+/wBlLf8Av2b/ALli/wC3Yv8At2H/ALdf/zm+iP//////ube4/wAAABUAAAAWuLe3////
-        ///78fT///j8///6/v//+v////r////6/v//+Pz//fT1//Py7f/z+ur/9//p//j/6v/4/+r/+P/q//j/
-        6v/2/+n/8fjn//////+/u7z/pZuf//////////////////////////////////////+5uLj/AAAADQAA
-        ABa4t7j//////4LZQv9B0QD/RNIA/0TSAP9E0gD/RNIA/0LSAP+D3UT/7vT0//tDwP//AKT//wCk//8A
-        pP//AKT//wCk//8ApP/4Qbz//////7u9vP9lY2T/wL6//7u4uv+6t7j/ure4/7q3uP+5t7j/ubi4/7e3
-        t7QAAAAEAAAAFri3uv//////Pc4A/6PzdP+b8Wj/nPFo/5zxaP+b8Wj/pPR0/z/TAP/s9/n//wCo//+Z
-        5f/+juD//o7g//6O4P/+juD//pnk//8Ao///////ur67/wAAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAWube6//////8/zgD/oO5x/4rpTv+L6VD/i+lQ/4rpTv+h73L/QdQA/+r2
-        9///AKn//ovf//5r1P/+a9T//mvU//5r1P/+i97//wCj//////+4vLn/AAAAFgAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABa5t7r//////z/OAP+i7XP/feQ6/3/kPP9/5Dz/feQ6/6Pu
-        dP9B1AD/6PP0//8Aqv/+hdv//k/L//5Qy//+UMv//k/L//6F2v//AKT//////7e7uP8AAAAWAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFrm3uv//////P84A/6fref9v3yX/ceAo/3Hg
-        KP9v3yX/p+x6/0LVAP/k7/L//wCq//+D2v//M8D//zbB//82wf//M8D//4PZ//8ApP//////trq3/wAA
-        ABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWube6//////8/zwD/rOyA/13Z
-        Cv9f2Q3/X9kN/13ZCv+s7IH/QdUA/+Dr7v//AKv//4fa//8Ttf//Frb//xa2//8Ttf//htr//wCk////
-        //+2urf/AAAAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABa4t7r//////z3P
-        AP+07Iz/teyN/7bsj/+27I//teyN/7Tsjf8/1QD/3Obn//8Aqv//jd3//47c//+P3f//j93//47c//+N
-        3P//AKP//////7a6t/8AAAAWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFbi3
-        uf//////dMw2/z3OAP8/zwD/P88A/z/PAP8/zwD/Pc8A/3bROf/U2tr/7jq1//8ApP//AKT//wCk//8A
-        pP//AKT//wCj/+s3sf//////t7m3/wAAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAANuLi5////////////////////////////////////////////////////////////////////
-        //////////////////////////////////+4ubj/AAAADQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAS3t7e0uLi5/7i3uf+4t7r/ube6/7m3uv+5t7r/ube6/7i3uv+4t7n/t7e4/7e5
-        t/+2urf/trq3/7a6t/+2urf/trq3/7a6t/+3ubf/uLm4/7e3t7QAAAAEAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAA/4AAAP+AAAD/gAAA/4AAAP+AAAD/gAAA/4AAAP+AAAD/gAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH/AAAB/wAA
-        Af8AAAH/AAAB/wAAAf8AAAH/AAAB/wAAAf8=
-</value>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>96, 96</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>564, 441</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>425, 314</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Color Swatch Loader</value>
+  </data>
+  <data name="&gt;&gt;toolTipColor.Name" xml:space="preserve">
+    <value>toolTipColor</value>
+  </data>
+  <data name="&gt;&gt;toolTipColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorkerLoadColor.Name" xml:space="preserve">
+    <value>backgroundWorkerLoadColor</value>
+  </data>
+  <data name="&gt;&gt;backgroundWorkerLoadColor.Type" xml:space="preserve">
+    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormSwatch</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

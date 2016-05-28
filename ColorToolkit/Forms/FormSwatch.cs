@@ -21,6 +21,9 @@ namespace Toolkit.Forms
         public FormSwatch(string file)
         {
             InitializeComponent();
+
+            Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
+
             this.LoadFile(file);
         }
 

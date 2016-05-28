@@ -112,12 +112,16 @@
     <value>2.0</value>
   </resheader>
   <resheader name="reader">
-    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <resheader name="writer">
-    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelColor.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="panelColor.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -131,9 +135,97 @@
         TKC7Xfiv4LUpMWeyJPNMLqQjJlhYXFpP9aNSkfiEXDNPLkuArL8zFg4CETwYlwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <metadata name="toolTipMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="panelColor.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="panelColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="panelColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 57</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelColor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <metadata name="toolTipMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>507, 17</value>
   </metadata>
+  <data name="panelColor.ToolTip" xml:space="preserve">
+    <value>Press for color picker / Double click for color  picker</value>
+  </data>
+  <data name="&gt;&gt;panelColor.Name" xml:space="preserve">
+    <value>panelColor</value>
+  </data>
+  <data name="&gt;&gt;panelColor.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelColor.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelColor.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="labelHEX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 11</value>
+  </data>
+  <data name="labelHEX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 25</value>
+  </data>
+  <data name="labelHEX.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelHEX.Text" xml:space="preserve">
+    <value>&amp;HEX:</value>
+  </data>
+  <data name="labelHEX.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelHEX.Name" xml:space="preserve">
+    <value>labelHEX</value>
+  </data>
+  <data name="&gt;&gt;labelHEX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelHEX.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelHEX.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="textBoxHEX.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="textBoxHEX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 12</value>
+  </data>
+  <data name="textBoxHEX.MaxLength" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="textBoxHEX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 25</value>
+  </data>
+  <data name="textBoxHEX.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="textBoxHEX.Text" xml:space="preserve">
+    <value>#000000</value>
+  </data>
+  <data name="&gt;&gt;textBoxHEX.Name" xml:space="preserve">
+    <value>textBoxHEX</value>
+  </data>
+  <data name="&gt;&gt;textBoxHEX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxHEX.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textBoxHEX.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="buttonCopyHEX.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="buttonCopyHEX.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -146,6 +238,180 @@
         jS9RckQ6zOiAOuOiXeAQqi3G6vXmMOGvNBONRWuIjRpZXkiZdLJbpfIXwQvNhTAS2SsAAAAASUVORK5C
         YII=
 </value>
+  </data>
+  <data name="buttonCopyHEX.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="buttonCopyHEX.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonCopyHEX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 12</value>
+  </data>
+  <data name="buttonCopyHEX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="buttonCopyHEX.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonCopyHEX.ToolTip" xml:space="preserve">
+    <value>Copy as HEX</value>
+  </data>
+  <data name="&gt;&gt;buttonCopyHEX.Name" xml:space="preserve">
+    <value>buttonCopyHEX</value>
+  </data>
+  <data name="&gt;&gt;buttonCopyHEX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCopyHEX.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonCopyHEX.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="labelRGB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 43</value>
+  </data>
+  <data name="labelRGB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>35, 25</value>
+  </data>
+  <data name="labelRGB.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelRGB.Text" xml:space="preserve">
+    <value>R&amp;GB:</value>
+  </data>
+  <data name="labelRGB.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;labelRGB.Name" xml:space="preserve">
+    <value>labelRGB</value>
+  </data>
+  <data name="&gt;&gt;labelRGB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelRGB.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;labelRGB.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="textBoxR.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textBoxR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="textBoxR.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 3, 0</value>
+  </data>
+  <data name="textBoxR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 25</value>
+  </data>
+  <data name="textBoxR.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBoxR.Name" xml:space="preserve">
+    <value>textBoxR</value>
+  </data>
+  <data name="&gt;&gt;textBoxR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxR.Parent" xml:space="preserve">
+    <value>tableLayoutPanelRGB</value>
+  </data>
+  <data name="&gt;&gt;textBoxR.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxG.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textBoxG.Location" type="System.Drawing.Point, System.Drawing">
+    <value>57, 0</value>
+  </data>
+  <data name="textBoxG.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 0</value>
+  </data>
+  <data name="textBoxG.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 25</value>
+  </data>
+  <data name="textBoxG.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBoxG.Name" xml:space="preserve">
+    <value>textBoxG</value>
+  </data>
+  <data name="&gt;&gt;textBoxG.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxG.Parent" xml:space="preserve">
+    <value>tableLayoutPanelRGB</value>
+  </data>
+  <data name="&gt;&gt;textBoxG.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textBoxB.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="textBoxB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 0</value>
+  </data>
+  <data name="textBoxB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 0, 0</value>
+  </data>
+  <data name="textBoxB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 25</value>
+  </data>
+  <data name="textBoxB.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBoxB.Name" xml:space="preserve">
+    <value>textBoxB</value>
+  </data>
+  <data name="&gt;&gt;textBoxB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxB.Parent" xml:space="preserve">
+    <value>tableLayoutPanelRGB</value>
+  </data>
+  <data name="&gt;&gt;textBoxB.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanelRGB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="tableLayoutPanelRGB.ColumnCount" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tableLayoutPanelRGB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>115, 43</value>
+  </data>
+  <data name="tableLayoutPanelRGB.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tableLayoutPanelRGB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 25</value>
+  </data>
+  <data name="tableLayoutPanelRGB.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelRGB.Name" xml:space="preserve">
+    <value>tableLayoutPanelRGB</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelRGB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelRGB.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanelRGB.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tableLayoutPanelRGB.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="textBoxR" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="textBoxB" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;Control Name="textBoxG" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,33,33333,Percent,33,33334,Percent,33,33334" /&gt;&lt;Rows Styles="AutoSize,0" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="buttonCopyRGB.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="buttonCopyRGB.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -160,9 +426,42 @@
         YII=
 </value>
   </data>
-  <metadata name="colorDialogPicker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="buttonCopyRGB.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="buttonCopyRGB.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonCopyRGB.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 43</value>
+  </data>
+  <data name="buttonCopyRGB.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="buttonCopyRGB.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="buttonCopyRGB.ToolTip" xml:space="preserve">
+    <value>Copy as RGB</value>
+  </data>
+  <data name="&gt;&gt;buttonCopyRGB.Name" xml:space="preserve">
+    <value>buttonCopyRGB</value>
+  </data>
+  <data name="&gt;&gt;buttonCopyRGB.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonCopyRGB.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonCopyRGB.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="colorDialogPicker.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="buttonPicture.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="buttonPicture.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -177,6 +476,39 @@
         ncH36UPyr7BW+D7HOeJ902uG71NA6MZMlf6JlXqWQ+f+TdOZ/njsjt5EAUKZuOc/uAtwfgNC5+sy+cBh
         OgAAAABJRU5ErkJggg==
 </value>
+  </data>
+  <data name="buttonPicture.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="buttonPicture.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonPicture.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 12</value>
+  </data>
+  <data name="buttonPicture.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="buttonPicture.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonPicture.ToolTip" xml:space="preserve">
+    <value>Open picture</value>
+  </data>
+  <data name="&gt;&gt;buttonPicture.Name" xml:space="preserve">
+    <value>buttonPicture</value>
+  </data>
+  <data name="&gt;&gt;buttonPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonPicture.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonPicture.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonQSwatch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="buttonQSwatch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -193,9 +525,45 @@
         xzED+9wxq9zgv0H9BYhDDQj0hihYAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="openFileDialogPicture.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="buttonQSwatch.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="buttonQSwatch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonQSwatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 43</value>
+  </data>
+  <data name="buttonQSwatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="buttonQSwatch.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="buttonQSwatch.ToolTip" xml:space="preserve">
+    <value>Generate quick swatch</value>
+  </data>
+  <data name="&gt;&gt;buttonQSwatch.Name" xml:space="preserve">
+    <value>buttonQSwatch</value>
+  </data>
+  <data name="&gt;&gt;buttonQSwatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonQSwatch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonQSwatch.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="openFileDialogPicture.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>164, 17</value>
   </metadata>
+  <data name="openFileDialogPicture.Filter" xml:space="preserve">
+    <value>Valid files|*.bmp;*.gif;*.jpeg;*.jpg;*.png|All files|*.*</value>
+  </data>
+  <data name="buttonOpenSwatch.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="buttonOpenSwatch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -211,9 +579,45 @@
         YWEm9kUq2eso7ZcnLpGvlnWrChBlM/kPawCIv9m7n5ZbGvd4AAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="openFileDialogSwatch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="buttonOpenSwatch.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="buttonOpenSwatch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonOpenSwatch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 12</value>
+  </data>
+  <data name="buttonOpenSwatch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="buttonOpenSwatch.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonOpenSwatch.ToolTip" xml:space="preserve">
+    <value>Open swatch</value>
+  </data>
+  <data name="&gt;&gt;buttonOpenSwatch.Name" xml:space="preserve">
+    <value>buttonOpenSwatch</value>
+  </data>
+  <data name="&gt;&gt;buttonOpenSwatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonOpenSwatch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonOpenSwatch.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="openFileDialogSwatch.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>335, 17</value>
   </metadata>
+  <data name="openFileDialogSwatch.Filter" xml:space="preserve">
+    <value>Valid files|*.ase;*.aco|Adobe Swatch Exchange File|*.ase|Adobe Photoshop Color File|*.aco|All files|*.*</value>
+  </data>
+  <data name="buttonAbout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="buttonAbout.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
@@ -230,130 +634,85 @@
         XlCtIru8qdPXOTmbC7JTJHavWMLZ5U39vwGg/AWydTXQtRO4cAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAMAICAQAAEABADoAgAANgAAACAgAAABAAgAqAgAAB4DAAAgIAAAAQAgAKgQAADGCwAAKAAAACAA
-        AABAAAAAAQAEAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAIAAAACAgACAAAAAgACAAICA
-        AACAgIAAwMDAAAAA/wAA/wAAAP//AP8AAAD/AP8A//8AAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGZmZmZmZmZmZmZmZmZmZwBv//////////////////YAb0
-        ZGRmxc3M3dzVmZmZn2AG9Gxnx3zc19zd13eXmZ9gBvZGxn5+3IzY19eXl5efYAb853x8d3fY2Nh3mJeZ
-        f2AG/sjOfn53yNjXiYmJi59gBvzn6MjIeIeNiJh3eJifYAb37I6HjnhY2IiHeJuJv2AG/I58joeOiIiN
-        eLh3mJ9gBv7IfoeHiIiIiLiYmLmPYAb2jnjo6IiIiIiIiLiYn2AG/u7ujo6Oj/iIuLeLu79gBv5o6OiI
-        iIiPuIuLmLm/wAb+7n6O6OiIiPuIe4t7n2AG/q7o6IiOi4uPuLi5uL9gBv7o6o6o64i/uIuLi3ufYAb+
-        rn53jouLi4v7iLi5v2AG/uqK56ioqLi4uLuLu59gBvp+qK6Ou7e7u4uLi4u/YAb66uqOq6iri4u4uLu3
-        v2AG+mrq6oq7q7u7u4u5u7/ABv//////////////////YAb2jn5+fn5+fn5+fn536GAGjsjnfnfnyOfI
-        53yOyM9gBobsbOzsbm7Obs7OZ+bowAaIiPiIiIiIiIiIiIiIiOAIbsZubOZs5sbsbmzmxuxwAAAAAAAA
-        AAAAAAAAAAAAAP///////////////4AAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAA
-        AAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAA
-        AAGAAAABgAAAAYAAAAH/////KAAAACAAAABAAAAAAQAIAAAAAAAABAAAAAAAAAAAAAAAAQAAAAEAAAAA
-        AACHIwAAkDQAAJY9AACYPgAAnEQCAJ5LCwChTAsAo1IUAKlbHAC0ewsAtX4QAKZdJACtYCUAsWYtALJo
-        LgC2bzYAtnM+ALt2PwC2fTsA+HwYAMJGMQDLbiUAw3c8AP8AXAD/AmEA/wtjAP8ddgDyLmkA/yV3AP8q
-        egD/MXgAvnxHAMB9RwDrZnkAVf8AAGn/AwB3/xgAfP8lAGL/QwC2gRUAuIcmANGNGwDZnjoA+IAkAOyf
-        IgD6jjYA+ZA8AJz/HgC8/wEAgv8qAIf/NwDF/xgAyP8mAMz/OADQ/zMAvoBGALqXTgDHhVMAy5JaAPmU
-        RgDvmVcA+51UANuhQQDoqUcA8bBNAOGpVAD8o18A8rVZAM6SYADUmGgA155wAMuoYADXom8A3qZ4AOmj
-        bAD8p2cA87xqAPyqcADgsn8A/LJ6AI//QgCV/0cAmv9YAKD/XgCl/2gArP93ALT/fQDI/0MA0v9IANX/
-        VgD1w3wAw/9mANn+aADd/nYAAwT/AA4S/wAWGf8AICL/ACkq/wAsOP8ANzj/ADdN+QAlXPEAK2HyADRl
-        8gBHSf8AT1j8AFlY/gBVYv8ASXfyAFN98wBnav8AbnH/AHR6/wD/K4QA/zqEAP8ArAD/A7QA/xi0AP8n
-        uwD/RIUA/1WPAP9LkAD/W5oA/2OcAP90qADMAsAA/yrCAP86xACyS+AArHPuAP9JxwD/XMwA/1LQAP9k
-        0wDpd94A/nbZAAX/iwA4/4sAKP+dADL/mQAv/6gAO/+mAHD/kABF/6cAVP+rAFz/tQBk/7QAeP+6AACf
-        /wABpP8AF6v/AB6w/wAms/8ANrj/AFuE8wBkifUAfIn9AGuS9QB2mfUAR73/AFO//wB/pPcAAM//AAfS
-        /wAU1f8AJsX/ACnZ/wA52/8AB/f/ABb2/wAv4/8AKvf+ADb3/gBw/8AARsL/AFfF/wBH2/8AUt7/AGrL
-        /gB0zv4AbdX/AHrS/gBC4P8AWOH/AEf3/gBX+f4AZuL/AHbl/wBl9/4Aevr+AOmTiQDkrIAA5rWIAP23
-        hgDvs5oA976VAP2KrQD/ibMA/rS9AJ7/mgCv/4IAtv+JALj/kwCM/78Au/+rAPfJhwDrzJYA9saXAML/
-        iQDf/4cAwf+aAN/+kwDj/oQA5f+WAPbXqAD03LUAzP+mANT/vQDp/6QA+OC9AOX/sgCEhP8AjpP/AJSa
-        /gCtlvgAh6f3AJan/ACZtfkApbf8ALez/gD/msAA/4jcAP+O4wDgoe4A/6DpAP+08ACH/8QAl//PALP/
-        ygCI1f4Altz+AK7I+wC3yv4AiOf/AJrs/wCL9v4Anfv/AKbp/gC36v4AqvL/ALb0/wDixP0Axfb/AP//
-        /wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKQsKCgoKCgoKCgoKCgoKCgoKCgoK
-        CgoKCgoKCgo5AAAL/////////////////////////////////////wsAAAr/AQIDBQcICRUYGBkZGnZ1
-        dXV1f2RjYmFgX1//CgAACv8CBggJDQ8QExwbHR4fgHh4d3dsamplZWNiX/8KAAAK/wQICQ0PEBI4OnN0
-        dHmBgYF4gm1samplZWJh/woAAAr/FBYMDxASITo7Int7eoaGhIRxcG1samplZmf/CgAACv8ULi8XESA6
-        OkVGfHx9h4eFg3JxcGxsbG5uZ/8KAAAK/xQuPD49OjtFRknAfn6JiYie33JxcJ2cb25o/woAAAr/FC88
-        PkNMS0ZHSk/Gx+rp4uDf356gn5xvbmj/CgAACv8sLzxDQ0xQw8HBwsTo7Ovk4eHjo6CfnW9uaf8KAAAK
-        /yw8Pj5MTlDDxdHF0cjt5+bm5ePjoJ+fnG9p/woAAAr/LUBBRE1NW8/R2NjZ2P308+bl5aOjn52cb2n/
-        CgAACv8xNTc2WlpdXtbX3N7b/vr58vG3tbGxsJual/8KAAAK/zE1NzZZXV1e1tfa2vD8+vry8be1saKw
-        m5qX/woAAAr/MTQ3NllaXV7SzNTO7/j7+fbytbSioZubmZf/CgAACv8xNDc3WVpcVsrL0s3N9/f29vX1
-        tqKhm5qZl/8KAAAK/zE0NTdYVFVVVsrJr5W/v/f19b29vKGbmpmX/woAAAr/MTQ0UlJTVFVVVpOUlL++
-        vvW9vby8ubOZmJf/CgAACv8xMDMzUVJTVFSQkpKSu7u7u728vLm5uLinlv8KAAAK/yQlMjMzUVJTU46P
-        j5G7uq6uvLy5s7ipqaim/woAAAr/JCUlMjIzUVKLjIyMja6urq2uubm4qamoqKX/CgAACv8jJCQkJSUm
-        J4qKioqKrauqqqqsqaiopqalpP8KAAAK/////////////////////////////////////woAAAvdQkJC
-        QkJCQkJCQkJCQkJCQkJCQkJCQkJCQkLdCwAAKNkrPz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/Pz8/K9koAAAo
-        2CoqKioqKioqKioqKioqKioqKioqKioqKioq2AoAACjQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ
-        KAAASCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKChIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAA////////////////gAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAA
-        AAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAA
-        AAGAAAABgAAAAf////8oAAAAIAAAAEAAAAABACAAAAAAAIAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAFAAAAEAAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAA
-        ABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAAABYAAAAWAAAAFgAA
-        ABUAAAANAAAABAAAABAAAAAwAAAAQgAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAA
-        AEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAAAEMAAABDAAAAQwAA
-        AEMAAABDAAAAPwAAACsAAAANAAAAFrSAGO+1fhD/tHwM/7R8DP+0fAz/tHwM/7R8DP+0fAz/tHwM/7R8
-        DP+0fAv/tHwL/7R8C/+0fAv/tHwL/7R8C/+0fAv/tHwL/7R8C/+0fAv/tHwL/7V8C/+1fAv/tXwL/7V8
-        C/+1fAv/tXwL/7V8C/+1fg//pXYWwQAAABUAAAAWtX4Q////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        //////////////////////////////////+2fhD/AAAAFgAAABa0fAz//////4cjAP+QNQD/lj0A/5xE
-        Av+hTAv/pVMT/6pcG//CRjH//wBc//8AXf//AGD//wRj//8LY///A7T//wCv//8Arv//AKv//wCo/8wC
-        wP8sOP//Kiv//yAi//8WGf//DhH//wUH//8AAP///////7V8C/8AAAAWAAAAFrR8DP//////kDQA/55L
-        C/+kUxX/qVod/61gJf+yZy3/tm82/7Z9O//yLmn//x12//8ld///Knr//zF4//8qwv//Jrz//yK6//8d
-        uP//FLD/XVP8/0hP//9DRf//Ozz//zI0//8pK///ICL//wUH////////tXwL/wAAABYAAAAWtHwM////
-        //+YPgD/oFEU/6hbHv+tYSb/smgu/7dvN/+7dj//voBG/8iBUv//K4T//zeD//89hv//RIX//z/K//87
-        wv//NsH//y+8/7JL4P9VYv//VFj//01O//9ERv//PD3//zM0//8oKP//DxP///////+1fAv/AAAAFgAA
-        ABa0fAz///////l6E//LbiX/pl0k/7BmLf+3bzf/u3Y//8B9R//FhVD/yJBW/+tmef//R5D//0+R//9V
-        j///UtD//07K//9Jx///RcT/bXL//2Np//9eX///VVf//01O//9ERP//Ozj//zdN+f8kW/D//////7V8
-        C/8AAAAWAAAAFrR8DP//////+XwX//yONf/2kUD/w3c8/7ZzPv++fEf/xYRQ/8uLWP/OlF//1Jpo//9b
-        mv//YJ3//2ab//9m1///YtD//1zM/6xz7v9xe///b3D//2Zo//9eXv//VFT//09Y/P9NefT/Q3Xx/ydd
-        8v//////tXwL/wAAABYAAAAWtHwM///////4fBr/+Y44//uVRf//nVH/75lX/8eFUf/IiVf/zpJg/9SY
-        aP/Xom//6ZOJ//9wqv//eKf//nnc//901v/pd97/f43//36B//93ef//b27//2dq//9khPj/XInz/1F/
-        9P9FdfP/KmDy//////+1fAv/AAAAFgAAABa0fAz///////h+Hv/5kDv/+ZZH//qcU//8o1///6xr/+mj
-        bP/UmGj/155w/96meP/gsn///Yqt//+Js///juP//4jc/62W+P+Ok///iIn//4CA//95j/v/c5v1/2iR
-        9f9eh/X/U3/0/0h28/8tYvL//////7V8C/8AAAAWAAAAFrR8DP//////+IAi//mQPv/5mEv/+p5W//qk
-        Yf/8qm3//bN5//23hP/oroH/4KuA/+a1iP/vs5r//5rA//+g6f/goe7/nKT//5iY//+RnP3/iav3/3+k
-        9/91m/b/a5L2/2GK9f9WgfT/S3jz/zBk8v//////tXwL/wAAABYAAAAWtHwM///////4gCb/+pBC//qW
-        T//7nln/+6Rm//yqcP/8sXv//riI//6/lP/7wpv/8L6W//DCl//+tL3//7Tw/7ez/v+osP//obn7/5e2
-        +f+MrPj/gqT3/3ic9/9ulPb/Y4z1/1mE9P9Oe/P/NGfz//////+1fAv/AAAAFgAAABa0ewz//////+yf
-        Iv/vqkD/8bBN//K1Wf/zuWX/9L9v//XDfP/3yYf/+M+U//nUoP/62a3/+tuv//var//ixP3/t8r+/67I
-        +/+mvfr/nLT5/5Gr+f+Ho/j/fpv2/3SS9f9pivT/X4Lz/1V58/86ZvL//////7V8C/8AAAAWAAAAFrR7
-        DP//////vf8F/8X/Jf/K/zT/zf9B/9H/UP/V/17/2P9s/9z/ef/f/4f/5f+W/+n/pP/l/7L/1P+9/8X2
-        //+36v7/peD+/5fc/v+K2P7/fNT+/23P/v9fy///Usf//0PB//81vf//Jrn//was////////tXsL/wAA
-        ABYAAAAWtHsM//////+//wL/yP8j/8z/Mv/P/z//0/9N/9b/W//Z/mn/3v53/+P+hP/f/pP/zP+i/8z/
-        qv+z/8r/s/j//7rw//+t6///ltz+/4bT/v950P7/a8v+/13F//9QwP//Qrz//zS3//8ksv//BKf/////
-        //+1ewv/AAAAFgAAABa0ewz//////77/AP/H/x//y/8u/87/PP/S/0n/1v9X/9r/Zf/d/nL/xP+G/7j/
-        k//B/5r/u/+r/5f/z/+d+///qvL//6bu//+f7v//juP//3TO/v9mx/7/WcT//0y///8+uv//MLb//yKx
-        //8Apf///////7V7C/8AAAAWAAAAFrR7DP//////vf8A/8X/G//K/yr/zf84/9P/RP/Z/1L/w/9m/6z/
-        ef+v/4L/tv+J/8H/jf+M/7//h//E/476//+L+f7/oOv//5br//+N6v//hOn//23V//9Tv///R73//zq5
-        //8stP//HrD//wCj////////tXsL/wAAABYAAAAWtHsM//////+7/wD/xP8X/8v/Jv/Q/zP/xP9G/6D/
-        Xv+g/2f/pv9v/6z/d/+0/33/nv+a/3D/wP94/7r/f/r//3b7/v+J8P//juj//4Po//975v//dOf//2ni
-        //9Jw///NLX//yey//8arf//AKL///////+1ewv/AAAAFgAAABa0ewz//////7v/AP/H/xL/xP8j/5v/
-        QP+Q/07/mP9U/57/Xf+i/2X/qf9t/67/df9c/7X/Yf+3/2f/sv9u+f//Z/n+/2L6/v+F5///fOb//3Ll
-        //9q4///YuP//1rj//9K1///JbT//xSq//8AoP///////7V7C/8AAAAWAAAAFrR7DP//////u/8A/5z/
-        Hv+B/zT/iP87/4//Q/+U/0v/mP9U/57/XP+o/2L/cP+Q/0n/r/9S/67/Vv+p/175//9Y+f7/UPn+/2Dw
-        /v915P//auP//2Hi//9Y4P//UN///0je//9C4P//JsX//wCf////////tXsL/wAAABYAAAAWtHsM////
-        //9u/wT/eP8g/3//Kf+F/zH/iv85/4//Qv+T/0r/m/9R/5j/X/8v/6j/O/+m/0H/p/9F/6H/Tvf//0j4
-        /v9B+P7/Ofr+/2jk//9j4v//WOD//1Df//9H3f//P9z//zbc//8v2///EdT///////+1ewv/AAAAFgAA
-        ABa0ewz//////2T/AP92/xX/ev8e/3//J/+E/y//iP83/47/P/+b/0T/OP+L/yL/nf8p/53/L/+e/zL/
-        mf899///N/j+/zH3/v8q9/7/MfP+/1ve//9Q3///Rt3//z7c//812///Ldn//yPY//8H0////////7V7
-        C/8AAAAWAAAAFrR7DP//////Vf8A/2P/AP9p/wL/b/8K/3T/E/95/xz/gP8l/2L/Q/8A/4z/AP+K/wX/
-        jP8K/47/Dv+J/xr2//8T9///Dvf//wf3//8A+P//L+P//zfa//8t2f//I9j//xvW//8R1f//B9L//wDP
-        ////////tXsL/wAAABYAAAAWtHwN////////////////////////////////////////////////////
-        ////////////////////////////////////////////////////////////////////////////////
-        //////////////////+0fA3/AAAAFgAAABa1fhH/+OC+/+GoUP/iqlX/4qpV/+KqVf/iqlX/4qpV/+Kq
-        Vf/iqlX/4qpV/+KqVf/iqlX/4qpV/+KqVf/iqlX/4qpV/+KqVf/iqlX/4qpV/+KqVf/iqlX/4qpV/+Kq
-        Vf/iqlX/4qpV/+KqVP/hqE//+OC9/7V+Ef8AAAAWAAAAFrWAE//03LX/2Z46/9uhQf/bokL/26JC/9ui
-        Qv/bokL/26JC/9uiQv/bokL/26JC/9uiQv/bokL/26JC/9uiQv/bokL/26JC/9uiQv/bokL/26JC/9ui
-        Qv/bokL/26JC/9uiQv/bokL/26FB/9meOv/03LX/tYAT/wAAABYAAAAVtoAU//DUpf/Rihb/0o0c/9KO
-        HP/Sjhz/0o4c/9KOHP/Sjhz/0o4c/9KOHP/Sjhz/0o4c/9KOHP/Sjhz/0o4c/9KOHP/Sjhz/0o4c/9KO
-        HP/Sjhz/0o4c/9KOHP/Sjhz/0o4c/9KOHP/SjRz/0YoW//DUpf+2gBT/AAAAFQAAAA23ghb/7c2X/+vM
-        lf/rzJb/68yX/+vMl//rzJf/68yX/+vMl//rzJf/68yX/+vMl//rzJf/68yX/+vMl//rzJf/68yX/+vM
-        l//rzJf/68yX/+vMl//rzJf/68yX/+vMl//rzJf/68yX/+vMlv/rzJX/7c2X/7eCFv8AAAANAAAABLWC
-        G7G3ghf/toEV/7aBFf+2gRX/toEV/7aBFf+2gRX/toEV/7aBFf+2gRX/toEV/7aBFf+2gRX/toEV/7aB
-        Ff+2gRX/toEV/7aBFf+2gRX/toEV/7aBFf+2gRX/toEV/7aBFf+2gRX/toEV/7aBFf+3ghf/tYIbsQAA
-        AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAP////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAD/////
-</value>
+  <data name="buttonAbout.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="buttonAbout.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="buttonAbout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 43</value>
+  </data>
+  <data name="buttonAbout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 25</value>
+  </data>
+  <data name="buttonAbout.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="buttonAbout.ToolTip" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Name" xml:space="preserve">
+    <value>buttonAbout</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonAbout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>96, 96</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>384, 81</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="$this.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>400, 120</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>400, 120</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Color Toolkit</value>
+  </data>
+  <data name="&gt;&gt;colorDialogPicker.Name" xml:space="preserve">
+    <value>colorDialogPicker</value>
+  </data>
+  <data name="&gt;&gt;colorDialogPicker.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColorDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialogPicture.Name" xml:space="preserve">
+    <value>openFileDialogPicture</value>
+  </data>
+  <data name="&gt;&gt;openFileDialogPicture.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFileDialogSwatch.Name" xml:space="preserve">
+    <value>openFileDialogSwatch</value>
+  </data>
+  <data name="&gt;&gt;openFileDialogSwatch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolTipMain.Name" xml:space="preserve">
+    <value>toolTipMain</value>
+  </data>
+  <data name="&gt;&gt;toolTipMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

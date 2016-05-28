@@ -8,11 +8,15 @@ using System.Resources;
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("ColorToolkit")]
 [assembly: AssemblyDescription("Color Toolkit for Devigners")]
-[assembly: AssemblyConfiguration("")]
+#if DEBUG
+[assembly: AssemblyConfiguration("DEBUG")]
+#else
+[assembly: AssemblyConfiguration("RELEASE")]
+#endif
 [assembly: AssemblyCompany("Enner Pérez")]
 [assembly: AssemblyProduct("ColorToolkit")]
-[assembly: AssemblyCopyright("Copyright © Enner Pérez 2016")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © Enner Pérez")]
+[assembly: AssemblyTrademark("ColorToolkit")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible como false, los tipos de este ensamblado no estarán visibles 
@@ -21,7 +25,7 @@ using System.Resources;
 [assembly: ComVisible(true)]
 
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
-[assembly: Guid("579e5039-9e14-452f-a97b-a11521956d4e")]
+[assembly: Guid("579E5039-9E14-452F-A97B-A11521956D4E")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
@@ -33,6 +37,6 @@ using System.Resources;
 // Puede especificar todos los valores o establecer como predeterminados los números de compilación y de revisión 
 // mediante el carácter '*', como se muestra a continuación:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.1")]
-[assembly: AssemblyFileVersion("1.0.0.1")]
-[assembly: NeutralResourcesLanguageAttribute("en")]
+[assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: NeutralResourcesLanguage("en")]

@@ -14,6 +14,9 @@ namespace Toolkit.Forms
         public FormMain()
         {
             InitializeComponent();
+
+            Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
+
 #if DEBUG
             this.Color = Helpers.FromHEX("#F44336");
             setColor();

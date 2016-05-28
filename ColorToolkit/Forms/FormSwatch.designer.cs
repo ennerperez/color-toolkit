@@ -37,13 +37,8 @@
             // 
             // flowLayoutPanelColors
             // 
-            this.flowLayoutPanelColors.AutoScroll = true;
-            this.flowLayoutPanelColors.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanelColors.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.flowLayoutPanelColors, "flowLayoutPanelColors");
             this.flowLayoutPanelColors.Name = "flowLayoutPanelColors";
-            this.flowLayoutPanelColors.Padding = new System.Windows.Forms.Padding(6);
-            this.flowLayoutPanelColors.Size = new System.Drawing.Size(564, 441);
-            this.flowLayoutPanelColors.TabIndex = 2;
             // 
             // backgroundWorkerLoadColor
             // 
@@ -53,17 +48,11 @@
             // 
             // FormSwatch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(564, 441);
             this.Controls.Add(this.flowLayoutPanelColors);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(425, 314);
             this.Name = "FormSwatch";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Color Swatch Loader";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormSwatch_FormClosed);
             this.Load += new System.EventHandler(this.FormSwatch_Load);
             this.ResumeLayout(false);

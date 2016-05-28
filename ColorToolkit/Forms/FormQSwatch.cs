@@ -15,6 +15,9 @@ namespace Toolkit.Forms
         public FormQSwatch(Color color)
         {
             InitializeComponent();
+
+            Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
+
             this.Color = color;
         }
 
