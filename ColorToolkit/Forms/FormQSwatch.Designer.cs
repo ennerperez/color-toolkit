@@ -142,7 +142,8 @@
             this.comboBoxColorMode.FormattingEnabled = true;
             this.comboBoxColorMode.Items.AddRange(new object[] {
             resources.GetString("comboBoxColorMode.Items"),
-            resources.GetString("comboBoxColorMode.Items1")});
+            resources.GetString("comboBoxColorMode.Items1"),
+            resources.GetString("comboBoxColorMode.Items2")});
             this.comboBoxColorMode.Name = "comboBoxColorMode";
             this.comboBoxColorMode.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorMode_SelectedIndexChanged);
             // 

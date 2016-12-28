@@ -27,6 +27,8 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -60,12 +62,12 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing.Pictograms, Version=1.1.14.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Drawing.Pictograms.1.1.14.0\lib\net40\System.Drawing.Pictograms.dll</HintPath>
+    <Reference Include="System.Drawing.Pictograms, Version=1.1.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Pictograms.1.1.15.0\lib\net40\System.Drawing.Pictograms.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Windows.Forms.Pictograms, Version=1.1.14.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Windows.Forms.Pictograms.1.1.14.0\lib\net40\System.Windows.Forms.Pictograms.dll</HintPath>
+    <Reference Include="System.Windows.Forms.Pictograms, Version=1.1.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Windows.Forms.Pictograms.1.1.15.0\lib\net40\System.Windows.Forms.Pictograms.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
@@ -78,22 +80,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\BufferedPanel.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Forms\FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FormAbout.Designer.cs">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormHistory.Designer.cs">
+      <DependentUpon>FormHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Structures\ApplicationInfo.cs" />
-    <Compile Include="Structures\Helpers.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="References.cs" />
     <Compile Include="Forms\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,7 +123,16 @@
     <Compile Include="Forms\FormSwatch.designer.cs">
       <DependentUpon>FormSwatch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Structures\Swatch.cs" />
+    <Compile Include="References\CMYK.cs" />
+    <Compile Include="References\ColorExtensions.cs" />
+    <Compile Include="References\ColorHelpers.cs" />
+    <Compile Include="References\ColorSpace.cs" />
+    <Compile Include="References\HEX.cs" />
+    <Compile Include="References\HSB.cs" />
+    <Compile Include="References\MathHelpers.cs" />
+    <Compile Include="References\NumberExtensions.cs" />
+    <Compile Include="References\RGB.cs" />
+    <Compile Include="References\Swatch.cs" />
     <EmbeddedResource Include="Forms\FormAbout.es.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormHistory.resx">
+      <DependentUpon>FormHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormQSwatch.resx">
       <DependentUpon>FormQSwatch.cs</DependentUpon>
@@ -150,7 +171,12 @@
     </None>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

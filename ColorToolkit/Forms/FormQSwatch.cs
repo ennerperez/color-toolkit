@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Platform.Support.Drawing;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,75 +19,82 @@ namespace Toolkit.Forms
 
             Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
 
-            this.Color = color;
+            Color = color;
         }
 
         private void FormSwatches_Load(object sender, EventArgs e)
         {
-            this.panelPrimary.BackColor = this.Color;
-            this.panelPrimaryInternal.BackColor = this.panelPrimary.BackColor;
-            
+            panelPrimary.BackColor = Color;
+            panelPrimaryInternal.BackColor = panelPrimary.BackColor;
+
             // LIGHT
 
             //000-255-
             //000-001
             //(0.13*255)
 
-            this.panel50.BackColor = Helpers.LightenBy(this.Color, 85);
-            this.panel100.BackColor = Helpers.LightenBy(this.Color, 70);
-            this.panel200.BackColor = Helpers.LightenBy(this.Color, 50);
-            this.panel300.BackColor = Helpers.LightenBy(this.Color, 31);
-            this.panel400.BackColor = Helpers.LightenBy(this.Color, 13);
-            
+            panel50.BackColor = Color.LightenBy(85);
+            panel100.BackColor = Color.LightenBy(70);
+            panel200.BackColor = Color.LightenBy(50);
+            panel300.BackColor = Color.LightenBy(31);
+            panel400.BackColor = Color.LightenBy(13);
+
             // BASE COLOR
 
-            this.panel500.BackColor = this.Color;
+            panel500.BackColor = Color;
 
             // DARK
 
-            this.panel600.BackColor = Helpers.DarkenBy(this.Color, 3);
-            this.panel700.BackColor = Helpers.DarkenBy(this.Color, 18);
-            this.panel800.BackColor = Helpers.DarkenBy(this.Color, 36);
-            this.panel900.BackColor = Helpers.DarkenBy(this.Color, 48);
+            panel600.BackColor = Color.DarkenBy(3);
+            panel700.BackColor = Color.DarkenBy(18);
+            panel800.BackColor = Color.DarkenBy(36);
+            panel900.BackColor = Color.DarkenBy(48);
 
             // OTHERS
 
-            this.panelA100.BackColor = Helpers.DarkenBy(this.panel100.BackColor, 10);
-            this.panelA200.BackColor = Helpers.DarkenBy(this.panel200.BackColor, 30);
-            this.panelA400.BackColor = Helpers.DarkenBy(this.panel400.BackColor, 45);
-            this.panelA700.BackColor = Helpers.DarkenBy(this.panel700.BackColor, 60);
+            panelA100.BackColor = panel100.BackColor.DarkenBy(10);
+            panelA200.BackColor = panel200.BackColor.DarkenBy(30);
+            panelA400.BackColor = panel400.BackColor.DarkenBy(45);
+            panelA700.BackColor = panel700.BackColor.DarkenBy(60);
 
             // Resolution fix
-            if (this.Height > Program.GetWorkingArea().Height)
+            if (Height > FormHelpers.GetWorkingArea().Height)
             {
-                this.Height = this.MinimumSize.Height;
+                Height = MinimumSize.Height;
             }
 
-            this.comboBoxColorMode.SelectedIndex = 0;
+            comboBoxColorMode.SelectedIndex = 0;
         }
 
         private void panel_MouseClick(object sender, MouseEventArgs e)
         {
-            if (sender.GetType() != typeof(Label)) {
-                switch (this.comboBoxColorMode.SelectedIndex)
+            if (sender.GetType() != typeof(Label))
+            {
+                switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        Clipboard.SetText(Helpers.ToRGB((sender as Panel).BackColor)); 
+                        Clipboard.SetText(ColorHelpers.RGB((sender as Panel).BackColor));
+                        break;
+                    case 2:
+                        Clipboard.SetText(ColorHelpers.HSB((sender as Panel).BackColor.ToHSB()));
                         break;
                     default:
-                        Clipboard.SetText(Helpers.ToHEX((sender as Panel).BackColor));
+                        Clipboard.SetText((sender as Panel).BackColor.ToHEX());
                         break;
                 }
             }
             else
             {
-                switch (this.comboBoxColorMode.SelectedIndex)
+                switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        Clipboard.SetText(Helpers.ToRGB((sender as Label).Parent.BackColor));
+                        Clipboard.SetText(ColorHelpers.RGB((sender as Label).Parent.BackColor));
+                        break;
+                    case 2:
+                        Clipboard.SetText(ColorHelpers.HSB((sender as Label).Parent.BackColor.ToHSB()));
                         break;
                     default:
-                        Clipboard.SetText(Helpers.ToHEX((sender as Label).Parent.BackColor)); 
+                        Clipboard.SetText((sender as Label).Parent.BackColor.ToHEX());
                         break;
                 }
             }
@@ -94,11 +102,11 @@ namespace Toolkit.Forms
 
         private void comboBoxColorMode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (this.comboBoxColorMode.SelectedIndex)
+            switch (comboBoxColorMode.SelectedIndex)
             {
                 case 1:
 
-                    this.labelPrimary.Text = Helpers.ToRGB(this.panelPrimary.BackColor).ToUpper();
+                    labelPrimary.Text = ColorHelpers.RGB(panelPrimary.BackColor).ToUpper();
 
                     // LIGHT
 
@@ -106,34 +114,70 @@ namespace Toolkit.Forms
                     //000-001
                     //(0.13*255)
 
-                    this.label50.Text = Helpers.ToRGB(this.panel50.BackColor);
-                    this.label100.Text = Helpers.ToRGB(this.panel100.BackColor);
-                    this.label200.Text = Helpers.ToRGB(this.panel200.BackColor);
-                    this.label300.Text = Helpers.ToRGB(this.panel300.BackColor);
-                    this.label400.Text = Helpers.ToRGB(this.panel400.BackColor);
+                    label50.Text = ColorHelpers.RGB(panel50.BackColor);
+                    label100.Text = ColorHelpers.RGB(panel100.BackColor);
+                    label200.Text = ColorHelpers.RGB(panel200.BackColor);
+                    label300.Text = ColorHelpers.RGB(panel300.BackColor);
+                    label400.Text = ColorHelpers.RGB(panel400.BackColor);
 
                     // BASE COLOR
 
-                    this.label500.Text = Helpers.ToRGB(this.panel500.BackColor).ToUpper();
+                    label500.Text = ColorHelpers.RGB(panel500.BackColor);
 
                     // DARK
 
-                    this.label600.Text = Helpers.ToRGB(this.panel600.BackColor).ToUpper();
-                    this.label700.Text = Helpers.ToRGB(this.panel700.BackColor).ToUpper();
-                    this.label800.Text = Helpers.ToRGB(this.panel800.BackColor).ToUpper();
-                    this.label900.Text = Helpers.ToRGB(this.panel900.BackColor).ToUpper();
+                    label600.Text = ColorHelpers.RGB(panel600.BackColor);
+                    label700.Text = ColorHelpers.RGB(panel700.BackColor);
+                    label800.Text = ColorHelpers.RGB(panel800.BackColor);
+                    label900.Text = ColorHelpers.RGB(panel900.BackColor);
 
                     // OTHERS
 
-                    this.labelA100.Text = Helpers.ToRGB(this.panelA100.BackColor).ToUpper();
-                    this.labelA200.Text = Helpers.ToRGB(this.panelA200.BackColor).ToUpper();
-                    this.labelA400.Text = Helpers.ToRGB(this.panelA400.BackColor).ToUpper();
-                    this.labelA700.Text = Helpers.ToRGB(this.panelA700.BackColor).ToUpper();
+                    labelA100.Text = ColorHelpers.RGB(panelA100.BackColor);
+                    labelA200.Text = ColorHelpers.RGB(panelA200.BackColor);
+                    labelA400.Text = ColorHelpers.RGB(panelA400.BackColor);
+                    labelA700.Text = ColorHelpers.RGB(panelA700.BackColor);
+
+                    break;
+
+                case 2:
+
+                    labelPrimary.Text = ColorHelpers.HSB(panelPrimary.BackColor.ToHSB());
+
+                    // LIGHT
+
+                    //000-255-
+                    //000-001
+                    //(0.13*255)
+
+                    label50.Text = ColorHelpers.HSB(panel50.BackColor.ToHSB());
+                    label100.Text = ColorHelpers.HSB(panel100.BackColor.ToHSB());
+                    label200.Text = ColorHelpers.HSB(panel200.BackColor.ToHSB());
+                    label300.Text = ColorHelpers.HSB(panel300.BackColor.ToHSB());
+                    label400.Text = ColorHelpers.HSB(panel400.BackColor.ToHSB());
+
+                    // BASE COLOR
+
+                    label500.Text = ColorHelpers.HSB(panel500.BackColor.ToHSB());
+
+                    // DARK
+
+                    label600.Text = ColorHelpers.HSB(panel600.BackColor.ToHSB());
+                    label700.Text = ColorHelpers.HSB(panel700.BackColor.ToHSB());
+                    label800.Text = ColorHelpers.HSB(panel800.BackColor.ToHSB());
+                    label900.Text = ColorHelpers.HSB(panel900.BackColor.ToHSB());
+
+                    // OTHERS
+
+                    labelA100.Text = ColorHelpers.HSB(panelA100.BackColor.ToHSB());
+                    labelA200.Text = ColorHelpers.HSB(panelA200.BackColor.ToHSB());
+                    labelA400.Text = ColorHelpers.HSB(panelA400.BackColor.ToHSB());
+                    labelA700.Text = ColorHelpers.HSB(panelA700.BackColor.ToHSB());
 
                     break;
                 default:
 
-                    this.labelPrimary.Text = Helpers.ToHEX(this.panelPrimary.BackColor).ToUpper();
+                    labelPrimary.Text = panelPrimary.BackColor.ToHEX().ToUpper();
 
                     // LIGHT
 
@@ -141,29 +185,29 @@ namespace Toolkit.Forms
                     //000-001
                     //(0.13*255)
 
-                    this.label50.Text = Helpers.ToHEX(this.panel50.BackColor).ToUpper();
-                    this.label100.Text = Helpers.ToHEX(this.panel100.BackColor).ToUpper();
-                    this.label200.Text = Helpers.ToHEX(this.panel200.BackColor).ToUpper();
-                    this.label300.Text = Helpers.ToHEX(this.panel300.BackColor).ToUpper();
-                    this.label400.Text = Helpers.ToHEX(this.panel400.BackColor).ToUpper();
+                    label50.Text = panel50.BackColor.ToHEX().ToUpper();
+                    label100.Text = panel100.BackColor.ToHEX().ToUpper();
+                    label200.Text = panel200.BackColor.ToHEX().ToUpper();
+                    label300.Text = panel300.BackColor.ToHEX().ToUpper();
+                    label400.Text = panel400.BackColor.ToHEX().ToUpper();
 
                     // BASE COLOR
 
-                    this.label500.Text = Helpers.ToHEX(this.panel500.BackColor).ToUpper();
+                    label500.Text = panel500.BackColor.ToHEX().ToUpper();
 
                     // DARK
 
-                    this.label600.Text = Helpers.ToHEX(this.panel600.BackColor).ToUpper();
-                    this.label700.Text = Helpers.ToHEX(this.panel700.BackColor).ToUpper();
-                    this.label800.Text = Helpers.ToHEX(this.panel800.BackColor).ToUpper();
-                    this.label900.Text = Helpers.ToHEX(this.panel900.BackColor).ToUpper();
+                    label600.Text = panel600.BackColor.ToHEX().ToUpper();
+                    label700.Text = panel700.BackColor.ToHEX().ToUpper();
+                    label800.Text = panel800.BackColor.ToHEX().ToUpper();
+                    label900.Text = panel900.BackColor.ToHEX().ToUpper();
 
                     // OTHERS
 
-                    this.labelA100.Text = Helpers.ToHEX(this.panelA100.BackColor).ToUpper();
-                    this.labelA200.Text = Helpers.ToHEX(this.panelA200.BackColor).ToUpper();
-                    this.labelA400.Text = Helpers.ToHEX(this.panelA400.BackColor).ToUpper();
-                    this.labelA700.Text = Helpers.ToHEX(this.panelA700.BackColor).ToUpper();
+                    labelA100.Text = panelA100.BackColor.ToHEX().ToUpper();
+                    labelA200.Text = panelA200.BackColor.ToHEX().ToUpper();
+                    labelA400.Text = panelA400.BackColor.ToHEX().ToUpper();
+                    labelA700.Text = panelA700.BackColor.ToHEX().ToUpper();
 
                     break;
             }
@@ -171,7 +215,7 @@ namespace Toolkit.Forms
 
         private void checkBoxVisible_CheckedChanged(object sender, EventArgs e)
         {
-            this.TopMost = this.checkBoxVisible.Checked;
+            TopMost = checkBoxVisible.Checked;
         }
     }
 }

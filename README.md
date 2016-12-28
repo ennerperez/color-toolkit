@@ -12,7 +12,9 @@ See the [changelog](CHANGELOG.md) for changes.
 
 ## Roadmap
 
-- [ ] UI Refresh
+- [x] UI Refresh
+- [x] Color history
+- [ ] Palette creation
 - [ ] Spanish translation
 
 ## Table of contents
