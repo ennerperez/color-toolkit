@@ -14,6 +14,7 @@ See the [changelog](CHANGELOG.md) for changes.
 
 - [x] UI Refresh
 - [x] Color history
+- [ ] Drag & Drop
 - [ ] Palette creation
 - [ ] Spanish translation
 
