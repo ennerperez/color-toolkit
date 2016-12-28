@@ -22,7 +22,7 @@ namespace System.Drawing
     /// <summary>
     /// Provides helper methods for imaging
     /// </summary>
-    internal static partial class ImageHelpers
+    internal static partial class ImageHelper
     {
         /// <summary>
         /// Converts a PNG image to a icon (ico)
@@ -147,7 +147,7 @@ namespace System.Drawing
 namespace System.Windows.Forms
 {
 
-    internal static partial class FormHelpers
+    internal static partial class FormHelper
     {
         public static void ExtractResources(Image image, string name)
         {
@@ -621,7 +621,7 @@ namespace Platform.Support.Drawing
 namespace System.Windows.Forms
 {
 
-    internal static partial class FormHelpers
+    internal static partial class FormHelper
     {
         public static Rectangle GetWorkingArea()
         {

@@ -15,7 +15,7 @@ namespace Toolkit
         {
 
 #if DEBUG
-            System.Drawing.ImageHelpers.GetEditorIcon(MaterialDesign.GetImage(MaterialDesign.IconType.color_lens, 256, Color.White));
+            System.Drawing.ImageHelper.GetEditorIcon(MaterialDesign.GetImage(MaterialDesign.IconType.color_lens, 256, Color.White));
 #endif
 
             Application.EnableVisualStyles();

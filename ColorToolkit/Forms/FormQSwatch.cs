@@ -58,7 +58,7 @@ namespace Toolkit.Forms
             panelA700.BackColor = panel700.BackColor.DarkenBy(60);
 
             // Resolution fix
-            if (Height > FormHelpers.GetWorkingArea().Height)
+            if (Height > FormHelper.GetWorkingArea().Height)
             {
                 Height = MinimumSize.Height;
             }
@@ -73,10 +73,10 @@ namespace Toolkit.Forms
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        Clipboard.SetText(ColorHelpers.RGB((sender as Panel).BackColor));
+                        Clipboard.SetText(ColorHelper.RGB((sender as Panel).BackColor));
                         break;
                     case 2:
-                        Clipboard.SetText(ColorHelpers.HSB((sender as Panel).BackColor.ToHSB()));
+                        Clipboard.SetText(ColorHelper.HSB((sender as Panel).BackColor.ToHSB()));
                         break;
                     default:
                         Clipboard.SetText((sender as Panel).BackColor.ToHEX());
@@ -88,10 +88,10 @@ namespace Toolkit.Forms
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        Clipboard.SetText(ColorHelpers.RGB((sender as Label).Parent.BackColor));
+                        Clipboard.SetText(ColorHelper.RGB((sender as Label).Parent.BackColor));
                         break;
                     case 2:
-                        Clipboard.SetText(ColorHelpers.HSB((sender as Label).Parent.BackColor.ToHSB()));
+                        Clipboard.SetText(ColorHelper.HSB((sender as Label).Parent.BackColor.ToHSB()));
                         break;
                     default:
                         Clipboard.SetText((sender as Label).Parent.BackColor.ToHEX());
@@ -106,7 +106,7 @@ namespace Toolkit.Forms
             {
                 case 1:
 
-                    labelPrimary.Text = ColorHelpers.RGB(panelPrimary.BackColor).ToUpper();
+                    labelPrimary.Text = ColorHelper.RGB(panelPrimary.BackColor).ToUpper();
 
                     // LIGHT
 
@@ -114,35 +114,35 @@ namespace Toolkit.Forms
                     //000-001
                     //(0.13*255)
 
-                    label50.Text = ColorHelpers.RGB(panel50.BackColor);
-                    label100.Text = ColorHelpers.RGB(panel100.BackColor);
-                    label200.Text = ColorHelpers.RGB(panel200.BackColor);
-                    label300.Text = ColorHelpers.RGB(panel300.BackColor);
-                    label400.Text = ColorHelpers.RGB(panel400.BackColor);
+                    label50.Text = ColorHelper.RGB(panel50.BackColor);
+                    label100.Text = ColorHelper.RGB(panel100.BackColor);
+                    label200.Text = ColorHelper.RGB(panel200.BackColor);
+                    label300.Text = ColorHelper.RGB(panel300.BackColor);
+                    label400.Text = ColorHelper.RGB(panel400.BackColor);
 
                     // BASE COLOR
 
-                    label500.Text = ColorHelpers.RGB(panel500.BackColor);
+                    label500.Text = ColorHelper.RGB(panel500.BackColor);
 
                     // DARK
 
-                    label600.Text = ColorHelpers.RGB(panel600.BackColor);
-                    label700.Text = ColorHelpers.RGB(panel700.BackColor);
-                    label800.Text = ColorHelpers.RGB(panel800.BackColor);
-                    label900.Text = ColorHelpers.RGB(panel900.BackColor);
+                    label600.Text = ColorHelper.RGB(panel600.BackColor);
+                    label700.Text = ColorHelper.RGB(panel700.BackColor);
+                    label800.Text = ColorHelper.RGB(panel800.BackColor);
+                    label900.Text = ColorHelper.RGB(panel900.BackColor);
 
                     // OTHERS
 
-                    labelA100.Text = ColorHelpers.RGB(panelA100.BackColor);
-                    labelA200.Text = ColorHelpers.RGB(panelA200.BackColor);
-                    labelA400.Text = ColorHelpers.RGB(panelA400.BackColor);
-                    labelA700.Text = ColorHelpers.RGB(panelA700.BackColor);
+                    labelA100.Text = ColorHelper.RGB(panelA100.BackColor);
+                    labelA200.Text = ColorHelper.RGB(panelA200.BackColor);
+                    labelA400.Text = ColorHelper.RGB(panelA400.BackColor);
+                    labelA700.Text = ColorHelper.RGB(panelA700.BackColor);
 
                     break;
 
                 case 2:
 
-                    labelPrimary.Text = ColorHelpers.HSB(panelPrimary.BackColor.ToHSB());
+                    labelPrimary.Text = ColorHelper.HSB(panelPrimary.BackColor.ToHSB());
 
                     // LIGHT
 
@@ -150,29 +150,29 @@ namespace Toolkit.Forms
                     //000-001
                     //(0.13*255)
 
-                    label50.Text = ColorHelpers.HSB(panel50.BackColor.ToHSB());
-                    label100.Text = ColorHelpers.HSB(panel100.BackColor.ToHSB());
-                    label200.Text = ColorHelpers.HSB(panel200.BackColor.ToHSB());
-                    label300.Text = ColorHelpers.HSB(panel300.BackColor.ToHSB());
-                    label400.Text = ColorHelpers.HSB(panel400.BackColor.ToHSB());
+                    label50.Text = ColorHelper.HSB(panel50.BackColor.ToHSB());
+                    label100.Text = ColorHelper.HSB(panel100.BackColor.ToHSB());
+                    label200.Text = ColorHelper.HSB(panel200.BackColor.ToHSB());
+                    label300.Text = ColorHelper.HSB(panel300.BackColor.ToHSB());
+                    label400.Text = ColorHelper.HSB(panel400.BackColor.ToHSB());
 
                     // BASE COLOR
 
-                    label500.Text = ColorHelpers.HSB(panel500.BackColor.ToHSB());
+                    label500.Text = ColorHelper.HSB(panel500.BackColor.ToHSB());
 
                     // DARK
 
-                    label600.Text = ColorHelpers.HSB(panel600.BackColor.ToHSB());
-                    label700.Text = ColorHelpers.HSB(panel700.BackColor.ToHSB());
-                    label800.Text = ColorHelpers.HSB(panel800.BackColor.ToHSB());
-                    label900.Text = ColorHelpers.HSB(panel900.BackColor.ToHSB());
+                    label600.Text = ColorHelper.HSB(panel600.BackColor.ToHSB());
+                    label700.Text = ColorHelper.HSB(panel700.BackColor.ToHSB());
+                    label800.Text = ColorHelper.HSB(panel800.BackColor.ToHSB());
+                    label900.Text = ColorHelper.HSB(panel900.BackColor.ToHSB());
 
                     // OTHERS
 
-                    labelA100.Text = ColorHelpers.HSB(panelA100.BackColor.ToHSB());
-                    labelA200.Text = ColorHelpers.HSB(panelA200.BackColor.ToHSB());
-                    labelA400.Text = ColorHelpers.HSB(panelA400.BackColor.ToHSB());
-                    labelA700.Text = ColorHelpers.HSB(panelA700.BackColor.ToHSB());
+                    labelA100.Text = ColorHelper.HSB(panelA100.BackColor.ToHSB());
+                    labelA200.Text = ColorHelper.HSB(panelA200.BackColor.ToHSB());
+                    labelA400.Text = ColorHelper.HSB(panelA400.BackColor.ToHSB());
+                    labelA700.Text = ColorHelper.HSB(panelA700.BackColor.ToHSB());
 
                     break;
                 default:

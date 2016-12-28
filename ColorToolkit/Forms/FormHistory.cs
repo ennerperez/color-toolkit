@@ -58,7 +58,7 @@ namespace Toolkit.Forms
             panelOptions.SendToBack();
 
             // Resolution fix
-            if (Height > FormHelpers.GetWorkingArea().Height)
+            if (Height > FormHelper.GetWorkingArea().Height)
             {
                 Height = MinimumSize.Height;
             }
@@ -73,10 +73,10 @@ namespace Toolkit.Forms
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        Clipboard.SetText(ColorHelpers.RGB((sender as Panel).BackColor));
+                        Clipboard.SetText(ColorHelper.RGB((sender as Panel).BackColor));
                         break;
                     case 2:
-                        Clipboard.SetText(ColorHelpers.HSB((sender as Panel).BackColor.ToHSB()));
+                        Clipboard.SetText(ColorHelper.HSB((sender as Panel).BackColor.ToHSB()));
                         break;
                     default:
                         Clipboard.SetText((sender as Panel).BackColor.ToHEX());
@@ -88,10 +88,10 @@ namespace Toolkit.Forms
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        Clipboard.SetText(ColorHelpers.RGB((sender as Label).Parent.BackColor));
+                        Clipboard.SetText(ColorHelper.RGB((sender as Label).Parent.BackColor));
                         break;
                     case 2:
-                        Clipboard.SetText(ColorHelpers.HSB((sender as Label).Parent.BackColor.ToHSB()));
+                        Clipboard.SetText(ColorHelper.HSB((sender as Label).Parent.BackColor.ToHSB()));
                         break;
                     default:
                         Clipboard.SetText((sender as Label).Parent.BackColor.ToHEX());
@@ -108,10 +108,10 @@ namespace Toolkit.Forms
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        label.Text = ColorHelpers.RGB(item.BackColor).ToUpper();
+                        label.Text = ColorHelper.RGB(item.BackColor).ToUpper();
                         break;
                     case 2:
-                        label.Text = ColorHelpers.HSB(item.BackColor.ToHSB());
+                        label.Text = ColorHelper.HSB(item.BackColor.ToHSB());
                         break;
                     default:
                         label.Text = item.BackColor.ToHEX().ToUpper();

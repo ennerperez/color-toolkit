@@ -125,11 +125,11 @@
     </Compile>
     <Compile Include="References\CMYK.cs" />
     <Compile Include="References\ColorExtensions.cs" />
-    <Compile Include="References\ColorHelpers.cs" />
+    <Compile Include="References\ColorHelper.cs" />
     <Compile Include="References\ColorSpace.cs" />
     <Compile Include="References\HEX.cs" />
     <Compile Include="References\HSB.cs" />
-    <Compile Include="References\MathHelpers.cs" />
+    <Compile Include="References\MathHelper.cs" />
     <Compile Include="References\NumberExtensions.cs" />
     <Compile Include="References\RGB.cs" />
     <Compile Include="References\Swatch.cs" />

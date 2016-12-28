@@ -38,11 +38,11 @@ namespace Toolkit.Forms
             //pasteToolStripMenuItem.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.content_paste, 16, toolStripMenu.BackColor);
 #if DEBUG
 
-            Color = ColorHelpers.ToColor("#F44336");
+            Color = ColorHelper.ToColor("#F44336");
             setColor();
 
-            FormHelpers.ExtractResources(panelColor.BackgroundImage, panelColor.Name);
-            FormHelpers.ExtractResources(toolStripMenu);
+            FormHelper.ExtractResources(panelColor.BackgroundImage, panelColor.Name);
+            FormHelper.ExtractResources(toolStripMenu);
 #endif
 
         }
@@ -127,12 +127,12 @@ namespace Toolkit.Forms
 
             if (!System.Text.RegularExpressions.Regex.IsMatch("#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})", textBoxHEX.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
             {
-                Color = ColorHelpers.ToColor(textBoxHEX.Text);
+                Color = ColorHelper.ToColor(textBoxHEX.Text);
                 setColor();
             }
             else
             {
-                textBoxHEX.Text = ColorHelpers.ToHEX(System.Drawing.Color.FromArgb((int)textBoxR.Value, (int)textBoxG.Value, (int)textBoxB.Value));
+                textBoxHEX.Text = ColorHelper.ToHEX(System.Drawing.Color.FromArgb((int)textBoxR.Value, (int)textBoxG.Value, (int)textBoxB.Value));
             }
 
         }
@@ -177,7 +177,7 @@ namespace Toolkit.Forms
         }
         private void textBoxHSB_Leave(object sender, EventArgs e)
         {
-            Color = ColorHelpers.ToColor(new HSB((int)textBoxH.Value, (int)textBoxS.Value, (int)textBoxV.Value));
+            Color = ColorHelper.ToColor(new HSB((int)textBoxH.Value, (int)textBoxS.Value, (int)textBoxV.Value));
             setColor();
         }
 
@@ -209,7 +209,7 @@ namespace Toolkit.Forms
 
         private void getScreenColor()
         {
-            Bitmap bitmap = new Bitmap(FormHelpers.GetWorkingArea().Width, FormHelpers.GetWorkingArea().Height);
+            Bitmap bitmap = new Bitmap(FormHelper.GetWorkingArea().Width, FormHelper.GetWorkingArea().Height);
             Point mousePosition = Control.MousePosition;
             checked
             {
@@ -244,13 +244,13 @@ namespace Toolkit.Forms
 
             toolStripButtonHistory.Enabled = Properties.Settings.Default.History != null && Properties.Settings.Default.History.Count > 0;
 
-            textBoxHEX.Text = ColorHelpers.ToHEX(Color);
+            textBoxHEX.Text = ColorHelper.ToHEX(Color);
 
             textBoxR.Value = Color.R;
             textBoxG.Value = Color.G;
             textBoxB.Value = Color.B;
 
-            var hsv = ColorHelpers.ToHSB(Color);
+            var hsv = ColorHelper.ToHSB(Color);
 
             textBoxH.Value = (decimal)hsv.Hue360;
             textBoxS.Value = (decimal)hsv.Saturation100;
@@ -275,7 +275,7 @@ namespace Toolkit.Forms
                     if (images.Contains(file.Extension))
                     {
                         var image = Image.FromFile(item);
-                        Color = ColorHelpers.GetDominantColor(image);
+                        Color = ColorHelper.GetDominantColor(image);
                         setColor();
                     }
                     else if (palettes.Contains(file.Extension))
@@ -323,7 +323,7 @@ namespace Toolkit.Forms
                 child.Height = this.Height;
             }
             child.StartPosition = FormStartPosition.Manual;
-            if (this.DesktopLocation.X > (FormHelpers.GetWorkingArea().Width / 2))
+            if (this.DesktopLocation.X > (FormHelper.GetWorkingArea().Width / 2))
                 child.Location = new Point(this.Location.X - child.Width - this.Padding.Left, this.Location.Y);
             else
                 child.Location = new Point(this.Location.X + this.Width + this.Padding.Left, this.Location.Y);
