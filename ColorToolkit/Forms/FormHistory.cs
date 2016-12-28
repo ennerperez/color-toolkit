@@ -102,7 +102,7 @@ namespace Toolkit.Forms
 
         private void comboBoxColorMode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var item in this.Controls.OfType<Panel>().Where(x => x.Tag == "panelItem"))
+            foreach (var item in this.Controls.OfType<Panel>().Where(x => x.Tag.Equals("panelItem")))
             {
                 var label = item.Controls.OfType<Label>().First();
                 switch (comboBoxColorMode.SelectedIndex)
