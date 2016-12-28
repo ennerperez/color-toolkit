@@ -31,34 +31,44 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelColor = new System.Windows.Forms.Panel();
-            this.labelHEX = new System.Windows.Forms.Label();
+            this.labelHEX = new System.Windows.Forms.LinkLabel();
             this.textBoxHEX = new System.Windows.Forms.TextBox();
-            this.buttonCopyHEX = new System.Windows.Forms.Button();
-            this.labelRGB = new System.Windows.Forms.Label();
+            this.labelRGB = new System.Windows.Forms.LinkLabel();
             this.textBoxR = new System.Windows.Forms.NumericUpDown();
             this.textBoxG = new System.Windows.Forms.NumericUpDown();
             this.textBoxB = new System.Windows.Forms.NumericUpDown();
-            this.tableLayoutPanelRGB = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonCopyRGB = new System.Windows.Forms.Button();
             this.colorDialogPicker = new System.Windows.Forms.ColorDialog();
-            this.buttonPicture = new System.Windows.Forms.Button();
-            this.buttonQSwatch = new System.Windows.Forms.Button();
-            this.openFileDialogPicture = new System.Windows.Forms.OpenFileDialog();
-            this.buttonOpenSwatch = new System.Windows.Forms.Button();
-            this.openFileDialogSwatch = new System.Windows.Forms.OpenFileDialog();
-            this.buttonAbout = new System.Windows.Forms.Button();
+            this.openFileDialogMain = new System.Windows.Forms.OpenFileDialog();
             this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
+            this.labelHSB = new System.Windows.Forms.LinkLabel();
+            this.toolStripMenu = new System.Windows.Forms.ToolStrip();
+            this.toolStripButtonOpen = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonClose = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonAbout = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonQSwatch = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonCopy = new System.Windows.Forms.ToolStripDropDownButton();
+            this.copyHEXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyRGBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyHSBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonHistory = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonTopMost = new System.Windows.Forms.ToolStripButton();
+            this.textBoxS = new System.Windows.Forms.NumericUpDown();
+            this.textBoxV = new System.Windows.Forms.NumericUpDown();
+            this.textBoxH = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxB)).BeginInit();
-            this.tableLayoutPanelRGB.SuspendLayout();
+            this.toolStripMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxH)).BeginInit();
             this.SuspendLayout();
             // 
             // panelColor
             // 
-            resources.ApplyResources(this.panelColor, "panelColor");
             this.panelColor.BackColor = System.Drawing.Color.Black;
-            this.panelColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.panelColor, "panelColor");
             this.panelColor.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelColor.Name = "panelColor";
             this.toolTipMain.SetToolTip(this.panelColor, resources.GetString("panelColor.ToolTip"));
@@ -70,8 +80,13 @@
             // 
             // labelHEX
             // 
+            this.labelHEX.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.labelHEX.LinkColor = System.Drawing.SystemColors.MenuHighlight;
             resources.ApplyResources(this.labelHEX, "labelHEX");
             this.labelHEX.Name = "labelHEX";
+            this.labelHEX.TabStop = true;
+            this.toolTipMain.SetToolTip(this.labelHEX, resources.GetString("labelHEX.ToolTip"));
+            this.labelHEX.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelHEX_LinkClicked);
             // 
             // textBoxHEX
             // 
@@ -80,19 +95,15 @@
             this.textBoxHEX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxHEX_KeyDown);
             this.textBoxHEX.Leave += new System.EventHandler(this.textBoxHEX_Leave);
             // 
-            // buttonCopyHEX
-            // 
-            resources.ApplyResources(this.buttonCopyHEX, "buttonCopyHEX");
-            this.buttonCopyHEX.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonCopyHEX.Name = "buttonCopyHEX";
-            this.toolTipMain.SetToolTip(this.buttonCopyHEX, resources.GetString("buttonCopyHEX.ToolTip"));
-            this.buttonCopyHEX.UseVisualStyleBackColor = true;
-            this.buttonCopyHEX.Click += new System.EventHandler(this.buttonCopiarHEX_Click);
-            // 
             // labelRGB
             // 
+            this.labelRGB.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.labelRGB.LinkColor = System.Drawing.SystemColors.MenuHighlight;
             resources.ApplyResources(this.labelRGB, "labelRGB");
             this.labelRGB.Name = "labelRGB";
+            this.labelRGB.TabStop = true;
+            this.toolTipMain.SetToolTip(this.labelRGB, resources.GetString("labelRGB.ToolTip"));
+            this.labelRGB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelRGB_LinkClicked);
             // 
             // textBoxR
             // 
@@ -104,6 +115,11 @@
             0,
             0});
             this.textBoxR.Name = "textBoxR";
+            this.textBoxR.Value = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
             this.textBoxR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxRGB_KeyDown);
             this.textBoxR.Leave += new System.EventHandler(this.textBoxRGB_Leave);
             // 
@@ -117,6 +133,11 @@
             0,
             0});
             this.textBoxG.Name = "textBoxG";
+            this.textBoxG.Value = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
             this.textBoxG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxRGB_KeyDown);
             this.textBoxG.Leave += new System.EventHandler(this.textBoxRGB_Leave);
             // 
@@ -130,105 +151,215 @@
             0,
             0});
             this.textBoxB.Name = "textBoxB";
+            this.textBoxB.Value = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
             this.textBoxB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxRGB_KeyDown);
             this.textBoxB.Leave += new System.EventHandler(this.textBoxRGB_Leave);
-            // 
-            // tableLayoutPanelRGB
-            // 
-            resources.ApplyResources(this.tableLayoutPanelRGB, "tableLayoutPanelRGB");
-            this.tableLayoutPanelRGB.Controls.Add(this.textBoxR, 0, 0);
-            this.tableLayoutPanelRGB.Controls.Add(this.textBoxB, 2, 0);
-            this.tableLayoutPanelRGB.Controls.Add(this.textBoxG, 1, 0);
-            this.tableLayoutPanelRGB.Name = "tableLayoutPanelRGB";
-            // 
-            // buttonCopyRGB
-            // 
-            resources.ApplyResources(this.buttonCopyRGB, "buttonCopyRGB");
-            this.buttonCopyRGB.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonCopyRGB.Name = "buttonCopyRGB";
-            this.toolTipMain.SetToolTip(this.buttonCopyRGB, resources.GetString("buttonCopyRGB.ToolTip"));
-            this.buttonCopyRGB.UseVisualStyleBackColor = true;
-            this.buttonCopyRGB.Click += new System.EventHandler(this.buttonCopiarRGB_Click);
             // 
             // colorDialogPicker
             // 
             this.colorDialogPicker.AnyColor = true;
             this.colorDialogPicker.FullOpen = true;
             // 
-            // buttonPicture
+            // openFileDialogMain
             // 
-            resources.ApplyResources(this.buttonPicture, "buttonPicture");
-            this.buttonPicture.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonPicture.Name = "buttonPicture";
-            this.toolTipMain.SetToolTip(this.buttonPicture, resources.GetString("buttonPicture.ToolTip"));
-            this.buttonPicture.UseVisualStyleBackColor = true;
-            this.buttonPicture.Click += new System.EventHandler(this.buttonPicture_Click);
+            resources.ApplyResources(this.openFileDialogMain, "openFileDialogMain");
+            this.openFileDialogMain.Multiselect = true;
+            this.openFileDialogMain.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialogMain_FileOk);
             // 
-            // buttonQSwatch
+            // labelHSB
             // 
-            resources.ApplyResources(this.buttonQSwatch, "buttonQSwatch");
-            this.buttonQSwatch.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonQSwatch.Name = "buttonQSwatch";
-            this.toolTipMain.SetToolTip(this.buttonQSwatch, resources.GetString("buttonQSwatch.ToolTip"));
-            this.buttonQSwatch.UseVisualStyleBackColor = true;
-            this.buttonQSwatch.Click += new System.EventHandler(this.buttonQSwatch_Click);
+            resources.ApplyResources(this.labelHSB, "labelHSB");
+            this.labelHSB.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.labelHSB.LinkColor = System.Drawing.SystemColors.MenuHighlight;
+            this.labelHSB.Name = "labelHSB";
+            this.labelHSB.TabStop = true;
+            this.toolTipMain.SetToolTip(this.labelHSB, resources.GetString("labelHSB.ToolTip"));
+            this.labelHSB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelHSB_LinkClicked);
             // 
-            // openFileDialogPicture
+            // toolStripMenu
             // 
-            this.openFileDialogPicture.DefaultExt = "*.jpg";
-            resources.ApplyResources(this.openFileDialogPicture, "openFileDialogPicture");
-            this.openFileDialogPicture.Multiselect = true;
-            this.openFileDialogPicture.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialogPicture_FileOk);
+            resources.ApplyResources(this.toolStripMenu, "toolStripMenu");
+            this.toolStripMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.toolStripMenu.CanOverflow = false;
+            this.toolStripMenu.GripMargin = new System.Windows.Forms.Padding(0);
+            this.toolStripMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStripMenu.ImageScalingSize = new System.Drawing.Size(48, 48);
+            this.toolStripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButtonOpen,
+            this.toolStripButtonClose,
+            this.toolStripButtonAbout,
+            this.toolStripButtonQSwatch,
+            this.toolStripButtonCopy,
+            this.toolStripSeparator1,
+            this.toolStripButtonHistory,
+            this.toolStripButtonTopMost});
+            this.toolStripMenu.Name = "toolStripMenu";
+            this.toolStripMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             // 
-            // buttonOpenSwatch
+            // toolStripButtonOpen
             // 
-            resources.ApplyResources(this.buttonOpenSwatch, "buttonOpenSwatch");
-            this.buttonOpenSwatch.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonOpenSwatch.Name = "buttonOpenSwatch";
-            this.toolTipMain.SetToolTip(this.buttonOpenSwatch, resources.GetString("buttonOpenSwatch.ToolTip"));
-            this.buttonOpenSwatch.UseVisualStyleBackColor = true;
-            this.buttonOpenSwatch.Click += new System.EventHandler(this.buttonOpenSwatch_Click);
+            resources.ApplyResources(this.toolStripButtonOpen, "toolStripButtonOpen");
+            this.toolStripButtonOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonOpen.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonOpen.Name = "toolStripButtonOpen";
+            this.toolStripButtonOpen.Click += new System.EventHandler(this.toolStripButtonOpen_Click);
             // 
-            // openFileDialogSwatch
+            // toolStripButtonClose
             // 
-            this.openFileDialogSwatch.DefaultExt = "*.ase";
-            resources.ApplyResources(this.openFileDialogSwatch, "openFileDialogSwatch");
-            this.openFileDialogSwatch.Multiselect = true;
-            this.openFileDialogSwatch.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialogSwatch_FileOk);
+            this.toolStripButtonClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.toolStripButtonClose, "toolStripButtonClose");
+            this.toolStripButtonClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonClose.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonClose.Name = "toolStripButtonClose";
+            this.toolStripButtonClose.Click += new System.EventHandler(this.toolStripButtonClose_Click);
             // 
-            // buttonAbout
+            // toolStripButtonAbout
             // 
-            resources.ApplyResources(this.buttonAbout, "buttonAbout");
-            this.buttonAbout.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDark;
-            this.buttonAbout.Name = "buttonAbout";
-            this.toolTipMain.SetToolTip(this.buttonAbout, resources.GetString("buttonAbout.ToolTip"));
-            this.buttonAbout.UseVisualStyleBackColor = true;
-            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
+            this.toolStripButtonAbout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.toolStripButtonAbout, "toolStripButtonAbout");
+            this.toolStripButtonAbout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonAbout.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonAbout.Name = "toolStripButtonAbout";
+            this.toolStripButtonAbout.Click += new System.EventHandler(this.toolStripButtonAbout_Click);
+            // 
+            // toolStripButtonQSwatch
+            // 
+            resources.ApplyResources(this.toolStripButtonQSwatch, "toolStripButtonQSwatch");
+            this.toolStripButtonQSwatch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonQSwatch.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonQSwatch.Name = "toolStripButtonQSwatch";
+            this.toolStripButtonQSwatch.Click += new System.EventHandler(this.buttonQSwatch_Click);
+            // 
+            // toolStripButtonCopy
+            // 
+            resources.ApplyResources(this.toolStripButtonCopy, "toolStripButtonCopy");
+            this.toolStripButtonCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonCopy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.copyHEXToolStripMenuItem,
+            this.copyRGBToolStripMenuItem,
+            this.copyHSBToolStripMenuItem});
+            this.toolStripButtonCopy.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonCopy.Name = "toolStripButtonCopy";
+            this.toolStripButtonCopy.ShowDropDownArrow = false;
+            // 
+            // copyHEXToolStripMenuItem
+            // 
+            this.copyHEXToolStripMenuItem.Name = "copyHEXToolStripMenuItem";
+            resources.ApplyResources(this.copyHEXToolStripMenuItem, "copyHEXToolStripMenuItem");
+            this.copyHEXToolStripMenuItem.Click += new System.EventHandler(this.buttonCopyHEX_Click);
+            // 
+            // copyRGBToolStripMenuItem
+            // 
+            this.copyRGBToolStripMenuItem.Name = "copyRGBToolStripMenuItem";
+            resources.ApplyResources(this.copyRGBToolStripMenuItem, "copyRGBToolStripMenuItem");
+            this.copyRGBToolStripMenuItem.Click += new System.EventHandler(this.buttonCopyRGB_Click);
+            // 
+            // copyHSBToolStripMenuItem
+            // 
+            this.copyHSBToolStripMenuItem.Name = "copyHSBToolStripMenuItem";
+            resources.ApplyResources(this.copyHSBToolStripMenuItem, "copyHSBToolStripMenuItem");
+            this.copyHSBToolStripMenuItem.Click += new System.EventHandler(this.buttonCopyHSB_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            // 
+            // toolStripButtonHistory
+            // 
+            resources.ApplyResources(this.toolStripButtonHistory, "toolStripButtonHistory");
+            this.toolStripButtonHistory.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonHistory.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonHistory.Name = "toolStripButtonHistory";
+            this.toolStripButtonHistory.Click += new System.EventHandler(this.toolStripButtonHistory_Click);
+            // 
+            // toolStripButtonTopMost
+            // 
+            this.toolStripButtonTopMost.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.toolStripButtonTopMost, "toolStripButtonTopMost");
+            this.toolStripButtonTopMost.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonTopMost.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonTopMost.Name = "toolStripButtonTopMost";
+            this.toolStripButtonTopMost.Click += new System.EventHandler(this.toolStripButtonTopMost_Click);
+            // 
+            // textBoxS
+            // 
+            this.textBoxS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBoxS, "textBoxS");
+            this.textBoxS.Name = "textBoxS";
+            this.textBoxS.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.textBoxS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxHSB_KeyDown);
+            this.textBoxS.Leave += new System.EventHandler(this.textBoxHSB_Leave);
+            // 
+            // textBoxV
+            // 
+            this.textBoxV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBoxV, "textBoxV");
+            this.textBoxV.Name = "textBoxV";
+            this.textBoxV.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.textBoxV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxHSB_KeyDown);
+            this.textBoxV.Leave += new System.EventHandler(this.textBoxHSB_Leave);
+            // 
+            // textBoxH
+            // 
+            this.textBoxH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.textBoxH, "textBoxH");
+            this.textBoxH.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.textBoxH.Name = "textBoxH";
+            this.textBoxH.Value = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.textBoxH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxHSB_KeyDown);
+            this.textBoxH.Leave += new System.EventHandler(this.textBoxHSB_Leave);
             // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.Controls.Add(this.buttonAbout);
-            this.Controls.Add(this.buttonOpenSwatch);
-            this.Controls.Add(this.buttonQSwatch);
-            this.Controls.Add(this.buttonPicture);
-            this.Controls.Add(this.tableLayoutPanelRGB);
-            this.Controls.Add(this.buttonCopyRGB);
-            this.Controls.Add(this.buttonCopyHEX);
+            this.Controls.Add(this.panelColor);
+            this.Controls.Add(this.textBoxH);
+            this.Controls.Add(this.textBoxR);
+            this.Controls.Add(this.toolStripMenu);
+            this.Controls.Add(this.textBoxV);
+            this.Controls.Add(this.textBoxB);
+            this.Controls.Add(this.textBoxS);
+            this.Controls.Add(this.textBoxG);
             this.Controls.Add(this.textBoxHEX);
+            this.Controls.Add(this.labelHSB);
             this.Controls.Add(this.labelRGB);
             this.Controls.Add(this.labelHEX);
-            this.Controls.Add(this.panelColor);
+            this.DataBindings.Add(new System.Windows.Forms.Binding("TopMost", global::Toolkit.Properties.Settings.Default, "TopMost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormMain";
-            this.TopMost = true;
+            this.TopMost = global::Toolkit.Properties.Settings.Default.TopMost;
             ((System.ComponentModel.ISupportInitialize)(this.textBoxR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxB)).EndInit();
-            this.tableLayoutPanelRGB.ResumeLayout(false);
+            this.toolStripMenu.ResumeLayout(false);
+            this.toolStripMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textBoxH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,23 +368,31 @@
         #endregion
 
         private System.Windows.Forms.Panel panelColor;
-        private System.Windows.Forms.Label labelHEX;
+        private System.Windows.Forms.LinkLabel labelHEX;
         private System.Windows.Forms.TextBox textBoxHEX;
-        private System.Windows.Forms.Button buttonCopyHEX;
-        private System.Windows.Forms.Label labelRGB;
+        private System.Windows.Forms.LinkLabel labelRGB;
         private System.Windows.Forms.NumericUpDown textBoxR;
         private System.Windows.Forms.NumericUpDown textBoxG;
         private System.Windows.Forms.NumericUpDown textBoxB;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelRGB;
-        private System.Windows.Forms.Button buttonCopyRGB;
         private System.Windows.Forms.ColorDialog colorDialogPicker;
-        private System.Windows.Forms.Button buttonPicture;
-        private System.Windows.Forms.Button buttonQSwatch;
-        private System.Windows.Forms.OpenFileDialog openFileDialogPicture;
-        private System.Windows.Forms.Button buttonOpenSwatch;
-        private System.Windows.Forms.OpenFileDialog openFileDialogSwatch;
-        private System.Windows.Forms.Button buttonAbout;
+        private System.Windows.Forms.OpenFileDialog openFileDialogMain;
         private System.Windows.Forms.ToolTip toolTipMain;
+        private System.Windows.Forms.ToolStrip toolStripMenu;
+        private System.Windows.Forms.ToolStripButton toolStripButtonOpen;
+        private System.Windows.Forms.ToolStripButton toolStripButtonClose;
+        private System.Windows.Forms.ToolStripButton toolStripButtonAbout;
+        private System.Windows.Forms.ToolStripButton toolStripButtonQSwatch;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripButtonCopy;
+        private System.Windows.Forms.ToolStripMenuItem copyHEXToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyRGBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyHSBToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripButtonHistory;
+        private System.Windows.Forms.ToolStripButton toolStripButtonTopMost;
+        private System.Windows.Forms.LinkLabel labelHSB;
+        private System.Windows.Forms.NumericUpDown textBoxS;
+        private System.Windows.Forms.NumericUpDown textBoxV;
+        private System.Windows.Forms.NumericUpDown textBoxH;
     }
 }
 

@@ -267,6 +267,9 @@
   <data name="comboBoxColorMode.Items1" xml:space="preserve">
     <value>RGB</value>
   </data>
+  <data name="comboBoxColorMode.Items2" xml:space="preserve">
+    <value>HSB</value>
+  </data>
   <data name="comboBoxColorMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>234, 10</value>
   </data>

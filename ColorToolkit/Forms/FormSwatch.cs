@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Platform.Support.Drawing;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -12,7 +13,7 @@ namespace Toolkit.Forms
 
         #region Instance Fields
 
-        private List<Color> _loadedPalette;
+        private IEnumerable<Color> _loadedPalette;
 
         #endregion
 
@@ -24,13 +25,13 @@ namespace Toolkit.Forms
 
             Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
 
-            this.LoadFile(file);
+            LoadFile(file);
         }
 
         public FormSwatch(List<Color> palette)
         {
             InitializeComponent();
-            this._loadedPalette = palette;
+            _loadedPalette = palette;
         }
 
         #endregion
@@ -60,7 +61,7 @@ namespace Toolkit.Forms
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         private void LoadFile(string file)
@@ -79,12 +80,12 @@ namespace Toolkit.Forms
                     _loadedPalette = Swatch.ReadSwatchFile(selectedFile.FullName);
                 }
 
-                this.Text = string.Format("{0} - {1}", Path.GetFileName(selectedFile.FullName), Application.ProductName);
+                Text = string.Format("{0} - {1}", Path.GetFileName(selectedFile.FullName), Application.ProductName);
             }
             else
             {
                 _loadedPalette = null;
-                this.Text = Application.ProductName;
+                Text = Application.ProductName;
             }
 
         }
@@ -96,14 +97,14 @@ namespace Toolkit.Forms
         {
             if (_loadedPalette != null)
             {
-                this.backgroundWorkerLoadColor.RunWorkerAsync(this.flowLayoutPanelColors);
+                backgroundWorkerLoadColor.RunWorkerAsync(flowLayoutPanelColors);
             }
 
         }
 
         private void _color_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(Helpers.ToHEX((sender as BufferedPanel).BackColor));
+            Clipboard.SetText((sender as BufferedPanel).BackColor.ToHEX());
         }
 
         private void FormSwatch_FormClosed(object sender, FormClosedEventArgs e)
@@ -113,7 +114,7 @@ namespace Toolkit.Forms
 
         private void backgroundWorkerLoadColor_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
-            if (!this.IsDisposed && this.IsHandleCreated)
+            if (!IsDisposed && IsHandleCreated)
             {
                 foreach (Color color in _loadedPalette)
                 {
@@ -126,11 +127,11 @@ namespace Toolkit.Forms
                         _color.BackColor = color;
                         _color.Cursor = Cursors.Hand;
                         //_color.Controls.Add(new Label() { Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleCenter, ForeColor = System.Drawing.Color.Transparent, Text = (_loadedPalette.IndexOf(color) + 1).ToString() });
-                        toolTipColor.SetToolTip(_color, Helpers.ToHEX(color));
+                        toolTipColor.SetToolTip(_color, color.ToHEX());
                         _color.Click += _color_Click;
 
                         object data = new Control[] { _color };
-                        (e.Argument as FlowLayoutPanel).Invoke(new AddItemsDelegate(this.FlowLayoutPanel_Invoke), data);
+                        (e.Argument as FlowLayoutPanel).Invoke(new AddItemsDelegate(FlowLayoutPanel_Invoke), data);
                     }
                     catch
                     { }
@@ -141,12 +142,12 @@ namespace Toolkit.Forms
         public delegate void AddItemsDelegate(params Control[] data);
         private void FlowLayoutPanel_Invoke(params Control[] data)
         {
-            this.flowLayoutPanelColors.SuspendLayout();
+            flowLayoutPanelColors.SuspendLayout();
             foreach (Control item in data)
             {
-                this.flowLayoutPanelColors.Controls.Add((item as Control));
+                flowLayoutPanelColors.Controls.Add((item as Control));
             }
-            this.flowLayoutPanelColors.ResumeLayout();
+            flowLayoutPanelColors.ResumeLayout();
         }
     }
 
