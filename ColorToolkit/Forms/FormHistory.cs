@@ -1,11 +1,8 @@
 ﻿using Platform.Support.Drawing;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Toolkit.Forms
@@ -13,12 +10,25 @@ namespace Toolkit.Forms
     public partial class FormHistory : Form
     {
 
-        public FormHistory()
+        private static FormHistory instance;
+
+        private FormHistory()
         {
             InitializeComponent();
 
             Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
         }
+
+        public static FormHistory Instance
+        {
+            get
+            {
+                if (instance == null || instance.IsDisposed)
+                    instance = new FormHistory();
+                return instance;
+            }
+        }
+
 
         private void FormSwatches_Load(object sender, EventArgs e)
         {
@@ -26,16 +36,16 @@ namespace Toolkit.Forms
             {
                 var color = Color.FromArgb(int.Parse(item));
 
-                var panelItem = new System.Windows.Forms.Panel();
-                var labelColor = new System.Windows.Forms.Label();
+                var panelItem = new Panel();
+                var labelColor = new Label();
 
                 // 
                 // labelColor
                 // 
-                labelColor.ForeColor = System.Drawing.Color.Black;
+                labelColor.ForeColor = Color.Black;
                 labelColor.Dock = DockStyle.Right;
                 labelColor.AutoSize = true;
-                labelColor.MouseClick += new System.Windows.Forms.MouseEventHandler(panel_MouseClick);
+                labelColor.MouseClick += new MouseEventHandler(panel_MouseClick);
                 labelColor.Text = color.ToHEX().ToUpper();
                 labelColor.ForeColor = color.Invert();
 
@@ -43,12 +53,11 @@ namespace Toolkit.Forms
                 // panelItem
                 // 
                 panelItem.Controls.Add(labelColor);
-                panelItem.Cursor = System.Windows.Forms.Cursors.Hand;
-                panelItem.Tag = "panelItem";
+                panelItem.Cursor = Cursors.Hand;
                 panelItem.Dock = DockStyle.Top;
                 panelItem.Padding = new Padding(6);
                 panelItem.Size = new Size(192, 32);
-                panelItem.MouseClick += new System.Windows.Forms.MouseEventHandler(panel_MouseClick);
+                panelItem.MouseClick += new MouseEventHandler(panel_MouseClick);
                 panelItem.BackColor = color;
 
                 this.Controls.Add(panelItem);
@@ -58,10 +67,8 @@ namespace Toolkit.Forms
             panelOptions.SendToBack();
 
             // Resolution fix
-            if (Height > FormHelpers.GetWorkingArea().Height)
-            {
+            if (Height > FormHelper.GetWorkingArea().Height)
                 Height = MinimumSize.Height;
-            }
 
             comboBoxColorMode.SelectedIndex = 0;
         }
@@ -73,10 +80,10 @@ namespace Toolkit.Forms
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        Clipboard.SetText(ColorHelpers.RGB((sender as Panel).BackColor));
+                        Clipboard.SetText(ColorHelper.RGB((sender as Panel).BackColor));
                         break;
                     case 2:
-                        Clipboard.SetText(ColorHelpers.HSB((sender as Panel).BackColor.ToHSB()));
+                        Clipboard.SetText(ColorHelper.HSB((sender as Panel).BackColor.ToHSB()));
                         break;
                     default:
                         Clipboard.SetText((sender as Panel).BackColor.ToHEX());
@@ -88,10 +95,10 @@ namespace Toolkit.Forms
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        Clipboard.SetText(ColorHelpers.RGB((sender as Label).Parent.BackColor));
+                        Clipboard.SetText(ColorHelper.RGB((sender as Label).Parent.BackColor));
                         break;
                     case 2:
-                        Clipboard.SetText(ColorHelpers.HSB((sender as Label).Parent.BackColor.ToHSB()));
+                        Clipboard.SetText(ColorHelper.HSB((sender as Label).Parent.BackColor.ToHSB()));
                         break;
                     default:
                         Clipboard.SetText((sender as Label).Parent.BackColor.ToHEX());
@@ -102,16 +109,16 @@ namespace Toolkit.Forms
 
         private void comboBoxColorMode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var item in this.Controls.OfType<Panel>().Where(x => x.Tag == "panelItem"))
+            foreach (var item in this.Controls.OfType<Panel>().Where(x => x != panelOptions))
             {
                 var label = item.Controls.OfType<Label>().First();
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        label.Text = ColorHelpers.RGB(item.BackColor).ToUpper();
+                        label.Text = ColorHelper.RGB(item.BackColor).ToUpper();
                         break;
                     case 2:
-                        label.Text = ColorHelpers.HSB(item.BackColor.ToHSB());
+                        label.Text = ColorHelper.HSB(item.BackColor.ToHSB());
                         break;
                     default:
                         label.Text = item.BackColor.ToHEX().ToUpper();
@@ -136,7 +143,7 @@ namespace Toolkit.Forms
             });
             this.Controls.Clear();
             this.Controls.Add(panelOptions);
-            
+
             FormSwatches_Load(sender, e);
             this.ResumeLayout();
         }

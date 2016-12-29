@@ -46,10 +46,6 @@
             this.toolStripButtonClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonAbout = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonQSwatch = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonCopy = new System.Windows.Forms.ToolStripDropDownButton();
-            this.copyHEXToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyRGBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyHSBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonHistory = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonTopMost = new System.Windows.Forms.ToolStripButton();
@@ -193,7 +189,6 @@
             this.toolStripButtonClose,
             this.toolStripButtonAbout,
             this.toolStripButtonQSwatch,
-            this.toolStripButtonCopy,
             this.toolStripSeparator1,
             this.toolStripButtonHistory,
             this.toolStripButtonTopMost});
@@ -232,37 +227,7 @@
             this.toolStripButtonQSwatch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonQSwatch.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonQSwatch.Name = "toolStripButtonQSwatch";
-            this.toolStripButtonQSwatch.Click += new System.EventHandler(this.buttonQSwatch_Click);
-            // 
-            // toolStripButtonCopy
-            // 
-            resources.ApplyResources(this.toolStripButtonCopy, "toolStripButtonCopy");
-            this.toolStripButtonCopy.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonCopy.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.copyHEXToolStripMenuItem,
-            this.copyRGBToolStripMenuItem,
-            this.copyHSBToolStripMenuItem});
-            this.toolStripButtonCopy.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripButtonCopy.Name = "toolStripButtonCopy";
-            this.toolStripButtonCopy.ShowDropDownArrow = false;
-            // 
-            // copyHEXToolStripMenuItem
-            // 
-            this.copyHEXToolStripMenuItem.Name = "copyHEXToolStripMenuItem";
-            resources.ApplyResources(this.copyHEXToolStripMenuItem, "copyHEXToolStripMenuItem");
-            this.copyHEXToolStripMenuItem.Click += new System.EventHandler(this.buttonCopyHEX_Click);
-            // 
-            // copyRGBToolStripMenuItem
-            // 
-            this.copyRGBToolStripMenuItem.Name = "copyRGBToolStripMenuItem";
-            resources.ApplyResources(this.copyRGBToolStripMenuItem, "copyRGBToolStripMenuItem");
-            this.copyRGBToolStripMenuItem.Click += new System.EventHandler(this.buttonCopyRGB_Click);
-            // 
-            // copyHSBToolStripMenuItem
-            // 
-            this.copyHSBToolStripMenuItem.Name = "copyHSBToolStripMenuItem";
-            resources.ApplyResources(this.copyHSBToolStripMenuItem, "copyHSBToolStripMenuItem");
-            this.copyHSBToolStripMenuItem.Click += new System.EventHandler(this.buttonCopyHSB_Click);
+            this.toolStripButtonQSwatch.Click += new System.EventHandler(this.toolStripButtonQSwatch_Click);
             // 
             // toolStripSeparator1
             // 
@@ -332,6 +297,7 @@
             // 
             // FormMain
             // 
+            this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.panelColor);
@@ -352,6 +318,8 @@
             this.MinimizeBox = false;
             this.Name = "FormMain";
             this.TopMost = global::Toolkit.Properties.Settings.Default.TopMost;
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.dragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.dragEnter);
             ((System.ComponentModel.ISupportInitialize)(this.textBoxR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxB)).EndInit();
@@ -382,10 +350,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonClose;
         private System.Windows.Forms.ToolStripButton toolStripButtonAbout;
         private System.Windows.Forms.ToolStripButton toolStripButtonQSwatch;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripButtonCopy;
-        private System.Windows.Forms.ToolStripMenuItem copyHEXToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyRGBToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyHSBToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButtonHistory;
         private System.Windows.Forms.ToolStripButton toolStripButtonTopMost;

@@ -295,7 +295,7 @@
     <value>History</value>
   </data>
   <data name="$this.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;toolTipQSwatch.Name" xml:space="preserve">
     <value>toolTipQSwatch</value>

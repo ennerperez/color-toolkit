@@ -34,8 +34,8 @@
             this.toolTipQSwatch = new System.Windows.Forms.ToolTip(this.components);
             this.checkBoxVisible = new System.Windows.Forms.CheckBox();
             this.panelOptions = new System.Windows.Forms.Panel();
-            this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonClear = new System.Windows.Forms.Button();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panelOptions.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,7 @@
             // 
             // panelOptions
             // 
+            this.panelOptions.BackColor = System.Drawing.SystemColors.Info;
             this.panelOptions.Controls.Add(this.buttonClear);
             this.panelOptions.Controls.Add(this.buttonRefresh);
             this.panelOptions.Controls.Add(this.checkBoxVisible);
@@ -67,19 +68,19 @@
             resources.ApplyResources(this.panelOptions, "panelOptions");
             this.panelOptions.Name = "panelOptions";
             // 
-            // buttonRefresh
-            // 
-            resources.ApplyResources(this.buttonRefresh, "buttonRefresh");
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.UseVisualStyleBackColor = true;
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
-            // 
             // buttonClear
             // 
             resources.ApplyResources(this.buttonClear, "buttonClear");
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.UseVisualStyleBackColor = true;
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // buttonRefresh
+            // 
+            resources.ApplyResources(this.buttonRefresh, "buttonRefresh");
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.UseVisualStyleBackColor = true;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // FormHistory
             // 

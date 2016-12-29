@@ -1,20 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Platform.Support.Drawing;
+using System;
 using System.ComponentModel;
-using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Pictograms;
+using System.IO;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using System.Windows.Forms.Pictograms;
-using Platform.Support.Drawing;
 
 namespace Toolkit.Forms
 {
-
     public partial class FormMain : Form
     {
+
+        private Color color;
+        public Color Color
+        {
+            get
+            {
+                return color;
+            }
+            set
+            {
+                color = value;
+                OnColorChanged(EventArgs.Empty);
+            }
+        }
+
         public FormMain()
         {
             InitializeComponent();
@@ -25,7 +39,6 @@ namespace Toolkit.Forms
 
             toolStripButtonOpen.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.folder_open, 48, Color.White);
             toolStripButtonQSwatch.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.color_lens, 48, Color.White);
-            toolStripButtonCopy.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.content_copy, 48, Color.White);
             toolStripButtonHistory.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.restore, 48, Color.White);
 
             toolStripButtonTopMost.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.layers, 48, Color.White);
@@ -34,18 +47,28 @@ namespace Toolkit.Forms
 
             panelColor.BackgroundImage = MaterialDesign.GetImage(MaterialDesign.IconType.colorize, 48, Color.White);
 
-            //copyToolStripMenuItem.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.content_copy, 16, toolStripMenu.BackColor);
-            //pasteToolStripMenuItem.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.content_paste, 16, toolStripMenu.BackColor);
 #if DEBUG
 
-            Color = ColorHelpers.ToColor("#F44336");
+            Color = ColorHelper.ToColor("#F44336");
             setColor();
 
-            FormHelpers.ExtractResources(panelColor.BackgroundImage, panelColor.Name);
-            FormHelpers.ExtractResources(toolStripMenu);
+            FormHelper.ExtractResources(panelColor.BackgroundImage, panelColor.Name);
+            FormHelper.ExtractResources(toolStripMenu);
 #endif
 
         }
+
+        #region Events
+
+        public event EventHandler ColorChanged;
+
+        private void OnColorChanged(EventArgs e)
+        {
+            if (ColorChanged != null)
+                ColorChanged(this, e);
+        }
+
+        #endregion
 
         protected override void OnActivated(EventArgs e)
         {
@@ -58,22 +81,69 @@ namespace Toolkit.Forms
             {
                 Opacity = 0.25;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Debug.WriteLine(ex.Message);
             }
 
             base.OnDeactivate(e);
         }
 
-        public Color Color { get; set; }
+        #region Drag & Drop
+
+        private bool validData;
+        //private Thread getFileThread;
+
+        private bool getFileName(out string filename, DragEventArgs e)
+        {
+            var ret = false;
+            filename = string.Empty;
+
+            if ((e.AllowedEffect & DragDropEffects.Copy) == DragDropEffects.Copy)
+            {
+                var data = ((IDataObject)e.Data).GetData("FileName") as Array;
+                if (data != null && ((data.Length == 1) && (data.GetValue(0) is string)))
+                {
+                    filename = ((string[])data)[0];
+                    var ext = Path.GetExtension(filename).ToLower();
+                    ret = (Program.imageFiles.Contains(ext) || Program.paletteFiles.Contains(ext));
+                }
+            }
+            return ret;
+        }
+
+        private void dragDrop(object sender, DragEventArgs e)
+        {
+            //if (validData)
+            //    while (getFileThread.IsAlive)
+            //    {
+            //        Application.DoEvents();
+            //        Thread.Sleep(0);
+            //    }
+        }
+        private void dragEnter(object sender, DragEventArgs e)
+        {
+            var fileName = string.Empty;
+            validData = getFileName(out fileName, e);
+            if (validData && !string.IsNullOrEmpty(fileName))
+            {
+                //getFileThread = new Thread(new ParameterizedThreadStart(loadFile));
+                //getFileThread.Start(fileName);
+                loadFile(fileName);
+
+                e.Effect = DragDropEffects.Copy;
+            }
+            else
+                e.Effect = DragDropEffects.None;
+        }
+
+        #endregion
 
         private void panelColor_MouseClick(object sender, MouseEventArgs e)
         {
             MouseButtons button = e.Button;
             if (button == MouseButtons.Left)
-            {
                 Cursor = Cursors.Cross;
-            }
         }
         private void panelColor_DoubleClick(object sender, EventArgs e)
         {
@@ -87,38 +157,25 @@ namespace Toolkit.Forms
         private void panelColor_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
-            {
                 Cursor = Cursors.Cross;
-            }
         }
         private void panelColor_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
-            {
                 getScreenColor();
-            }
         }
         private void panelColor_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
-            {
                 Cursor = Cursors.Default;
-            }
         }
 
         private void textBoxHEX_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Return)
-            {
-                copyHEXToolStripMenuItem.PerformClick();
-            }
-            else
-            {
-                if (e.KeyCode == Keys.Escape)
-                {
-                    textBoxHEX.Text = string.Empty;
-                }
-            }
+                buttonCopyHEX_Click(sender, e);
+            else if (e.KeyCode == Keys.Escape)
+                textBoxHEX.Text = string.Empty;
         }
         private void textBoxHEX_Leave(object sender, EventArgs e)
         {
@@ -127,30 +184,23 @@ namespace Toolkit.Forms
 
             if (!System.Text.RegularExpressions.Regex.IsMatch("#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})", textBoxHEX.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
             {
-                Color = ColorHelpers.ToColor(textBoxHEX.Text);
+                Color = ColorHelper.ToColor(textBoxHEX.Text);
                 setColor();
             }
             else
-            {
-                textBoxHEX.Text = ColorHelpers.ToHEX(System.Drawing.Color.FromArgb((int)textBoxR.Value, (int)textBoxG.Value, (int)textBoxB.Value));
-            }
+                textBoxHEX.Text = ColorHelper.ToHEX(System.Drawing.Color.FromArgb((int)textBoxR.Value, (int)textBoxG.Value, (int)textBoxB.Value));
 
         }
 
         private void textBoxRGB_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Return)
+                buttonCopyRGB_Click(sender, e);
+            else if (e.KeyCode == Keys.Escape)
             {
-                copyRGBToolStripMenuItem.PerformClick();
-            }
-            else
-            {
-                if (e.KeyCode == Keys.Escape)
-                {
-                    textBoxR.Value = 0;
-                    textBoxG.Value = 0;
-                    textBoxB.Value = 0;
-                }
+                textBoxR.Value = 0;
+                textBoxG.Value = 0;
+                textBoxB.Value = 0;
             }
         }
         private void textBoxRGB_Leave(object sender, EventArgs e)
@@ -162,22 +212,17 @@ namespace Toolkit.Forms
         private void textBoxHSB_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Return)
+                buttonCopyHSB_Click(sender, e);
+            else if (e.KeyCode == Keys.Escape)
             {
-                copyHSBToolStripMenuItem.PerformClick();
-            }
-            else
-            {
-                if (e.KeyCode == Keys.Escape)
-                {
-                    textBoxH.Value = 0;
-                    textBoxS.Value = 0;
-                    textBoxV.Value = 0;
-                }
+                textBoxH.Value = 0;
+                textBoxS.Value = 0;
+                textBoxV.Value = 0;
             }
         }
         private void textBoxHSB_Leave(object sender, EventArgs e)
         {
-            Color = ColorHelpers.ToColor(new HSB((int)textBoxH.Value, (int)textBoxS.Value, (int)textBoxV.Value));
+            Color = ColorHelper.ToColor(new HSB((int)textBoxH.Value, (int)textBoxS.Value, (int)textBoxV.Value));
             setColor();
         }
 
@@ -209,7 +254,7 @@ namespace Toolkit.Forms
 
         private void getScreenColor()
         {
-            Bitmap bitmap = new Bitmap(FormHelpers.GetWorkingArea().Width, FormHelpers.GetWorkingArea().Height);
+            Bitmap bitmap = new Bitmap(FormHelper.GetWorkingArea().Width, FormHelper.GetWorkingArea().Height);
             Point mousePosition = Control.MousePosition;
             checked
             {
@@ -244,66 +289,74 @@ namespace Toolkit.Forms
 
             toolStripButtonHistory.Enabled = Properties.Settings.Default.History != null && Properties.Settings.Default.History.Count > 0;
 
-            textBoxHEX.Text = ColorHelpers.ToHEX(Color);
+            textBoxHEX.Text = ColorHelper.ToHEX(Color);
 
             textBoxR.Value = Color.R;
             textBoxG.Value = Color.G;
             textBoxB.Value = Color.B;
 
-            var hsv = ColorHelpers.ToHSB(Color);
+            var hsv = ColorHelper.ToHSB(Color);
 
             textBoxH.Value = (decimal)hsv.Hue360;
             textBoxS.Value = (decimal)hsv.Saturation100;
             textBoxV.Value = (decimal)hsv.Brightness100;
 
         }
-
-        private void buttonQSwatch_Click(object sender, EventArgs e)
+        private void loadFile(object item)
         {
-            displayChild(new FormQSwatch(Color), 1);
+            try
+            {
+                var file = new FileInfo(item.ToString());
+                if (Program.imageFiles.Contains(file.Extension))
+                {
+                    var image = Image.FromFile(item.ToString());
+                    Color = ColorHelper.GetDominantColor(image);
+                    setColor();
+                }
+                else if (Program.paletteFiles.Contains(file.Extension))
+                    displayChild(new FormSwatch(item.ToString()), 3);
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                MessageBox.Show(ex.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+        private void displayChild(Form child, int factor = 0)
+        {
+            if (factor > 0)
+            {
+                child.Width = this.Width * factor;
+                child.Height = this.Height;
+            }
+            child.StartPosition = FormStartPosition.Manual;
+            if (this.DesktopLocation.X > (FormHelper.GetWorkingArea().Width / 2))
+                child.Location = new Point(this.Location.X - child.Width - this.Padding.Left, this.Location.Y);
+            else
+                child.Location = new Point(this.Location.X + this.Width + this.Padding.Left, this.Location.Y);
+            child.Show();
         }
 
         private void openFileDialogMain_FileOk(object sender, CancelEventArgs e)
         {
             foreach (string item in openFileDialogMain.FileNames)
-            {
-                try
-                {
-                    var images = new string[] { ".bmp", ".gif", ".jpeg", ".jpg", ".png" };
-                    var palettes = new string[] { ".ase", ".aco" };
-                    var file = new System.IO.FileInfo(item);
-                    if (images.Contains(file.Extension))
-                    {
-                        var image = Image.FromFile(item);
-                        Color = ColorHelpers.GetDominantColor(image);
-                        setColor();
-                    }
-                    else if (palettes.Contains(file.Extension))
-                        displayChild(new FormSwatch(item), 3);
-
-                }
-                catch (Exception ex)
-                {
-                    System.Windows.Forms.MessageBox.Show(ex.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
+                loadFile(item);
         }
 
-
-        private void toolStripButtonClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void toolStripButtonAbout_Click(object sender, EventArgs e)
-        {
-            var child = new FormAbout();
-            child.ShowDialog();
-        }
+        #region ToolStrip
 
         private void toolStripButtonOpen_Click(object sender, EventArgs e)
         {
             openFileDialogMain.ShowDialog();
+        }
+        private void toolStripButtonQSwatch_Click(object sender, EventArgs e)
+        {
+            displayChild(new FormQSwatch(Color), 1);
+        }
+        private void toolStripButtonHistory_Click(object sender, EventArgs e)
+        {
+            displayChild(FormHistory.Instance, 3);
         }
 
         private void toolStripButtonTopMost_Click(object sender, EventArgs e)
@@ -313,29 +366,17 @@ namespace Toolkit.Forms
             Properties.Settings.Default.TopMost = TopMost;
             Properties.Settings.Default.Save();
         }
-
-
-        private void displayChild(Form child, int factor = 0)
+        private void toolStripButtonAbout_Click(object sender, EventArgs e)
         {
-            if (factor > 0)
-            {
-                child.Width = this.Width * factor;
-                child.Height = this.Height;
-            }
-            child.StartPosition = FormStartPosition.Manual;
-            if (this.DesktopLocation.X > (FormHelpers.GetWorkingArea().Width / 2))
-                child.Location = new Point(this.Location.X - child.Width - this.Padding.Left, this.Location.Y);
-            else
-                child.Location = new Point(this.Location.X + this.Width + this.Padding.Left, this.Location.Y);
-            child.Show();
+            var child = new FormAbout();
+            child.ShowDialog();
+        }
+        private void toolStripButtonClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
-        private FormHistory FormHistory;
+        #endregion
 
-        private void toolStripButtonHistory_Click(object sender, EventArgs e)
-        {
-            if (FormHistory == null || FormHistory.IsDisposed) FormHistory = new FormHistory();
-            displayChild(FormHistory, 3);
-        }
     }
 }

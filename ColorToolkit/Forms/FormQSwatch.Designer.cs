@@ -534,6 +534,7 @@
             // 
             // panelOptions
             // 
+            this.panelOptions.BackColor = System.Drawing.SystemColors.Info;
             this.panelOptions.Controls.Add(this.checkBoxVisible);
             this.panelOptions.Controls.Add(this.comboBoxColorMode);
             resources.ApplyResources(this.panelOptions, "panelOptions");

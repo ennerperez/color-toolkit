@@ -7,7 +7,7 @@ using System.Text;
 namespace Platform.Support.Drawing
 {
 
-    public static partial class ColorHelpers
+    public static partial class ColorHelper
     {
         public static string ToHEX(Color source)
         {
@@ -46,12 +46,12 @@ namespace Platform.Support.Drawing
 
         public static void FromHEX(this Color @this, string hex, int alpha = 255)
         {
-            @this = ColorHelpers.ToColor(hex, alpha);
+            @this = ColorHelper.ToColor(hex, alpha);
         }
 
         public static string ToHEX(this Color @this)
         {
-            return ColorHelpers.ToHEX(@this);
+            return ColorHelper.ToHEX(@this);
         }
 
     }
