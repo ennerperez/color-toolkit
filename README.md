@@ -13,8 +13,10 @@ See the [changelog](CHANGELOG.md) for changes.
 ## Roadmap
 
 - [x] UI Refresh
-- [x] Color history
-- [ ] Drag & Drop
+- [x] Color History
+- [ ] CYMK Color Space
+- [x] Drag & Drop
+- [ ] Export color list
 - [ ] Palette creation
 - [ ] Spanish translation
 

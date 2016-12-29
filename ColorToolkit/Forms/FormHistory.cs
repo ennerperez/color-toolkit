@@ -1,11 +1,8 @@
 ﻿using Platform.Support.Drawing;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Toolkit.Forms
@@ -26,16 +23,16 @@ namespace Toolkit.Forms
             {
                 var color = Color.FromArgb(int.Parse(item));
 
-                var panelItem = new System.Windows.Forms.Panel();
-                var labelColor = new System.Windows.Forms.Label();
+                var panelItem = new Panel();
+                var labelColor = new Label();
 
                 // 
                 // labelColor
                 // 
-                labelColor.ForeColor = System.Drawing.Color.Black;
+                labelColor.ForeColor = Color.Black;
                 labelColor.Dock = DockStyle.Right;
                 labelColor.AutoSize = true;
-                labelColor.MouseClick += new System.Windows.Forms.MouseEventHandler(panel_MouseClick);
+                labelColor.MouseClick += new MouseEventHandler(panel_MouseClick);
                 labelColor.Text = color.ToHEX().ToUpper();
                 labelColor.ForeColor = color.Invert();
 
@@ -43,12 +40,11 @@ namespace Toolkit.Forms
                 // panelItem
                 // 
                 panelItem.Controls.Add(labelColor);
-                panelItem.Cursor = System.Windows.Forms.Cursors.Hand;
-                panelItem.Tag = "panelItem";
+                panelItem.Cursor = Cursors.Hand;
                 panelItem.Dock = DockStyle.Top;
                 panelItem.Padding = new Padding(6);
                 panelItem.Size = new Size(192, 32);
-                panelItem.MouseClick += new System.Windows.Forms.MouseEventHandler(panel_MouseClick);
+                panelItem.MouseClick += new MouseEventHandler(panel_MouseClick);
                 panelItem.BackColor = color;
 
                 this.Controls.Add(panelItem);
@@ -59,9 +55,7 @@ namespace Toolkit.Forms
 
             // Resolution fix
             if (Height > FormHelper.GetWorkingArea().Height)
-            {
                 Height = MinimumSize.Height;
-            }
 
             comboBoxColorMode.SelectedIndex = 0;
         }
@@ -102,7 +96,7 @@ namespace Toolkit.Forms
 
         private void comboBoxColorMode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var item in this.Controls.OfType<Panel>().Where(x => x.Tag.Equals("panelItem")))
+            foreach (var item in this.Controls.OfType<Panel>().Where(x => x != panelOptions))
             {
                 var label = item.Controls.OfType<Label>().First();
                 switch (comboBoxColorMode.SelectedIndex)

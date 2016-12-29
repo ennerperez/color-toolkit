@@ -2,6 +2,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.4] - [UNRELEASED]
+### Changed
+- General optimizations
+- Drag & Drop files
+
 ## [1.0.3] - [2016-12-28]
 ### Changed
 - UI Refresh

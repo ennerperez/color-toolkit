@@ -1,9 +1,9 @@
 ﻿using Platform.Support.Drawing;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Toolkit.Forms
@@ -45,8 +45,6 @@ namespace Toolkit.Forms
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-
-            //this.AddFiles("aco");
         }
 
         #endregion
@@ -54,31 +52,16 @@ namespace Toolkit.Forms
 
         #region Event Handlers
 
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void LoadFile(string file)
         {
-            FileInfo selectedFile = new System.IO.FileInfo(file);
-
-
+            var selectedFile = new FileInfo(file);
+            
             if (selectedFile != null)
             {
                 if (selectedFile.Extension == ".ase")
-                {
                     _loadedPalette = Swatch.ReadExchangeFile(selectedFile.FullName);
-                }
                 else
-                {
                     _loadedPalette = Swatch.ReadSwatchFile(selectedFile.FullName);
-                }
 
                 Text = string.Format("{0} - {1}", Path.GetFileName(selectedFile.FullName), Application.ProductName);
             }
@@ -96,10 +79,7 @@ namespace Toolkit.Forms
         private void FormSwatch_Load(object sender, EventArgs e)
         {
             if (_loadedPalette != null)
-            {
                 backgroundWorkerLoadColor.RunWorkerAsync(flowLayoutPanelColors);
-            }
-
         }
 
         private void _color_Click(object sender, EventArgs e)
@@ -109,44 +89,47 @@ namespace Toolkit.Forms
 
         private void FormSwatch_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (backgroundWorkerLoadColor.IsBusy) backgroundWorkerLoadColor.CancelAsync();
+            if (backgroundWorkerLoadColor.IsBusy)
+                backgroundWorkerLoadColor.CancelAsync();
         }
 
         private void backgroundWorkerLoadColor_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             if (!IsDisposed && IsHandleCreated)
             {
-                foreach (Color color in _loadedPalette)
+                foreach (var color in _loadedPalette)
                 {
                     try
                     {
-                        BufferedPanel _color = new BufferedPanel();
-                        _color.Width = 32;
-                        _color.Height = _color.Width;
-                        _color.BorderStyle = BorderStyle.FixedSingle;
-                        _color.BackColor = color;
-                        _color.Cursor = Cursors.Hand;
-                        //_color.Controls.Add(new Label() { Dock = DockStyle.Fill, TextAlign = ContentAlignment.MiddleCenter, ForeColor = System.Drawing.Color.Transparent, Text = (_loadedPalette.IndexOf(color) + 1).ToString() });
+                        var _color = new BufferedPanel()
+                        {
+                            Width = 32,
+                            Height = 32,
+                            BorderStyle = BorderStyle.FixedSingle,
+                            BackColor = color,
+                            Cursor = Cursors.Hand
+                        };
                         toolTipColor.SetToolTip(_color, color.ToHEX());
                         _color.Click += _color_Click;
 
                         object data = new Control[] { _color };
                         (e.Argument as FlowLayoutPanel).Invoke(new AddItemsDelegate(FlowLayoutPanel_Invoke), data);
                     }
-                    catch
-                    { }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine(ex.Message);
+                    }
                 }
             }
         }
 
         public delegate void AddItemsDelegate(params Control[] data);
+
         private void FlowLayoutPanel_Invoke(params Control[] data)
         {
             flowLayoutPanelColors.SuspendLayout();
             foreach (Control item in data)
-            {
                 flowLayoutPanelColors.Controls.Add((item as Control));
-            }
             flowLayoutPanelColors.ResumeLayout();
         }
     }

@@ -1,10 +1,6 @@
 ﻿using Platform.Support.Drawing;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Toolkit.Forms
@@ -59,9 +55,7 @@ namespace Toolkit.Forms
 
             // Resolution fix
             if (Height > FormHelper.GetWorkingArea().Height)
-            {
                 Height = MinimumSize.Height;
-            }
 
             comboBoxColorMode.SelectedIndex = 0;
         }

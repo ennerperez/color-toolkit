@@ -336,7 +336,7 @@
     <value>164, 17</value>
   </metadata>
   <data name="openFileDialogMain.Filter" xml:space="preserve">
-    <value>Valid files|*.bmp;*.gif;*.jpeg;*.jpg;*.png;*.ase;*.aco|Image files|*.bmp;*.gif;*.jpeg;*.jpg;*.png;|Palette files|*.ase;*.aco|Adobe Swatch Exchange File|*.ase|Adobe Photoshop Color File|*.aco|All files|*.*</value>
+    <value>Valid files|*.bmp;*.jpg;*.jpeg;*.jpe;*.jfif;*.png;*.gif;*.ase;*.aco|Image files|*.bmp;*.jpg;*.jpeg;*.jpe;*.jfif;*.png;*.gif;|Palette files|*.ase;*.aco|Adobe Swatch Exchange File|*.ase|Adobe Photoshop Color File|*.aco|All files|*.*</value>
   </data>
   <data name="labelHSB.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -482,53 +482,7 @@
     <value>48, 48</value>
   </data>
   <data name="toolStripButtonQSwatch.Text" xml:space="preserve">
-    <value>&amp;Generate quick swatch</value>
-  </data>
-  <data name="toolStripButtonCopy.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="copyHEXToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 22</value>
-  </data>
-  <data name="copyHEXToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;HEX</value>
-  </data>
-  <data name="copyRGBToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 22</value>
-  </data>
-  <data name="copyRGBToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;RGB</value>
-  </data>
-  <data name="copyHSBToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 22</value>
-  </data>
-  <data name="copyHSBToolStripMenuItem.Text" xml:space="preserve">
-    <value>H&amp;SB</value>
-  </data>
-  <data name="toolStripButtonCopy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADfSURBVGhD7dj9DYIwEIfhDuACLuAC7OEibuBQLuEWrtIP
-        vIuHaSBtKj3Kh78n4Q9Lcs2LEUUDAH8ghHDtlXjvHzK2Ddqz+2yto3kAXf2b7K1i7YBOlvfj8AF0/szr
-        NQfNuMg4fbkAOneX9WrW2tciIamA0boKjpDxelIBfDeRtd459+TXcw8ZMzjJFjpKAsjks/ELzVkTCCiA
-        gBwEFEBADgIKICAHAQUQkHOEgPiJ6/tTdzcBKQiIIGAOBES2EKBJ96E+hW6vav9YD/iiyPg2Rl9yVeQd
-        bXP1AQAAAJgxb3Scrbf0rlSNAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="toolStripButtonCopy.ImageScaling" type="System.Windows.Forms.ToolStripItemImageScaling, System.Windows.Forms">
-    <value>None</value>
-  </data>
-  <data name="toolStripButtonCopy.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolStripButtonCopy.Size" type="System.Drawing.Size, System.Drawing">
-    <value>48, 48</value>
-  </data>
-  <data name="toolStripButtonCopy.Text" xml:space="preserve">
-    <value>&amp;Copy</value>
-  </data>
-  <data name="toolStripButtonCopy.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+    <value>&amp;Quick swatch</value>
   </data>
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 6</value>
@@ -563,7 +517,7 @@
     <value>48, 48</value>
   </data>
   <data name="toolStripButtonHistory.Text" xml:space="preserve">
-    <value>&amp;History</value>
+    <value>H&amp;istory</value>
   </data>
   <data name="toolStripButtonTopMost.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -748,30 +702,6 @@
   </data>
   <data name="&gt;&gt;toolStripButtonQSwatch.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonCopy.Name" xml:space="preserve">
-    <value>toolStripButtonCopy</value>
-  </data>
-  <data name="&gt;&gt;toolStripButtonCopy.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripDropDownButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;copyHEXToolStripMenuItem.Name" xml:space="preserve">
-    <value>copyHEXToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;copyHEXToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;copyRGBToolStripMenuItem.Name" xml:space="preserve">
-    <value>copyRGBToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;copyRGBToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;copyHSBToolStripMenuItem.Name" xml:space="preserve">
-    <value>copyHSBToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;copyHSBToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolStripSeparator1.Name" xml:space="preserve">
     <value>toolStripSeparator1</value>
