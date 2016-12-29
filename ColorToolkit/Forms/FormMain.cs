@@ -12,12 +12,22 @@ using System.Windows.Forms.Pictograms;
 
 namespace Toolkit.Forms
 {
-
     public partial class FormMain : Form
     {
 
-        public Color Color { get; set; }
-        private FormHistory FormHistory;
+        private Color color;
+        public Color Color
+        {
+            get
+            {
+                return color;
+            }
+            set
+            {
+                color = value;
+                OnColorChanged(EventArgs.Empty);
+            }
+        }
 
         public FormMain()
         {
@@ -48,6 +58,18 @@ namespace Toolkit.Forms
 
         }
 
+        #region Events
+
+        public event EventHandler ColorChanged;
+
+        private void OnColorChanged(EventArgs e)
+        {
+            if (ColorChanged != null)
+                ColorChanged(this, e);
+        }
+
+        #endregion
+
         protected override void OnActivated(EventArgs e)
         {
             base.OnActivated(e);
@@ -70,12 +92,12 @@ namespace Toolkit.Forms
         #region Drag & Drop
 
         private bool validData;
-        private Thread getFileThread;
+        //private Thread getFileThread;
 
         private bool getFileName(out string filename, DragEventArgs e)
         {
             var ret = false;
-            filename = String.Empty;
+            filename = string.Empty;
 
             if ((e.AllowedEffect & DragDropEffects.Copy) == DragDropEffects.Copy)
             {
@@ -92,12 +114,12 @@ namespace Toolkit.Forms
 
         private void dragDrop(object sender, DragEventArgs e)
         {
-            if (validData)
-                while (getFileThread.IsAlive)
-                {
-                    Application.DoEvents();
-                    Thread.Sleep(0);
-                }
+            //if (validData)
+            //    while (getFileThread.IsAlive)
+            //    {
+            //        Application.DoEvents();
+            //        Thread.Sleep(0);
+            //    }
         }
         private void dragEnter(object sender, DragEventArgs e)
         {
@@ -105,8 +127,8 @@ namespace Toolkit.Forms
             validData = getFileName(out fileName, e);
             if (validData && !string.IsNullOrEmpty(fileName))
             {
-                getFileThread = new Thread(new ParameterizedThreadStart(loadFile));
-                getFileThread.Start(fileName);
+                //getFileThread = new Thread(new ParameterizedThreadStart(loadFile));
+                //getFileThread.Start(fileName);
                 loadFile(fileName);
 
                 e.Effect = DragDropEffects.Copy;
@@ -334,8 +356,7 @@ namespace Toolkit.Forms
         }
         private void toolStripButtonHistory_Click(object sender, EventArgs e)
         {
-            if (FormHistory == null || FormHistory.IsDisposed) FormHistory = new FormHistory();
-            displayChild(FormHistory, 3);
+            displayChild(FormHistory.Instance, 3);
         }
 
         private void toolStripButtonTopMost_Click(object sender, EventArgs e)

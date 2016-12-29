@@ -10,12 +10,25 @@ namespace Toolkit.Forms
     public partial class FormHistory : Form
     {
 
-        public FormHistory()
+        private static FormHistory instance;
+
+        private FormHistory()
         {
             InitializeComponent();
 
             Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
         }
+
+        public static FormHistory Instance
+        {
+            get
+            {
+                if (instance == null || instance.IsDisposed)
+                    instance = new FormHistory();
+                return instance;
+            }
+        }
+
 
         private void FormSwatches_Load(object sender, EventArgs e)
         {
@@ -130,7 +143,7 @@ namespace Toolkit.Forms
             });
             this.Controls.Clear();
             this.Controls.Add(panelOptions);
-            
+
             FormSwatches_Load(sender, e);
             this.ResumeLayout();
         }
