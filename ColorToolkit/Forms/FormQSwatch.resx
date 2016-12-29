@@ -148,7 +148,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="labelPrimary.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;labelPrimary.Name" xml:space="preserve">
     <value>labelPrimary</value>
@@ -187,7 +187,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label6.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
@@ -217,7 +217,7 @@
     <value>2</value>
   </data>
   <data name="panelPrimaryInternal.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panelPrimaryInternal.Name" xml:space="preserve">
     <value>panelPrimaryInternal</value>
@@ -244,7 +244,7 @@
     <value>0</value>
   </data>
   <data name="panelPrimary.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panelPrimary.Name" xml:space="preserve">
     <value>panelPrimary</value>
@@ -316,7 +316,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="label50.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label50.Name" xml:space="preserve">
     <value>label50</value>
@@ -355,7 +355,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label4.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
@@ -385,7 +385,7 @@
     <value>1</value>
   </data>
   <data name="panel50.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panel50.Name" xml:space="preserve">
     <value>panel50</value>
@@ -424,7 +424,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="label100.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label100.Name" xml:space="preserve">
     <value>label100</value>
@@ -463,7 +463,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label2.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -493,7 +493,7 @@
     <value>2</value>
   </data>
   <data name="panel100.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panel100.Name" xml:space="preserve">
     <value>panel100</value>
@@ -532,7 +532,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="label200.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label200.Name" xml:space="preserve">
     <value>label200</value>
@@ -571,7 +571,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label8.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label8.Name" xml:space="preserve">
     <value>label8</value>
@@ -601,7 +601,7 @@
     <value>3</value>
   </data>
   <data name="panel200.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panel200.Name" xml:space="preserve">
     <value>panel200</value>
@@ -640,7 +640,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="label300.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label300.Name" xml:space="preserve">
     <value>label300</value>
@@ -679,7 +679,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label10.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label10.Name" xml:space="preserve">
     <value>label10</value>
@@ -709,7 +709,7 @@
     <value>4</value>
   </data>
   <data name="panel300.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panel300.Name" xml:space="preserve">
     <value>panel300</value>
@@ -748,7 +748,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="label400.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label400.Name" xml:space="preserve">
     <value>label400</value>
@@ -787,7 +787,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label12.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label12.Name" xml:space="preserve">
     <value>label12</value>
@@ -817,7 +817,7 @@
     <value>5</value>
   </data>
   <data name="panel400.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panel400.Name" xml:space="preserve">
     <value>panel400</value>
@@ -856,7 +856,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="label900.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label900.Name" xml:space="preserve">
     <value>label900</value>
@@ -895,7 +895,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label14.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>
@@ -925,7 +925,7 @@
     <value>10</value>
   </data>
   <data name="panel900.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panel900.Name" xml:space="preserve">
     <value>panel900</value>
@@ -964,7 +964,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="label800.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label800.Name" xml:space="preserve">
     <value>label800</value>
@@ -1003,7 +1003,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label16.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label16.Name" xml:space="preserve">
     <value>label16</value>
@@ -1033,7 +1033,7 @@
     <value>9</value>
   </data>
   <data name="panel800.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panel800.Name" xml:space="preserve">
     <value>panel800</value>
@@ -1072,7 +1072,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="label700.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label700.Name" xml:space="preserve">
     <value>label700</value>
@@ -1111,7 +1111,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label18.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label18.Name" xml:space="preserve">
     <value>label18</value>
@@ -1141,7 +1141,7 @@
     <value>8</value>
   </data>
   <data name="panel700.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panel700.Name" xml:space="preserve">
     <value>panel700</value>
@@ -1180,7 +1180,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="label600.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label600.Name" xml:space="preserve">
     <value>label600</value>
@@ -1219,7 +1219,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label20.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label20.Name" xml:space="preserve">
     <value>label20</value>
@@ -1249,7 +1249,7 @@
     <value>7</value>
   </data>
   <data name="panel600.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panel600.Name" xml:space="preserve">
     <value>panel600</value>
@@ -1288,7 +1288,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="label500.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label500.Name" xml:space="preserve">
     <value>label500</value>
@@ -1327,7 +1327,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label22.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label22.Name" xml:space="preserve">
     <value>label22</value>
@@ -1357,7 +1357,7 @@
     <value>6</value>
   </data>
   <data name="panel500.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panel500.Name" xml:space="preserve">
     <value>panel500</value>
@@ -1396,7 +1396,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="labelA700.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;labelA700.Name" xml:space="preserve">
     <value>labelA700</value>
@@ -1435,7 +1435,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label24.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label24.Name" xml:space="preserve">
     <value>label24</value>
@@ -1465,7 +1465,7 @@
     <value>14</value>
   </data>
   <data name="panelA700.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panelA700.Name" xml:space="preserve">
     <value>panelA700</value>
@@ -1504,7 +1504,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="labelA400.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;labelA400.Name" xml:space="preserve">
     <value>labelA400</value>
@@ -1543,7 +1543,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label26.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label26.Name" xml:space="preserve">
     <value>label26</value>
@@ -1573,7 +1573,7 @@
     <value>13</value>
   </data>
   <data name="panelA400.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panelA400.Name" xml:space="preserve">
     <value>panelA400</value>
@@ -1612,7 +1612,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="labelA200.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;labelA200.Name" xml:space="preserve">
     <value>labelA200</value>
@@ -1651,7 +1651,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label28.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label28.Name" xml:space="preserve">
     <value>label28</value>
@@ -1681,7 +1681,7 @@
     <value>12</value>
   </data>
   <data name="panelA200.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panelA200.Name" xml:space="preserve">
     <value>panelA200</value>
@@ -1720,7 +1720,7 @@
     <value>MiddleRight</value>
   </data>
   <data name="labelA100.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;labelA100.Name" xml:space="preserve">
     <value>labelA100</value>
@@ -1759,7 +1759,7 @@
     <value>MiddleLeft</value>
   </data>
   <data name="label30.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;label30.Name" xml:space="preserve">
     <value>label30</value>
@@ -1789,7 +1789,7 @@
     <value>11</value>
   </data>
   <data name="panelA100.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;panelA100.Name" xml:space="preserve">
     <value>panelA100</value>
@@ -1882,10 +1882,10 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Palette</value>
+    <value>Quick Swatch</value>
   </data>
   <data name="$this.ToolTip" xml:space="preserve">
-    <value>Click to copy color</value>
+    <value>Copy color</value>
   </data>
   <data name="&gt;&gt;toolTipQSwatch.Name" xml:space="preserve">
     <value>toolTipQSwatch</value>

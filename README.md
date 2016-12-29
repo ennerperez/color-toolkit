@@ -18,7 +18,7 @@ See the [changelog](CHANGELOG.md) for changes.
 - [x] Drag & Drop
 - [ ] Export color list
 - [ ] Palette creation
-- [ ] Spanish translation
+- [x] Spanish translation
 
 ## Table of contents
 

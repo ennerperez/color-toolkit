@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - General optimizations
 - Drag & Drop files
+- Spanish translation
 
 ## [1.0.3] - [2016-12-28]
 ### Changed
