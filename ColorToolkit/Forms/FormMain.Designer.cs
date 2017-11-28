@@ -315,7 +315,6 @@
             this.DataBindings.Add(new System.Windows.Forms.Binding("TopMost", global::Toolkit.Properties.Settings.Default, "TopMost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "FormMain";
             this.TopMost = global::Toolkit.Properties.Settings.Default.TopMost;
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.dragDrop);

@@ -1,28 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorToolkit", "ColorToolkit\ColorToolkit.csproj", "{D246BDCB-4CB6-45D4-A57A-76F12CEF76D5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".docs", ".docs", "{DA99EDFB-4B0A-4949-AA62-FF59B38C6049}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1CB68AA1-869F-47B4-B1CA-031FDF8E7761}"
 	ProjectSection(SolutionItems) = preProject
+		.editoricon.png = .editoricon.png
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		build.cake = build.cake
+		build.ps1 = build.ps1
+		build.sh = build.sh
 		CHANGELOG.md = CHANGELOG.md
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".files", ".files", "{A3B5A74C-64D0-48FD-B36C-14EFCDD9A61A}"
-	ProjectSection(SolutionItems) = preProject
-		.editoricon.png = .editoricon.png
-		.gitignore = .gitignore
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{430FA8D7-6C29-47F1-BD9E-9A7B48989355}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorToolkit", "ColorToolkit\ColorToolkit.csproj", "{D246BDCB-4CB6-45D4-A57A-76F12CEF76D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,5 +31,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EF7ADE6-30FA-4DC5-B165-ACE7C980A937}
 	EndGlobalSection
 EndGlobal
