@@ -1,4 +1,4 @@
-![logo](https://raw.githubusercontent.com/ennerperez/color-toolkit/master/.editoricon.png)
+![logo](.editoricon.png)
 
 # Color Toolkit for Devigners
 

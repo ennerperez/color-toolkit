@@ -143,7 +143,7 @@
     <value>12, 3, 3, 3</value>
   </data>
   <data name="panelColor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 92</value>
+    <value>195, 195</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="panelColor.TabIndex" type="System.Int32, mscorlib">
@@ -168,7 +168,7 @@
     <value>0</value>
   </data>
   <data name="labelHEX.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 93</value>
+    <value>57, 205</value>
   </data>
   <data name="labelHEX.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 25</value>
@@ -198,7 +198,7 @@
     <value>11</value>
   </data>
   <data name="textBoxHEX.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 121</value>
+    <value>60, 233</value>
   </data>
   <data name="textBoxHEX.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>12, 3, 3, 3</value>
@@ -207,7 +207,7 @@
     <value>7</value>
   </data>
   <data name="textBoxHEX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 25</value>
+    <value>171, 25</value>
   </data>
   <data name="textBoxHEX.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -228,7 +228,7 @@
     <value>8</value>
   </data>
   <data name="labelRGB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 149</value>
+    <value>57, 261</value>
   </data>
   <data name="labelRGB.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 25</value>
@@ -258,13 +258,13 @@
     <value>10</value>
   </data>
   <data name="textBoxR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 177</value>
+    <value>60, 289</value>
   </data>
   <data name="textBoxR.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>12, 3, 3, 3</value>
   </data>
   <data name="textBoxR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 25</value>
+    <value>53, 25</value>
   </data>
   <data name="textBoxR.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -282,13 +282,10 @@
     <value>2</value>
   </data>
   <data name="textBoxG.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 208</value>
-  </data>
-  <data name="textBoxG.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>12, 3, 3, 3</value>
+    <value>119, 289</value>
   </data>
   <data name="textBoxG.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 25</value>
+    <value>53, 25</value>
   </data>
   <data name="textBoxG.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -306,13 +303,10 @@
     <value>7</value>
   </data>
   <data name="textBoxB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 239</value>
-  </data>
-  <data name="textBoxB.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>12, 3, 3, 3</value>
+    <value>178, 289</value>
   </data>
   <data name="textBoxB.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 25</value>
+    <value>53, 25</value>
   </data>
   <data name="textBoxB.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -342,7 +336,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelHSB.Location" type="System.Drawing.Point, System.Drawing">
-    <value>57, 267</value>
+    <value>57, 317</value>
   </data>
   <data name="labelHSB.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 25</value>
@@ -572,13 +566,10 @@
     <value>3</value>
   </data>
   <data name="textBoxS.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 326</value>
-  </data>
-  <data name="textBoxS.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>12, 3, 3, 3</value>
+    <value>119, 345</value>
   </data>
   <data name="textBoxS.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 25</value>
+    <value>53, 25</value>
   </data>
   <data name="textBoxS.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -596,13 +587,10 @@
     <value>6</value>
   </data>
   <data name="textBoxV.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 357</value>
-  </data>
-  <data name="textBoxV.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>12, 3, 3, 3</value>
+    <value>178, 345</value>
   </data>
   <data name="textBoxV.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 25</value>
+    <value>53, 25</value>
   </data>
   <data name="textBoxV.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -620,13 +608,13 @@
     <value>4</value>
   </data>
   <data name="textBoxH.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 295</value>
+    <value>60, 345</value>
   </data>
   <data name="textBoxH.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>12, 3, 3, 3</value>
   </data>
   <data name="textBoxH.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 25</value>
+    <value>53, 25</value>
   </data>
   <data name="textBoxH.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -650,7 +638,7 @@
     <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>140, 393</value>
+    <value>243, 393</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Light, 9.75pt</value>
