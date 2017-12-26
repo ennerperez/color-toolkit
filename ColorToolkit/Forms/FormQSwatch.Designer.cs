@@ -107,7 +107,8 @@
             resources.ApplyResources(this.panelPrimary, "panelPrimary");
             this.panelPrimary.Name = "panelPrimary";
             this.toolTipQSwatch.SetToolTip(this.panelPrimary, resources.GetString("panelPrimary.ToolTip"));
-            this.panelPrimary.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panelPrimary.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panelPrimary.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panelPrimaryInternal
             // 
@@ -125,7 +126,8 @@
             this.labelPrimary.ForeColor = System.Drawing.Color.White;
             this.labelPrimary.Name = "labelPrimary";
             this.toolTipQSwatch.SetToolTip(this.labelPrimary, resources.GetString("labelPrimary.ToolTip"));
-            this.labelPrimary.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.labelPrimary.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.labelPrimary.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label6
             // 
@@ -133,7 +135,8 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Name = "label6";
             this.toolTipQSwatch.SetToolTip(this.label6, resources.GetString("label6.ToolTip"));
-            this.label6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label6.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // comboBoxColorMode
             // 
@@ -145,7 +148,7 @@
             resources.GetString("comboBoxColorMode.Items1"),
             resources.GetString("comboBoxColorMode.Items2")});
             this.comboBoxColorMode.Name = "comboBoxColorMode";
-            this.comboBoxColorMode.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorMode_SelectedIndexChanged);
+            this.comboBoxColorMode.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorMode_SelectedIndexChanged);
             // 
             // panel50
             // 
@@ -156,7 +159,8 @@
             resources.ApplyResources(this.panel50, "panel50");
             this.panel50.Name = "panel50";
             this.toolTipQSwatch.SetToolTip(this.panel50, resources.GetString("panel50.ToolTip"));
-            this.panel50.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panel50.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panel50.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label50
             // 
@@ -164,7 +168,8 @@
             this.label50.ForeColor = System.Drawing.Color.Black;
             this.label50.Name = "label50";
             this.toolTipQSwatch.SetToolTip(this.label50, resources.GetString("label50.ToolTip"));
-            this.label50.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label50.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label50.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label4
             // 
@@ -172,7 +177,8 @@
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Name = "label4";
             this.toolTipQSwatch.SetToolTip(this.label4, resources.GetString("label4.ToolTip"));
-            this.label4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label4.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panel100
             // 
@@ -183,7 +189,8 @@
             resources.ApplyResources(this.panel100, "panel100");
             this.panel100.Name = "panel100";
             this.toolTipQSwatch.SetToolTip(this.panel100, resources.GetString("panel100.ToolTip"));
-            this.panel100.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panel100.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panel100.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label100
             // 
@@ -191,7 +198,8 @@
             this.label100.ForeColor = System.Drawing.Color.Black;
             this.label100.Name = "label100";
             this.toolTipQSwatch.SetToolTip(this.label100, resources.GetString("label100.ToolTip"));
-            this.label100.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label100.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label100.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label2
             // 
@@ -199,7 +207,8 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Name = "label2";
             this.toolTipQSwatch.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
-            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panel200
             // 
@@ -210,7 +219,8 @@
             resources.ApplyResources(this.panel200, "panel200");
             this.panel200.Name = "panel200";
             this.toolTipQSwatch.SetToolTip(this.panel200, resources.GetString("panel200.ToolTip"));
-            this.panel200.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panel200.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panel200.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label200
             // 
@@ -218,7 +228,8 @@
             this.label200.ForeColor = System.Drawing.Color.Black;
             this.label200.Name = "label200";
             this.toolTipQSwatch.SetToolTip(this.label200, resources.GetString("label200.ToolTip"));
-            this.label200.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label200.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label200.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label8
             // 
@@ -226,7 +237,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Name = "label8";
             this.toolTipQSwatch.SetToolTip(this.label8, resources.GetString("label8.ToolTip"));
-            this.label8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
             // 
             // panel300
             // 
@@ -237,7 +248,8 @@
             resources.ApplyResources(this.panel300, "panel300");
             this.panel300.Name = "panel300";
             this.toolTipQSwatch.SetToolTip(this.panel300, resources.GetString("panel300.ToolTip"));
-            this.panel300.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panel300.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panel300.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label300
             // 
@@ -245,7 +257,8 @@
             this.label300.ForeColor = System.Drawing.Color.Black;
             this.label300.Name = "label300";
             this.toolTipQSwatch.SetToolTip(this.label300, resources.GetString("label300.ToolTip"));
-            this.label300.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label300.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label300.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label10
             // 
@@ -253,7 +266,8 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Name = "label10";
             this.toolTipQSwatch.SetToolTip(this.label10, resources.GetString("label10.ToolTip"));
-            this.label10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label10.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panel400
             // 
@@ -264,7 +278,8 @@
             resources.ApplyResources(this.panel400, "panel400");
             this.panel400.Name = "panel400";
             this.toolTipQSwatch.SetToolTip(this.panel400, resources.GetString("panel400.ToolTip"));
-            this.panel400.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panel400.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panel400.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label400
             // 
@@ -272,7 +287,8 @@
             this.label400.ForeColor = System.Drawing.Color.Black;
             this.label400.Name = "label400";
             this.toolTipQSwatch.SetToolTip(this.label400, resources.GetString("label400.ToolTip"));
-            this.label400.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label400.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label400.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label12
             // 
@@ -280,7 +296,8 @@
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Name = "label12";
             this.toolTipQSwatch.SetToolTip(this.label12, resources.GetString("label12.ToolTip"));
-            this.label12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label12.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panel900
             // 
@@ -291,7 +308,8 @@
             resources.ApplyResources(this.panel900, "panel900");
             this.panel900.Name = "panel900";
             this.toolTipQSwatch.SetToolTip(this.panel900, resources.GetString("panel900.ToolTip"));
-            this.panel900.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panel900.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panel900.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label900
             // 
@@ -299,7 +317,8 @@
             this.label900.ForeColor = System.Drawing.Color.White;
             this.label900.Name = "label900";
             this.toolTipQSwatch.SetToolTip(this.label900, resources.GetString("label900.ToolTip"));
-            this.label900.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label900.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label900.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label14
             // 
@@ -307,7 +326,8 @@
             this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Name = "label14";
             this.toolTipQSwatch.SetToolTip(this.label14, resources.GetString("label14.ToolTip"));
-            this.label14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label14.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panel800
             // 
@@ -318,7 +338,8 @@
             resources.ApplyResources(this.panel800, "panel800");
             this.panel800.Name = "panel800";
             this.toolTipQSwatch.SetToolTip(this.panel800, resources.GetString("panel800.ToolTip"));
-            this.panel800.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panel800.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panel800.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label800
             // 
@@ -326,7 +347,8 @@
             this.label800.ForeColor = System.Drawing.Color.White;
             this.label800.Name = "label800";
             this.toolTipQSwatch.SetToolTip(this.label800, resources.GetString("label800.ToolTip"));
-            this.label800.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label800.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label800.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label16
             // 
@@ -334,7 +356,8 @@
             this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Name = "label16";
             this.toolTipQSwatch.SetToolTip(this.label16, resources.GetString("label16.ToolTip"));
-            this.label16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label16.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panel700
             // 
@@ -345,7 +368,8 @@
             resources.ApplyResources(this.panel700, "panel700");
             this.panel700.Name = "panel700";
             this.toolTipQSwatch.SetToolTip(this.panel700, resources.GetString("panel700.ToolTip"));
-            this.panel700.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panel700.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panel700.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label700
             // 
@@ -353,7 +377,8 @@
             this.label700.ForeColor = System.Drawing.Color.White;
             this.label700.Name = "label700";
             this.toolTipQSwatch.SetToolTip(this.label700, resources.GetString("label700.ToolTip"));
-            this.label700.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label700.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label700.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label18
             // 
@@ -361,7 +386,8 @@
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Name = "label18";
             this.toolTipQSwatch.SetToolTip(this.label18, resources.GetString("label18.ToolTip"));
-            this.label18.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label18.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label18.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panel600
             // 
@@ -372,7 +398,8 @@
             resources.ApplyResources(this.panel600, "panel600");
             this.panel600.Name = "panel600";
             this.toolTipQSwatch.SetToolTip(this.panel600, resources.GetString("panel600.ToolTip"));
-            this.panel600.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panel600.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panel600.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label600
             // 
@@ -380,7 +407,8 @@
             this.label600.ForeColor = System.Drawing.Color.White;
             this.label600.Name = "label600";
             this.toolTipQSwatch.SetToolTip(this.label600, resources.GetString("label600.ToolTip"));
-            this.label600.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label600.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label600.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label20
             // 
@@ -388,7 +416,8 @@
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Name = "label20";
             this.toolTipQSwatch.SetToolTip(this.label20, resources.GetString("label20.ToolTip"));
-            this.label20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label20.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panel500
             // 
@@ -399,7 +428,8 @@
             resources.ApplyResources(this.panel500, "panel500");
             this.panel500.Name = "panel500";
             this.toolTipQSwatch.SetToolTip(this.panel500, resources.GetString("panel500.ToolTip"));
-            this.panel500.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panel500.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panel500.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label500
             // 
@@ -407,7 +437,8 @@
             this.label500.ForeColor = System.Drawing.Color.White;
             this.label500.Name = "label500";
             this.toolTipQSwatch.SetToolTip(this.label500, resources.GetString("label500.ToolTip"));
-            this.label500.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label500.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label500.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label22
             // 
@@ -415,7 +446,8 @@
             this.label22.ForeColor = System.Drawing.Color.White;
             this.label22.Name = "label22";
             this.toolTipQSwatch.SetToolTip(this.label22, resources.GetString("label22.ToolTip"));
-            this.label22.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label22.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label22.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panelA700
             // 
@@ -426,7 +458,8 @@
             resources.ApplyResources(this.panelA700, "panelA700");
             this.panelA700.Name = "panelA700";
             this.toolTipQSwatch.SetToolTip(this.panelA700, resources.GetString("panelA700.ToolTip"));
-            this.panelA700.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panelA700.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panelA700.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // labelA700
             // 
@@ -434,7 +467,8 @@
             this.labelA700.ForeColor = System.Drawing.Color.White;
             this.labelA700.Name = "labelA700";
             this.toolTipQSwatch.SetToolTip(this.labelA700, resources.GetString("labelA700.ToolTip"));
-            this.labelA700.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.labelA700.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.labelA700.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label24
             // 
@@ -442,7 +476,8 @@
             this.label24.ForeColor = System.Drawing.Color.White;
             this.label24.Name = "label24";
             this.toolTipQSwatch.SetToolTip(this.label24, resources.GetString("label24.ToolTip"));
-            this.label24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label24.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panelA400
             // 
@@ -453,7 +488,8 @@
             resources.ApplyResources(this.panelA400, "panelA400");
             this.panelA400.Name = "panelA400";
             this.toolTipQSwatch.SetToolTip(this.panelA400, resources.GetString("panelA400.ToolTip"));
-            this.panelA400.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panelA400.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panelA400.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // labelA400
             // 
@@ -461,7 +497,8 @@
             this.labelA400.ForeColor = System.Drawing.Color.White;
             this.labelA400.Name = "labelA400";
             this.toolTipQSwatch.SetToolTip(this.labelA400, resources.GetString("labelA400.ToolTip"));
-            this.labelA400.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.labelA400.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.labelA400.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label26
             // 
@@ -469,7 +506,8 @@
             this.label26.ForeColor = System.Drawing.Color.White;
             this.label26.Name = "label26";
             this.toolTipQSwatch.SetToolTip(this.label26, resources.GetString("label26.ToolTip"));
-            this.label26.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label26.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label26.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panelA200
             // 
@@ -480,7 +518,8 @@
             resources.ApplyResources(this.panelA200, "panelA200");
             this.panelA200.Name = "panelA200";
             this.toolTipQSwatch.SetToolTip(this.panelA200, resources.GetString("panelA200.ToolTip"));
-            this.panelA200.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panelA200.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panelA200.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // labelA200
             // 
@@ -488,7 +527,8 @@
             this.labelA200.ForeColor = System.Drawing.Color.White;
             this.labelA200.Name = "labelA200";
             this.toolTipQSwatch.SetToolTip(this.labelA200, resources.GetString("labelA200.ToolTip"));
-            this.labelA200.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.labelA200.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.labelA200.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label28
             // 
@@ -496,7 +536,8 @@
             this.label28.ForeColor = System.Drawing.Color.White;
             this.label28.Name = "label28";
             this.toolTipQSwatch.SetToolTip(this.label28, resources.GetString("label28.ToolTip"));
-            this.label28.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label28.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label28.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // panelA100
             // 
@@ -507,7 +548,8 @@
             resources.ApplyResources(this.panelA100, "panelA100");
             this.panelA100.Name = "panelA100";
             this.toolTipQSwatch.SetToolTip(this.panelA100, resources.GetString("panelA100.ToolTip"));
-            this.panelA100.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.panelA100.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.panelA100.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // labelA100
             // 
@@ -515,7 +557,8 @@
             this.labelA100.ForeColor = System.Drawing.Color.Black;
             this.labelA100.Name = "labelA100";
             this.toolTipQSwatch.SetToolTip(this.labelA100, resources.GetString("labelA100.ToolTip"));
-            this.labelA100.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.labelA100.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.labelA100.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // label30
             // 
@@ -523,14 +566,15 @@
             this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.Name = "label30";
             this.toolTipQSwatch.SetToolTip(this.label30, resources.GetString("label30.ToolTip"));
-            this.label30.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel_MouseClick);
+            this.label30.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseClick);
+            this.label30.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Panel_MouseDoubleClick);
             // 
             // checkBoxVisible
             // 
             resources.ApplyResources(this.checkBoxVisible, "checkBoxVisible");
             this.checkBoxVisible.Name = "checkBoxVisible";
             this.checkBoxVisible.UseVisualStyleBackColor = true;
-            this.checkBoxVisible.CheckedChanged += new System.EventHandler(this.checkBoxVisible_CheckedChanged);
+            this.checkBoxVisible.CheckedChanged += new System.EventHandler(this.CheckBoxVisible_CheckedChanged);
             // 
             // panelOptions
             // 

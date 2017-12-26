@@ -44,7 +44,7 @@
             // 
             this.backgroundWorkerLoadColor.WorkerReportsProgress = true;
             this.backgroundWorkerLoadColor.WorkerSupportsCancellation = true;
-            this.backgroundWorkerLoadColor.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerLoadColor_DoWork);
+            this.backgroundWorkerLoadColor.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorkerLoadColor_DoWork);
             // 
             // FormSwatch
             // 

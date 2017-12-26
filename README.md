@@ -14,11 +14,10 @@ See the [changelog](CHANGELOG.md) for changes.
 
 - [x] UI Refresh
 - [x] Color History
-- [ ] CYMK Color Space
 - [x] Drag & Drop
+- [ ] CYMK Color Space
 - [ ] Export color list
 - [ ] Palette creation
-- [x] Spanish translation
 
 ## Table of contents
 

@@ -23,8 +23,11 @@ namespace Toolkit.Forms
             }
             set
             {
-                color = value;
-                OnColorChanged(EventArgs.Empty);
+                if (color != value)
+                {
+                    color = value;
+                    OnColorChanged(EventArgs.Empty);
+                }
             }
         }
 
@@ -32,19 +35,19 @@ namespace Toolkit.Forms
         {
             InitializeComponent();
 
-            Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
+            Icon = Icon.ExtractAssociatedIcon(Program.Assembly.Location);
 
-            toolStripButtonTopMost.Checked = TopMost;
+            toolStripButtonOpen.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.folder_open, 48, SystemColors.Control);
+            toolStripButtonQSwatch.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.color_lens, 48, SystemColors.Control);
+            toolStripButtonHistory.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.restore, 48, SystemColors.Control);
 
-            toolStripButtonOpen.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.folder_open, 48, Color.White);
-            toolStripButtonQSwatch.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.color_lens, 48, Color.White);
-            toolStripButtonHistory.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.restore, 48, Color.White);
+            toolStripButtonTopMost.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.layers, 48, SystemColors.Control);
+            toolStripButtonAbout.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.info, 48, SystemColors.Control);
+            toolStripButtonClose.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.close, 48, SystemColors.Control);
 
-            toolStripButtonTopMost.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.layers, 48, Color.White);
-            toolStripButtonAbout.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.info, 48, Color.White);
-            toolStripButtonClose.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.close, 48, Color.White);
+            toolStripButtonUpdates.SetImage(MaterialDesign.Instance, MaterialDesign.IconType.system_update_alt, 48, SystemColors.Control);
 
-            panelColor.BackgroundImage = MaterialDesign.GetImage(MaterialDesign.IconType.colorize, 48, Color.White);
+            panelColor.BackgroundImage = MaterialDesign.GetImage(MaterialDesign.IconType.colorize, 48, SystemColors.Control);
 
 #if DEBUG
 
@@ -62,6 +65,7 @@ namespace Toolkit.Forms
 
         private void OnColorChanged(EventArgs e)
         {
+            SetColor();
             ColorChanged?.Invoke(this, e);
         }
 
@@ -90,7 +94,6 @@ namespace Toolkit.Forms
         #region Drag & Drop
 
         private bool validData;
-        //private Thread getFileThread;
 
         private bool GetFileName(out string filename, DragEventArgs e)
         {
@@ -103,7 +106,7 @@ namespace Toolkit.Forms
                 {
                     filename = ((string[])data)[0];
                     var ext = Path.GetExtension(filename).ToLower();
-                    ret = (Program.imageFiles.Contains(ext) || Program.paletteFiles.Contains(ext));
+                    ret = (Program.Formats.Contains(ext) || Program.Palettes.Contains(ext));
                 }
             }
             return ret;
@@ -111,12 +114,6 @@ namespace Toolkit.Forms
 
         private void FormMain_DragDrop(object sender, DragEventArgs e)
         {
-            //if (validData)
-            //    while (getFileThread.IsAlive)
-            //    {
-            //        Application.DoEvents();
-            //        Thread.Sleep(0);
-            //    }
         }
 
         private void FormMain_DragEnter(object sender, DragEventArgs e)
@@ -125,8 +122,6 @@ namespace Toolkit.Forms
             validData = GetFileName(out fileName, e);
             if (validData && !string.IsNullOrEmpty(fileName))
             {
-                //getFileThread = new Thread(new ParameterizedThreadStart(loadFile));
-                //getFileThread.Start(fileName);
                 LoadFile(fileName);
 
                 e.Effect = DragDropEffects.Copy;
@@ -314,13 +309,13 @@ namespace Toolkit.Forms
             try
             {
                 var file = new FileInfo(item.ToString());
-                if (Program.imageFiles.Contains(file.Extension))
+                if (Program.Formats.Contains(file.Extension))
                 {
                     var image = Image.FromFile(item.ToString());
                     Color = ColorHelper.GetDominantColor(image);
                     SetColor();
                 }
-                else if (Program.paletteFiles.Contains(file.Extension))
+                else if (Program.Palettes.Contains(file.Extension))
                     DisplayChild(new FormSwatch(item.ToString()), 3);
             }
             catch (Exception ex)
@@ -376,6 +371,14 @@ namespace Toolkit.Forms
             Properties.Settings.Default.Save();
         }
 
+        private void ToolStripButtonUpdates_Click(object sender, EventArgs e)
+        {
+            var checkForUpdates = !toolStripButtonUpdates.Checked;
+            toolStripButtonUpdates.Checked = checkForUpdates;
+            Properties.Settings.Default.CheckForUpdates = checkForUpdates;
+            Properties.Settings.Default.Save();
+        }
+
         private void ToolStripButtonAbout_Click(object sender, EventArgs e)
         {
             var child = new FormAbout();
@@ -391,7 +394,11 @@ namespace Toolkit.Forms
 
         private async void FormMain_Load(object sender, EventArgs e)
         {
-            await GitHubInfo.CheckForUpdateAsync();
+            toolStripButtonUpdates.Checked = Properties.Settings.Default.CheckForUpdates;
+            toolStripButtonTopMost.Checked = Properties.Settings.Default.TopMost;
+
+            if (Properties.Settings.Default.CheckForUpdates)
+                await GitHubInfo.CheckForUpdateAsync();
         }
     }
 }
