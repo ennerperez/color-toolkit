@@ -10,12 +10,11 @@ namespace Toolkit.Forms
 {
     internal sealed partial class FormSwatch : Form
     {
-
         #region Instance Fields
 
         private IEnumerable<Color> _loadedPalette;
 
-        #endregion
+        #endregion Instance Fields
 
         #region Public Constructors
 
@@ -34,7 +33,7 @@ namespace Toolkit.Forms
             _loadedPalette = palette;
         }
 
-        #endregion
+        #endregion Public Constructors
 
         #region Overridden Methods
 
@@ -47,15 +46,14 @@ namespace Toolkit.Forms
             base.OnLoad(e);
         }
 
-        #endregion
-
+        #endregion Overridden Methods
 
         #region Event Handlers
 
         private void LoadFile(string file)
         {
             var selectedFile = new FileInfo(file);
-            
+
             if (selectedFile != null)
             {
                 if (selectedFile.Extension == ".ase")
@@ -70,11 +68,9 @@ namespace Toolkit.Forms
                 _loadedPalette = null;
                 Text = Application.ProductName;
             }
-
         }
 
-
-        #endregion
+        #endregion Event Handlers
 
         private void FormSwatch_Load(object sender, EventArgs e)
         {
@@ -133,5 +129,4 @@ namespace Toolkit.Forms
             flowLayoutPanelColors.ResumeLayout();
         }
     }
-
 }

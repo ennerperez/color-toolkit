@@ -69,9 +69,11 @@ namespace Toolkit.Forms
                     case 1:
                         Clipboard.SetText(ColorHelper.RGB((sender as Panel).BackColor));
                         break;
+
                     case 2:
                         Clipboard.SetText(ColorHelper.HSB((sender as Panel).BackColor.ToHSB()));
                         break;
+
                     default:
                         Clipboard.SetText((sender as Panel).BackColor.ToHEX());
                         break;
@@ -84,9 +86,11 @@ namespace Toolkit.Forms
                     case 1:
                         Clipboard.SetText(ColorHelper.RGB((sender as Label).Parent.BackColor));
                         break;
+
                     case 2:
                         Clipboard.SetText(ColorHelper.HSB((sender as Label).Parent.BackColor.ToHSB()));
                         break;
+
                     default:
                         Clipboard.SetText((sender as Label).Parent.BackColor.ToHEX());
                         break;
@@ -169,6 +173,7 @@ namespace Toolkit.Forms
                     labelA700.Text = ColorHelper.HSB(panelA700.BackColor.ToHSB());
 
                     break;
+
                 default:
 
                     labelPrimary.Text = panelPrimary.BackColor.ToHEX().ToUpper();

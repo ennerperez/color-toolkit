@@ -68,11 +68,11 @@
             this.panelColor.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelColor.Name = "panelColor";
             this.toolTipMain.SetToolTip(this.panelColor, resources.GetString("panelColor.ToolTip"));
-            this.panelColor.DoubleClick += new System.EventHandler(this.panelColor_DoubleClick);
-            this.panelColor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseClick);
-            this.panelColor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
-            this.panelColor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseMove);
-            this.panelColor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseUp);
+            this.panelColor.DoubleClick += new System.EventHandler(this.PanelColor_DoubleClick);
+            this.panelColor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelColor_MouseClick);
+            this.panelColor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelColor_MouseDown);
+            this.panelColor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelColor_MouseMove);
+            this.panelColor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelColor_MouseUp);
             // 
             // labelHEX
             // 
@@ -82,14 +82,14 @@
             this.labelHEX.Name = "labelHEX";
             this.labelHEX.TabStop = true;
             this.toolTipMain.SetToolTip(this.labelHEX, resources.GetString("labelHEX.ToolTip"));
-            this.labelHEX.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelHEX_LinkClicked);
+            this.labelHEX.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LabelHEX_LinkClicked);
             // 
             // textBoxHEX
             // 
             resources.ApplyResources(this.textBoxHEX, "textBoxHEX");
             this.textBoxHEX.Name = "textBoxHEX";
-            this.textBoxHEX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxHEX_KeyDown);
-            this.textBoxHEX.Leave += new System.EventHandler(this.textBoxHEX_Leave);
+            this.textBoxHEX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxHEX_KeyDown);
+            this.textBoxHEX.Leave += new System.EventHandler(this.TextBoxHEX_Leave);
             // 
             // labelRGB
             // 
@@ -99,7 +99,7 @@
             this.labelRGB.Name = "labelRGB";
             this.labelRGB.TabStop = true;
             this.toolTipMain.SetToolTip(this.labelRGB, resources.GetString("labelRGB.ToolTip"));
-            this.labelRGB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelRGB_LinkClicked);
+            this.labelRGB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LabelRGB_LinkClicked);
             // 
             // textBoxR
             // 
@@ -116,8 +116,8 @@
             0,
             0,
             0});
-            this.textBoxR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxRGB_KeyDown);
-            this.textBoxR.Leave += new System.EventHandler(this.textBoxRGB_Leave);
+            this.textBoxR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxRGB_KeyDown);
+            this.textBoxR.Leave += new System.EventHandler(this.TextBoxRGB_Leave);
             // 
             // textBoxG
             // 
@@ -134,8 +134,8 @@
             0,
             0,
             0});
-            this.textBoxG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxRGB_KeyDown);
-            this.textBoxG.Leave += new System.EventHandler(this.textBoxRGB_Leave);
+            this.textBoxG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxRGB_KeyDown);
+            this.textBoxG.Leave += new System.EventHandler(this.TextBoxRGB_Leave);
             // 
             // textBoxB
             // 
@@ -152,8 +152,8 @@
             0,
             0,
             0});
-            this.textBoxB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxRGB_KeyDown);
-            this.textBoxB.Leave += new System.EventHandler(this.textBoxRGB_Leave);
+            this.textBoxB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxRGB_KeyDown);
+            this.textBoxB.Leave += new System.EventHandler(this.TextBoxRGB_Leave);
             // 
             // colorDialogPicker
             // 
@@ -164,7 +164,7 @@
             // 
             resources.ApplyResources(this.openFileDialogMain, "openFileDialogMain");
             this.openFileDialogMain.Multiselect = true;
-            this.openFileDialogMain.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialogMain_FileOk);
+            this.openFileDialogMain.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialogMain_FileOk);
             // 
             // labelHSB
             // 
@@ -174,7 +174,7 @@
             this.labelHSB.Name = "labelHSB";
             this.labelHSB.TabStop = true;
             this.toolTipMain.SetToolTip(this.labelHSB, resources.GetString("labelHSB.ToolTip"));
-            this.labelHSB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelHSB_LinkClicked);
+            this.labelHSB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LabelHSB_LinkClicked);
             // 
             // toolStripMenu
             // 
@@ -201,7 +201,7 @@
             this.toolStripButtonOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonOpen.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonOpen.Name = "toolStripButtonOpen";
-            this.toolStripButtonOpen.Click += new System.EventHandler(this.toolStripButtonOpen_Click);
+            this.toolStripButtonOpen.Click += new System.EventHandler(this.ToolStripButtonOpen_Click);
             // 
             // toolStripButtonClose
             // 
@@ -210,7 +210,7 @@
             this.toolStripButtonClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonClose.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonClose.Name = "toolStripButtonClose";
-            this.toolStripButtonClose.Click += new System.EventHandler(this.toolStripButtonClose_Click);
+            this.toolStripButtonClose.Click += new System.EventHandler(this.ToolStripButtonClose_Click);
             // 
             // toolStripButtonAbout
             // 
@@ -219,7 +219,7 @@
             this.toolStripButtonAbout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonAbout.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonAbout.Name = "toolStripButtonAbout";
-            this.toolStripButtonAbout.Click += new System.EventHandler(this.toolStripButtonAbout_Click);
+            this.toolStripButtonAbout.Click += new System.EventHandler(this.ToolStripButtonAbout_Click);
             // 
             // toolStripButtonQSwatch
             // 
@@ -227,7 +227,7 @@
             this.toolStripButtonQSwatch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonQSwatch.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonQSwatch.Name = "toolStripButtonQSwatch";
-            this.toolStripButtonQSwatch.Click += new System.EventHandler(this.toolStripButtonQSwatch_Click);
+            this.toolStripButtonQSwatch.Click += new System.EventHandler(this.ToolStripButtonQSwatch_Click);
             // 
             // toolStripSeparator1
             // 
@@ -240,7 +240,7 @@
             this.toolStripButtonHistory.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonHistory.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonHistory.Name = "toolStripButtonHistory";
-            this.toolStripButtonHistory.Click += new System.EventHandler(this.toolStripButtonHistory_Click);
+            this.toolStripButtonHistory.Click += new System.EventHandler(this.ToolStripButtonHistory_Click);
             // 
             // toolStripButtonTopMost
             // 
@@ -249,7 +249,7 @@
             this.toolStripButtonTopMost.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonTopMost.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonTopMost.Name = "toolStripButtonTopMost";
-            this.toolStripButtonTopMost.Click += new System.EventHandler(this.toolStripButtonTopMost_Click);
+            this.toolStripButtonTopMost.Click += new System.EventHandler(this.ToolStripButtonTopMost_Click);
             // 
             // textBoxS
             // 
@@ -261,8 +261,8 @@
             0,
             0,
             0});
-            this.textBoxS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxHSB_KeyDown);
-            this.textBoxS.Leave += new System.EventHandler(this.textBoxHSB_Leave);
+            this.textBoxS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxHSB_KeyDown);
+            this.textBoxS.Leave += new System.EventHandler(this.TextBoxHSB_Leave);
             // 
             // textBoxV
             // 
@@ -274,8 +274,8 @@
             0,
             0,
             0});
-            this.textBoxV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxHSB_KeyDown);
-            this.textBoxV.Leave += new System.EventHandler(this.textBoxHSB_Leave);
+            this.textBoxV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxHSB_KeyDown);
+            this.textBoxV.Leave += new System.EventHandler(this.TextBoxHSB_Leave);
             // 
             // textBoxH
             // 
@@ -292,8 +292,8 @@
             0,
             0,
             0});
-            this.textBoxH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxHSB_KeyDown);
-            this.textBoxH.Leave += new System.EventHandler(this.textBoxHSB_Leave);
+            this.textBoxH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxHSB_KeyDown);
+            this.textBoxH.Leave += new System.EventHandler(this.TextBoxHSB_Leave);
             // 
             // FormMain
             // 
@@ -317,8 +317,9 @@
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.TopMost = global::Toolkit.Properties.Settings.Default.TopMost;
-            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.dragDrop);
-            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.dragEnter);
+            this.Load += new System.EventHandler(this.FormMain_Load);
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormMain_DragDrop);
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormMain_DragEnter);
             ((System.ComponentModel.ISupportInitialize)(this.textBoxR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxB)).EndInit();

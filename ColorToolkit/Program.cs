@@ -6,16 +6,14 @@ using System.Windows.Forms;
 
 namespace Toolkit
 {
-    static class Program
+    internal static class Program
     {
-
         internal static List<string> imageFiles = new List<string>(new string[] { ".bmp", ".jpg", ".jpeg", ".jpe", ".jfif", ".png", ".gif" });
         internal static List<string> paletteFiles = new List<string>(new string[] { ".ase", ".aco" });
 
         [STAThread]
-        static void Main()
+        private static void Main()
         {
-
 #if DEBUG
             ImageHelper.GetEditorIcon(MaterialDesign.GetImage(MaterialDesign.IconType.color_lens, 256, Color.White));
 #endif
@@ -24,7 +22,5 @@ namespace Toolkit
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Forms.FormMain());
         }
-
     }
-
 }

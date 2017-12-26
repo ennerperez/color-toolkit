@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Platform.Support
 {
@@ -9,9 +6,9 @@ namespace Platform.Support
     namespace Core
     {
 #endif
+
     public static class NumberExtensions
     {
-
         public static int Min(this int num, int min)
         {
             if (num < min) return min;
@@ -124,9 +121,8 @@ namespace Platform.Support
             }
             return result;
         }
-
-
     }
+
 #if PORTABLE
     }
 #endif

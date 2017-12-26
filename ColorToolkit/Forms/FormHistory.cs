@@ -9,7 +9,6 @@ namespace Toolkit.Forms
 {
     public partial class FormHistory : Form
     {
-
         private static FormHistory instance;
 
         private FormHistory()
@@ -29,7 +28,6 @@ namespace Toolkit.Forms
             }
         }
 
-
         private void FormSwatches_Load(object sender, EventArgs e)
         {
             foreach (var item in Properties.Settings.Default.History)
@@ -39,9 +37,9 @@ namespace Toolkit.Forms
                 var panelItem = new Panel();
                 var labelColor = new Label();
 
-                // 
+                //
                 // labelColor
-                // 
+                //
                 labelColor.ForeColor = Color.Black;
                 labelColor.Dock = DockStyle.Right;
                 labelColor.AutoSize = true;
@@ -49,9 +47,9 @@ namespace Toolkit.Forms
                 labelColor.Text = color.ToHEX().ToUpper();
                 labelColor.ForeColor = color.Invert();
 
-                // 
+                //
                 // panelItem
-                // 
+                //
                 panelItem.Controls.Add(labelColor);
                 panelItem.Cursor = Cursors.Hand;
                 panelItem.Dock = DockStyle.Top;
@@ -61,7 +59,6 @@ namespace Toolkit.Forms
                 panelItem.BackColor = color;
 
                 this.Controls.Add(panelItem);
-
             }
 
             panelOptions.SendToBack();
@@ -82,9 +79,11 @@ namespace Toolkit.Forms
                     case 1:
                         Clipboard.SetText(ColorHelper.RGB((sender as Panel).BackColor));
                         break;
+
                     case 2:
                         Clipboard.SetText(ColorHelper.HSB((sender as Panel).BackColor.ToHSB()));
                         break;
+
                     default:
                         Clipboard.SetText((sender as Panel).BackColor.ToHEX());
                         break;
@@ -97,9 +96,11 @@ namespace Toolkit.Forms
                     case 1:
                         Clipboard.SetText(ColorHelper.RGB((sender as Label).Parent.BackColor));
                         break;
+
                     case 2:
                         Clipboard.SetText(ColorHelper.HSB((sender as Label).Parent.BackColor.ToHSB()));
                         break;
+
                     default:
                         Clipboard.SetText((sender as Label).Parent.BackColor.ToHEX());
                         break;
@@ -117,9 +118,11 @@ namespace Toolkit.Forms
                     case 1:
                         label.Text = ColorHelper.RGB(item.BackColor).ToUpper();
                         break;
+
                     case 2:
                         label.Text = ColorHelper.HSB(item.BackColor.ToHSB());
                         break;
+
                     default:
                         label.Text = item.BackColor.ToHEX().ToUpper();
                         break;

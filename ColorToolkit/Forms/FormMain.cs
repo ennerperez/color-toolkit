@@ -5,8 +5,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Pictograms;
 using System.IO;
-using System.Linq;
-using System.Threading;
+using System.Reflection;
 using System.Windows.Forms;
 using System.Windows.Forms.Pictograms;
 
@@ -14,8 +13,8 @@ namespace Toolkit.Forms
 {
     public partial class FormMain : Form
     {
-
         private Color color;
+
         public Color Color
         {
             get
@@ -50,12 +49,11 @@ namespace Toolkit.Forms
 #if DEBUG
 
             Color = ColorHelper.ToColor("#F44336");
-            setColor();
+            SetColor();
 
             FormHelper.ExtractResources(panelColor.BackgroundImage, panelColor.Name);
             FormHelper.ExtractResources(toolStripMenu);
 #endif
-
         }
 
         #region Events
@@ -64,17 +62,17 @@ namespace Toolkit.Forms
 
         private void OnColorChanged(EventArgs e)
         {
-            if (ColorChanged != null)
-                ColorChanged(this, e);
+            ColorChanged?.Invoke(this, e);
         }
 
-        #endregion
+        #endregion Events
 
         protected override void OnActivated(EventArgs e)
         {
             base.OnActivated(e);
             Opacity = 1.0;
         }
+
         protected override void OnDeactivate(EventArgs e)
         {
             try
@@ -94,15 +92,14 @@ namespace Toolkit.Forms
         private bool validData;
         //private Thread getFileThread;
 
-        private bool getFileName(out string filename, DragEventArgs e)
+        private bool GetFileName(out string filename, DragEventArgs e)
         {
             var ret = false;
             filename = string.Empty;
 
             if ((e.AllowedEffect & DragDropEffects.Copy) == DragDropEffects.Copy)
             {
-                var data = ((IDataObject)e.Data).GetData("FileName") as Array;
-                if (data != null && ((data.Length == 1) && (data.GetValue(0) is string)))
+                if (((IDataObject)e.Data).GetData("FileName") is Array data && ((data.Length == 1) && (data.GetValue(0) is string)))
                 {
                     filename = ((string[])data)[0];
                     var ext = Path.GetExtension(filename).ToLower();
@@ -112,7 +109,7 @@ namespace Toolkit.Forms
             return ret;
         }
 
-        private void dragDrop(object sender, DragEventArgs e)
+        private void FormMain_DragDrop(object sender, DragEventArgs e)
         {
             //if (validData)
             //    while (getFileThread.IsAlive)
@@ -121,15 +118,16 @@ namespace Toolkit.Forms
             //        Thread.Sleep(0);
             //    }
         }
-        private void dragEnter(object sender, DragEventArgs e)
+
+        private void FormMain_DragEnter(object sender, DragEventArgs e)
         {
             var fileName = string.Empty;
-            validData = getFileName(out fileName, e);
+            validData = GetFileName(out fileName, e);
             if (validData && !string.IsNullOrEmpty(fileName))
             {
                 //getFileThread = new Thread(new ParameterizedThreadStart(loadFile));
                 //getFileThread.Start(fileName);
-                loadFile(fileName);
+                LoadFile(fileName);
 
                 e.Effect = DragDropEffects.Copy;
             }
@@ -137,65 +135,68 @@ namespace Toolkit.Forms
                 e.Effect = DragDropEffects.None;
         }
 
-        #endregion
+        #endregion Drag & Drop
 
-        private void panelColor_MouseClick(object sender, MouseEventArgs e)
+        private void PanelColor_MouseClick(object sender, MouseEventArgs e)
         {
             MouseButtons button = e.Button;
             if (button == MouseButtons.Left)
                 Cursor = Cursors.Cross;
         }
-        private void panelColor_DoubleClick(object sender, EventArgs e)
+
+        private void PanelColor_DoubleClick(object sender, EventArgs e)
         {
             colorDialogPicker.Color = Color;
             if (colorDialogPicker.ShowDialog() == DialogResult.OK)
             {
                 Color = colorDialogPicker.Color;
-                setColor();
+                SetColor();
             }
         }
-        private void panelColor_MouseDown(object sender, MouseEventArgs e)
+
+        private void PanelColor_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
                 Cursor = Cursors.Cross;
         }
-        private void panelColor_MouseMove(object sender, MouseEventArgs e)
+
+        private void PanelColor_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
-                getScreenColor();
+                GetScreenColor();
         }
-        private void panelColor_MouseUp(object sender, MouseEventArgs e)
+
+        private void PanelColor_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
                 Cursor = Cursors.Default;
         }
 
-        private void textBoxHEX_KeyDown(object sender, KeyEventArgs e)
+        private void TextBoxHEX_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Return)
-                buttonCopyHEX_Click(sender, e);
+                ButtonCopyHEX_Click(sender, e);
             else if (e.KeyCode == Keys.Escape)
                 textBoxHEX.Text = string.Empty;
         }
-        private void textBoxHEX_Leave(object sender, EventArgs e)
-        {
 
+        private void TextBoxHEX_Leave(object sender, EventArgs e)
+        {
             if (!textBoxHEX.Text.StartsWith("#")) { textBoxHEX.Text = "#" + textBoxHEX.Text.Trim(); }
 
             if (!System.Text.RegularExpressions.Regex.IsMatch("#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})", textBoxHEX.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
             {
                 Color = ColorHelper.ToColor(textBoxHEX.Text);
-                setColor();
+                SetColor();
             }
             else
                 textBoxHEX.Text = ColorHelper.ToHEX(System.Drawing.Color.FromArgb((int)textBoxR.Value, (int)textBoxG.Value, (int)textBoxB.Value));
-
         }
 
-        private void textBoxRGB_KeyDown(object sender, KeyEventArgs e)
+        private void TextBoxRGB_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Return)
-                buttonCopyRGB_Click(sender, e);
+                ButtonCopyRGB_Click(sender, e);
             else if (e.KeyCode == Keys.Escape)
             {
                 textBoxR.Value = 0;
@@ -203,16 +204,17 @@ namespace Toolkit.Forms
                 textBoxB.Value = 0;
             }
         }
-        private void textBoxRGB_Leave(object sender, EventArgs e)
+
+        private void TextBoxRGB_Leave(object sender, EventArgs e)
         {
             Color = Color.FromArgb(255, int.Parse(textBoxR.Value.ToString()), int.Parse(textBoxG.Value.ToString()), int.Parse(textBoxB.Value.ToString()));
-            setColor();
+            SetColor();
         }
 
-        private void textBoxHSB_KeyDown(object sender, KeyEventArgs e)
+        private void TextBoxHSB_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Return)
-                buttonCopyHSB_Click(sender, e);
+                ButtonCopyHSB_Click(sender, e);
             else if (e.KeyCode == Keys.Escape)
             {
                 textBoxH.Value = 0;
@@ -220,39 +222,44 @@ namespace Toolkit.Forms
                 textBoxV.Value = 0;
             }
         }
-        private void textBoxHSB_Leave(object sender, EventArgs e)
+
+        private void TextBoxHSB_Leave(object sender, EventArgs e)
         {
             Color = ColorHelper.ToColor(new HSB((int)textBoxH.Value, (int)textBoxS.Value, (int)textBoxV.Value));
-            setColor();
+            SetColor();
         }
 
-        private void buttonCopyHEX_Click(object sender, EventArgs e)
+        private void ButtonCopyHEX_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(textBoxHEX.Text);
         }
-        private void buttonCopyRGB_Click(object sender, EventArgs e)
+
+        private void ButtonCopyRGB_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(String.Join(",", new string[] { textBoxR.Value.ToString(), textBoxG.Value.ToString(), textBoxB.Value.ToString() }));
         }
-        private void buttonCopyHSB_Click(object sender, EventArgs e)
+
+        private void ButtonCopyHSB_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(String.Join(",", new string[] { textBoxH.Value.ToString(), textBoxS.Value.ToString(), textBoxV.Value.ToString() }));
         }
 
-        private void labelHEX_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LabelHEX_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            buttonCopyHEX_Click(sender, e);
-        }
-        private void labelRGB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            buttonCopyRGB_Click(sender, e);
-        }
-        private void labelHSB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            buttonCopyHSB_Click(sender, e);
+            ButtonCopyHEX_Click(sender, e);
         }
 
-        private void getScreenColor()
+        private void LabelRGB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ButtonCopyRGB_Click(sender, e);
+        }
+
+        private void LabelHSB_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ButtonCopyHSB_Click(sender, e);
+        }
+
+        private void GetScreenColor()
         {
             Bitmap bitmap = new Bitmap(FormHelper.GetWorkingArea().Width, FormHelper.GetWorkingArea().Height);
             Point mousePosition = Control.MousePosition;
@@ -268,13 +275,13 @@ namespace Toolkit.Forms
                     arg_A4_0.CopyFromScreen(arg_A4_1, upperLeftDestination, bitmap.Size);
                 }
                 Color = bitmap.GetPixel((int)Math.Round((double)bitmap.Size.Width / 2.0), (int)Math.Round((double)bitmap.Size.Height / 2.0));
-                setColor();
+                SetColor();
                 Invalidate();
             }
         }
-        private void setColor()
-        {
 
+        private void SetColor()
+        {
             if (Properties.Settings.Default.History == null)
                 Properties.Settings.Default.History = new System.Collections.Specialized.StringCollection();
 
@@ -300,9 +307,9 @@ namespace Toolkit.Forms
             textBoxH.Value = (decimal)hsv.Hue360;
             textBoxS.Value = (decimal)hsv.Saturation100;
             textBoxV.Value = (decimal)hsv.Brightness100;
-
         }
-        private void loadFile(object item)
+
+        private void LoadFile(object item)
         {
             try
             {
@@ -311,11 +318,10 @@ namespace Toolkit.Forms
                 {
                     var image = Image.FromFile(item.ToString());
                     Color = ColorHelper.GetDominantColor(image);
-                    setColor();
+                    SetColor();
                 }
                 else if (Program.paletteFiles.Contains(file.Extension))
-                    displayChild(new FormSwatch(item.ToString()), 3);
-
+                    DisplayChild(new FormSwatch(item.ToString()), 3);
             }
             catch (Exception ex)
             {
@@ -323,7 +329,8 @@ namespace Toolkit.Forms
                 MessageBox.Show(ex.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-        private void displayChild(Form child, int factor = 0)
+
+        private void DisplayChild(Form child, int factor = 0)
         {
             if (factor > 0)
             {
@@ -338,45 +345,53 @@ namespace Toolkit.Forms
             child.Show();
         }
 
-        private void openFileDialogMain_FileOk(object sender, CancelEventArgs e)
+        private void OpenFileDialogMain_FileOk(object sender, CancelEventArgs e)
         {
             foreach (string item in openFileDialogMain.FileNames)
-                loadFile(item);
+                LoadFile(item);
         }
 
         #region ToolStrip
 
-        private void toolStripButtonOpen_Click(object sender, EventArgs e)
+        private void ToolStripButtonOpen_Click(object sender, EventArgs e)
         {
             openFileDialogMain.ShowDialog();
         }
-        private void toolStripButtonQSwatch_Click(object sender, EventArgs e)
+
+        private void ToolStripButtonQSwatch_Click(object sender, EventArgs e)
         {
-            displayChild(new FormQSwatch(Color), 1);
-        }
-        private void toolStripButtonHistory_Click(object sender, EventArgs e)
-        {
-            displayChild(FormHistory.Instance, 3);
+            DisplayChild(new FormQSwatch(Color), 1);
         }
 
-        private void toolStripButtonTopMost_Click(object sender, EventArgs e)
+        private void ToolStripButtonHistory_Click(object sender, EventArgs e)
+        {
+            DisplayChild(FormHistory.Instance, 3);
+        }
+
+        private void ToolStripButtonTopMost_Click(object sender, EventArgs e)
         {
             TopMost = !TopMost;
             toolStripButtonTopMost.Checked = TopMost;
             Properties.Settings.Default.TopMost = TopMost;
             Properties.Settings.Default.Save();
         }
-        private void toolStripButtonAbout_Click(object sender, EventArgs e)
+
+        private void ToolStripButtonAbout_Click(object sender, EventArgs e)
         {
             var child = new FormAbout();
             child.ShowDialog();
         }
-        private void toolStripButtonClose_Click(object sender, EventArgs e)
+
+        private void ToolStripButtonClose_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        #endregion
+        #endregion ToolStrip
 
+        private async void FormMain_Load(object sender, EventArgs e)
+        {
+            await GitHubInfo.CheckForUpdateAsync();
+        }
     }
 }
