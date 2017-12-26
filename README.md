@@ -1,8 +1,8 @@
 ![logo](.editoricon.png)
 
-# Color Toolkit for Devigners
+# Color Toolkit
 
-Color Toolkit is an powerful to for all developers who need sometimes some kind of designer information like colors, swatches or simply pick a color to make UI.
+Color information tool, with picker, selector and read and generate swatches.
 
 [![Build status](https://ci.appveyor.com/api/projects/status/w3jttw5tlqhcad9r?svg=true)](https://ci.appveyor.com/project/ennerperez/color-toolkit)
 
