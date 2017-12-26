@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Toolkit.Forms
@@ -22,7 +23,7 @@ namespace Toolkit.Forms
         {
             InitializeComponent();
 
-            Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
+            Icon = Icon.ExtractAssociatedIcon(Program.Assembly.Location);
 
             LoadFile(file);
         }
@@ -83,13 +84,23 @@ namespace Toolkit.Forms
             Clipboard.SetText((sender as BufferedPanel).BackColor.ToHEX());
         }
 
+        private void _color_DoubleClick(object sender, EventArgs e)
+        {
+            var mainForm = Application.OpenForms.OfType<FormMain>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                mainForm.Color = (sender as Control).BackColor;
+                mainForm.Activate();
+            }
+        }
+
         private void FormSwatch_FormClosed(object sender, FormClosedEventArgs e)
         {
             if (backgroundWorkerLoadColor.IsBusy)
                 backgroundWorkerLoadColor.CancelAsync();
         }
 
-        private void backgroundWorkerLoadColor_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        private void BackgroundWorkerLoadColor_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             if (!IsDisposed && IsHandleCreated)
             {
@@ -107,6 +118,7 @@ namespace Toolkit.Forms
                         };
                         toolTipColor.SetToolTip(_color, color.ToHEX());
                         _color.Click += _color_Click;
+                        _color.DoubleClick += _color_DoubleClick;
 
                         object data = new Control[] { _color };
                         (e.Argument as FlowLayoutPanel).Invoke(new AddItemsDelegate(FlowLayoutPanel_Invoke), data);

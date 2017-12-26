@@ -1,6 +1,7 @@
 ﻿using Platform.Support.Drawing;
 using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Toolkit.Forms
@@ -13,7 +14,7 @@ namespace Toolkit.Forms
         {
             InitializeComponent();
 
-            Icon = Icon.ExtractAssociatedIcon(System.Reflection.Assembly.GetEntryAssembly().Location);
+            Icon = Icon.ExtractAssociatedIcon(Program.Assembly.Location);
 
             Color = color;
         }
@@ -60,7 +61,7 @@ namespace Toolkit.Forms
             comboBoxColorMode.SelectedIndex = 0;
         }
 
-        private void panel_MouseClick(object sender, MouseEventArgs e)
+        private void Panel_MouseClick(object sender, MouseEventArgs e)
         {
             if (sender.GetType() != typeof(Label))
             {
@@ -98,7 +99,17 @@ namespace Toolkit.Forms
             }
         }
 
-        private void comboBoxColorMode_SelectedIndexChanged(object sender, EventArgs e)
+        private void Panel_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            var mainForm = Application.OpenForms.OfType<FormMain>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                mainForm.Color = (sender as Control).BackColor;
+                mainForm.Activate();
+            }
+        }
+
+        private void ComboBoxColorMode_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (comboBoxColorMode.SelectedIndex)
             {
@@ -212,7 +223,7 @@ namespace Toolkit.Forms
             }
         }
 
-        private void checkBoxVisible_CheckedChanged(object sender, EventArgs e)
+        private void CheckBoxVisible_CheckedChanged(object sender, EventArgs e)
         {
             TopMost = checkBoxVisible.Checked;
         }

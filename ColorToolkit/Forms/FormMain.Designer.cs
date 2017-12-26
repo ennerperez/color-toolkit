@@ -42,16 +42,17 @@
             this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
             this.labelHSB = new System.Windows.Forms.LinkLabel();
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
-            this.toolStripButtonOpen = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonAbout = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonQSwatch = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonOpen = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButtonHistory = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonTopMost = new System.Windows.Forms.ToolStripButton();
             this.textBoxS = new System.Windows.Forms.NumericUpDown();
             this.textBoxV = new System.Windows.Forms.NumericUpDown();
             this.textBoxH = new System.Windows.Forms.NumericUpDown();
+            this.toolStripButtonUpdates = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBoxB)).BeginInit();
@@ -185,23 +186,16 @@
             this.toolStripMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripMenu.ImageScalingSize = new System.Drawing.Size(48, 48);
             this.toolStripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonOpen,
             this.toolStripButtonClose,
             this.toolStripButtonAbout,
             this.toolStripButtonQSwatch,
+            this.toolStripButtonOpen,
             this.toolStripSeparator1,
             this.toolStripButtonHistory,
-            this.toolStripButtonTopMost});
+            this.toolStripButtonTopMost,
+            this.toolStripButtonUpdates});
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            // 
-            // toolStripButtonOpen
-            // 
-            resources.ApplyResources(this.toolStripButtonOpen, "toolStripButtonOpen");
-            this.toolStripButtonOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonOpen.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripButtonOpen.Name = "toolStripButtonOpen";
-            this.toolStripButtonOpen.Click += new System.EventHandler(this.ToolStripButtonOpen_Click);
             // 
             // toolStripButtonClose
             // 
@@ -229,6 +223,14 @@
             this.toolStripButtonQSwatch.Name = "toolStripButtonQSwatch";
             this.toolStripButtonQSwatch.Click += new System.EventHandler(this.ToolStripButtonQSwatch_Click);
             // 
+            // toolStripButtonOpen
+            // 
+            resources.ApplyResources(this.toolStripButtonOpen, "toolStripButtonOpen");
+            this.toolStripButtonOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonOpen.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonOpen.Name = "toolStripButtonOpen";
+            this.toolStripButtonOpen.Click += new System.EventHandler(this.ToolStripButtonOpen_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -246,6 +248,8 @@
             // 
             this.toolStripButtonTopMost.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             resources.ApplyResources(this.toolStripButtonTopMost, "toolStripButtonTopMost");
+            this.toolStripButtonTopMost.Checked = global::Toolkit.Properties.Settings.Default.TopMost;
+            this.toolStripButtonTopMost.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripButtonTopMost.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonTopMost.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonTopMost.Name = "toolStripButtonTopMost";
@@ -294,6 +298,17 @@
             0});
             this.textBoxH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxHSB_KeyDown);
             this.textBoxH.Leave += new System.EventHandler(this.TextBoxHSB_Leave);
+            // 
+            // toolStripButtonUpdates
+            // 
+            this.toolStripButtonUpdates.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.toolStripButtonUpdates, "toolStripButtonUpdates");
+            this.toolStripButtonUpdates.Checked = global::Toolkit.Properties.Settings.Default.CheckForUpdates;
+            this.toolStripButtonUpdates.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripButtonUpdates.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonUpdates.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonUpdates.Name = "toolStripButtonUpdates";
+            this.toolStripButtonUpdates.Click += new System.EventHandler(this.ToolStripButtonUpdates_Click);
             // 
             // FormMain
             // 
@@ -357,6 +372,7 @@
         private System.Windows.Forms.NumericUpDown textBoxS;
         private System.Windows.Forms.NumericUpDown textBoxV;
         private System.Windows.Forms.NumericUpDown textBoxH;
+        private System.Windows.Forms.ToolStripButton toolStripButtonUpdates;
     }
 }
 

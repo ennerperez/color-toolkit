@@ -49,14 +49,14 @@
             resources.GetString("comboBoxColorMode.Items1"),
             resources.GetString("comboBoxColorMode.Items2")});
             this.comboBoxColorMode.Name = "comboBoxColorMode";
-            this.comboBoxColorMode.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorMode_SelectedIndexChanged);
+            this.comboBoxColorMode.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorMode_SelectedIndexChanged);
             // 
             // checkBoxVisible
             // 
             resources.ApplyResources(this.checkBoxVisible, "checkBoxVisible");
             this.checkBoxVisible.Name = "checkBoxVisible";
             this.checkBoxVisible.UseVisualStyleBackColor = true;
-            this.checkBoxVisible.CheckedChanged += new System.EventHandler(this.checkBoxVisible_CheckedChanged);
+            this.checkBoxVisible.CheckedChanged += new System.EventHandler(this.CheckBoxVisible_CheckedChanged);
             // 
             // panelOptions
             // 
@@ -73,14 +73,14 @@
             resources.ApplyResources(this.buttonClear, "buttonClear");
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
             // 
             // buttonRefresh
             // 
             resources.ApplyResources(this.buttonRefresh, "buttonRefresh");
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            this.buttonRefresh.Click += new System.EventHandler(this.ButtonRefresh_Click);
             // 
             // FormHistory
             // 

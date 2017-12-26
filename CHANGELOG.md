@@ -2,6 +2,17 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.7]
+### Changed
+- Code enhancements
+
+### Fixed
+- Update checker
+- Minors bugs
+
+### Added
+- Double click color focus
+
 ## [1.0.6]
 ### Changed
 - Missing translations
