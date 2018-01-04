@@ -11,7 +11,7 @@ namespace Toolkit
         internal static MaterialDesign.IconType Icon => MaterialDesign.IconType.color_lens;
 
         internal static List<string> Formats => new List<string>(new[] { ".bmp", ".jpg", ".jpeg", ".jpe", ".jfif", ".png", ".gif" });
-        internal static List<string> Palettes => new List<string>(new[] { ".ase", ".aco" });
+        internal static List<string> Palettes => new List<string>(new[] { ".ase", ".aco", ".json" });
 
         internal static JsonSerializerSettings SerializerSettings = new JsonSerializerSettings()
         {

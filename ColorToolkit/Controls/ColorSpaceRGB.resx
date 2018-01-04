@@ -117,37 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="panelColor.ToolTip" xml:space="preserve">
-    <value>Clic para elegir un color / Doble clic para seleccionarlo de una lista</value>
-  </data>
-  <data name="openFileDialogMain.Filter" xml:space="preserve">
-    <value>Archivos validos|*.bmp;*.jpg;*.jpeg;*.jpe;*.jfif;*.png;*.gif;*.ase;*.aco|Imagenes|*.bmp;*.jpg;*.jpeg;*.jpe;*.jfif;*.png;*.gif;|Paletas|*.ase;*.aco|Adobe Swatch Exchange File|*.ase|Adobe Photoshop Color File|*.aco|JSON Palette files|*.json|Todos los archivos|*.*</value>
-  </data>
-  <data name="toolStripButtonAbout.Text" xml:space="preserve">
-    <value>&amp;Acerca de...</value>
-  </data>
-  <data name="toolStripButtonQSwatch.Text" xml:space="preserve">
-    <value>Paleta &amp;rapida</value>
-  </data>
-  <data name="toolStripButtonHistory.Text" xml:space="preserve">
-    <value>&amp;Historial</value>
-  </data>
-  <data name="toolStripButtonTopMost.Text" xml:space="preserve">
-    <value>&amp;Visible</value>
-  </data>
-  <data name="openToolStripMenuItem.Text" xml:space="preserve">
-    <value>A&amp;brir...</value>
-  </data>
-  <data name="saveAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>G&amp;uardar como...</value>
-  </data>
-  <data name="saveToolStripMenuItem.Text" xml:space="preserve">
-    <value>&amp;Guardar</value>
-  </data>
-  <data name="toolStripButtonFile.Text" xml:space="preserve">
-    <value>A&amp;rchivo</value>
-  </data>
-  <data name="toolStripButtonSettings.Text" xml:space="preserve">
-    <value>A&amp;justes</value>
-  </data>
 </root>

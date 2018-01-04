@@ -4,7 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 
-namespace Platform.Support.Drawing
+namespace Toolkit.Models
 {
     public static class Swatch
     {
@@ -86,7 +86,7 @@ namespace Platform.Support.Drawing
 
         #endregion Private Members
 
-        public static Color[] ReadSwatchFile(string fileName)
+        public static IEnumerable<Color> ReadSwatchFile(string fileName)
         {
             List<Color> colorPalette;
 
@@ -115,10 +115,10 @@ namespace Platform.Support.Drawing
                 }
             }
 
-            return colorPalette.ToArray();
+            return colorPalette;
         }
 
-        public static Color[] ReadSwatches(Stream stream, short version)
+        public static IEnumerable<Color> ReadSwatches(Stream stream, short version)
         {
             int colorCount;
             List<Color> results;
@@ -168,7 +168,7 @@ namespace Platform.Support.Drawing
                         green = value2 / 256; // 0-255
                         blue = value3 / 256; // 0-255
 
-                        results.Add(System.Drawing.Color.FromArgb(red, green, blue));
+                        results.Add(Color.FromArgb(red, green, blue));
                         break;
 
                     case ColorSpace.Hsb:
@@ -203,12 +203,12 @@ namespace Platform.Support.Drawing
                 }
             }
 
-            return results.ToArray();
+            return results;
         }
 
-        public static Color[] ReadExchangeFile(string fileName)
+        public static IEnumerable<Color> ReadExchangeFile(string fileName)
         {
-            List<System.Drawing.Color> colorPalette = new List<System.Drawing.Color>();
+            List<Color> colorPalette = new List<Color>();
 
             byte[] data;
             data = File.ReadAllBytes(fileName);
@@ -252,7 +252,7 @@ namespace Platform.Support.Drawing
                 offset += (int)blockLength;
             }
 
-            return colorPalette.ToArray();
+            return colorPalette;
         }
     }
 }

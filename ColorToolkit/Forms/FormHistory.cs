@@ -1,5 +1,4 @@
-﻿using Platform.Support.Drawing;
-using System;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -9,14 +8,14 @@ namespace Toolkit.Forms
 {
     public partial class FormHistory : Form
     {
-        private static FormHistory instance;
-
         private FormHistory()
         {
             InitializeComponent();
 
             Icon = Icon.ExtractAssociatedIcon(Program.Assembly.Location);
         }
+
+        private static FormHistory instance;
 
         public static FormHistory Instance
         {
@@ -41,11 +40,11 @@ namespace Toolkit.Forms
                     //
                     Dock = DockStyle.Right,
                     AutoSize = true,
-                    Text = color.ToHEX().ToUpper(),
+                    Text = color.GetHex(),
                     ForeColor = color.Invert(),
                 };
-                labelColor.MouseClick += new MouseEventHandler(Panel_MouseClick);
-                labelColor.MouseDoubleClick += new MouseEventHandler(Panel_MouseDoubleClick);
+                labelColor.MouseClick += new MouseEventHandler(panel_MouseClick);
+                labelColor.MouseDoubleClick += new MouseEventHandler(panel_MouseDoubleClick);
 
                 var panelItem = new BufferedPanel()
                 {
@@ -60,8 +59,8 @@ namespace Toolkit.Forms
                 };
 
                 panelItem.Controls.Add(labelColor);
-                panelItem.MouseClick += new MouseEventHandler(Panel_MouseClick);
-                panelItem.MouseDoubleClick += new MouseEventHandler(Panel_MouseDoubleClick);
+                panelItem.MouseClick += new MouseEventHandler(panel_MouseClick);
+                panelItem.MouseDoubleClick += new MouseEventHandler(panel_MouseDoubleClick);
 
                 this.Controls.Add(panelItem);
             }
@@ -75,7 +74,7 @@ namespace Toolkit.Forms
             comboBoxColorMode.SelectedIndex = 0;
         }
 
-        private void Panel_MouseDoubleClick(object sender, MouseEventArgs e)
+        private void panel_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             var mainForm = Application.OpenForms.OfType<FormMain>().FirstOrDefault();
             if (mainForm != null)
@@ -85,22 +84,26 @@ namespace Toolkit.Forms
             }
         }
 
-        private void Panel_MouseClick(object sender, MouseEventArgs e)
+        private void panel_MouseClick(object sender, MouseEventArgs e)
         {
             if (sender.GetType() != typeof(Label))
             {
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        Clipboard.SetText(ColorHelper.RGB((sender as Panel).BackColor));
+                        Clipboard.SetText((sender as Panel).BackColor.GetRgb());
                         break;
 
                     case 2:
-                        Clipboard.SetText(ColorHelper.HSB((sender as Panel).BackColor.ToHSB()));
+                        Clipboard.SetText((sender as Panel).BackColor.GetHsb());
+                        break;
+
+                    case 3:
+                        Clipboard.SetText((sender as Panel).BackColor.GetCmyk());
                         break;
 
                     default:
-                        Clipboard.SetText((sender as Panel).BackColor.ToHEX());
+                        Clipboard.SetText((sender as Panel).BackColor.GetHex());
                         break;
                 }
             }
@@ -109,21 +112,25 @@ namespace Toolkit.Forms
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        Clipboard.SetText(ColorHelper.RGB((sender as Label).Parent.BackColor));
+                        Clipboard.SetText((sender as Label).Parent.BackColor.GetRgb());
                         break;
 
                     case 2:
-                        Clipboard.SetText(ColorHelper.HSB((sender as Label).Parent.BackColor.ToHSB()));
+                        Clipboard.SetText((sender as Label).Parent.BackColor.GetHsb());
+                        break;
+
+                    case 3:
+                        Clipboard.SetText((sender as Label).Parent.BackColor.GetCmyk());
                         break;
 
                     default:
-                        Clipboard.SetText((sender as Label).Parent.BackColor.ToHEX());
+                        Clipboard.SetText((sender as Label).Parent.BackColor.GetHex());
                         break;
                 }
             }
         }
 
-        private void ComboBoxColorMode_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxColorMode_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (var item in this.Controls.OfType<Panel>().Where(x => x != panelOptions))
             {
@@ -131,26 +138,30 @@ namespace Toolkit.Forms
                 switch (comboBoxColorMode.SelectedIndex)
                 {
                     case 1:
-                        label.Text = ColorHelper.RGB(item.BackColor).ToUpper();
+                        label.Text = item.BackColor.GetRgb();
                         break;
 
                     case 2:
-                        label.Text = ColorHelper.HSB(item.BackColor.ToHSB());
+                        label.Text = item.BackColor.GetHsb();
+                        break;
+
+                    case 3:
+                        label.Text = item.BackColor.GetCmyk();
                         break;
 
                     default:
-                        label.Text = item.BackColor.ToHEX().ToUpper();
+                        label.Text = item.BackColor.GetHex();
                         break;
                 }
             }
         }
 
-        private void CheckBoxVisible_CheckedChanged(object sender, EventArgs e)
+        private void checkBoxVisible_CheckedChanged(object sender, EventArgs e)
         {
             TopMost = checkBoxVisible.Checked;
         }
 
-        private void ButtonRefresh_Click(object sender, EventArgs e)
+        private void buttonRefresh_Click(object sender, EventArgs e)
         {
             this.SuspendLayout();
             this.Controls.OfType<Panel>().Where(x => x != panelOptions).All(c =>
@@ -166,11 +177,12 @@ namespace Toolkit.Forms
             this.ResumeLayout();
         }
 
-        private void ButtonClear_Click(object sender, EventArgs e)
+        private void buttonClear_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.History.Clear();
             Properties.Settings.Default.Save();
             buttonRefresh.PerformClick();
+            GC.Collect();
         }
     }
 }

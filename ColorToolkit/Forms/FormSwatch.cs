@@ -1,143 +1,278 @@
-﻿using Platform.Support.Drawing;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Pictograms;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using System.Windows.Forms.Pictograms;
+using Toolkit.Models;
 
 namespace Toolkit.Forms
 {
     internal sealed partial class FormSwatch : Form
     {
-        #region Instance Fields
+        public string File { get; private set; }
+        public SortedList<int, Color> Palette { get; private set; }
 
-        private IEnumerable<Color> _loadedPalette;
-
-        #endregion Instance Fields
-
-        #region Public Constructors
-
-        public FormSwatch(string file)
+        public FormSwatch()
         {
             InitializeComponent();
 
             Icon = Icon.ExtractAssociatedIcon(Program.Assembly.Location);
 
-            LoadFile(file);
+            Palette = new SortedList<int, Color>();
         }
 
-        public FormSwatch(List<Color> palette)
+        public FormSwatch(string file) : this()
         {
-            InitializeComponent();
-            _loadedPalette = palette;
+            File = file;
         }
 
-        #endregion Public Constructors
-
-        #region Overridden Methods
-
-        /// <summary>
-        /// Raises the <see cref="E:System.Windows.Forms.Form.Load"/> event.
-        /// </summary>
-        /// <param name="e">An <see cref="T:System.EventArgs"/> that contains the event data. </param>
-        protected override void OnLoad(EventArgs e)
+        public FormSwatch(IEnumerable<Color> colors) : this()
         {
-            base.OnLoad(e);
+            var index = 0;
+            foreach (var item in colors)
+            {
+                Palette.Add(index, item);
+                index++;
+            }
         }
 
-        #endregion Overridden Methods
+        private void FormSwatch_Load(object sender, EventArgs e)
+        {
+            comboBoxTileSize.SelectedItem = "32";
 
-        #region Event Handlers
+            if (!string.IsNullOrEmpty(File))
+                loadFrom(File);
+        }
 
-        private void LoadFile(string file)
+        private Control buildColorBox(KeyValuePair<int, Color> item)
+        {
+            var _color = new BufferedPanel()
+            {
+                Tag = item.Key,
+                Width = int.Parse(comboBoxTileSize.SelectedItem.ToString()),
+                Height = int.Parse(comboBoxTileSize.SelectedItem.ToString()),
+                BorderStyle = BorderStyle.FixedSingle,
+                BackColor = item.Value,
+                Cursor = Cursors.Hand,
+                ContextMenuStrip = string.IsNullOrEmpty(File) ? contextMenuStripColor : null
+            };
+            toolTipColor.SetToolTip(_color, item.Value.GetHex());
+            _color.Click += _color_Click;
+            _color.DoubleClick += _color_DoubleClick;
+            return _color;
+        }
+
+        private void loadFrom(string file)
         {
             var selectedFile = new FileInfo(file);
 
             if (selectedFile != null)
             {
-                if (selectedFile.Extension == ".ase")
-                    _loadedPalette = Swatch.ReadExchangeFile(selectedFile.FullName);
+                IEnumerable<Color> colors = null;
+                if (selectedFile.Extension == ".json")
+                {
+                    try
+                    {
+                        var data = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(System.IO.File.ReadAllText(file));
+                        colors = (from item in data
+                                  let color = Color.Empty
+                                  select color.FromHex(item));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (selectedFile.Extension == ".ase")
+                    colors = Swatch.ReadExchangeFile(selectedFile.FullName);
                 else
-                    _loadedPalette = Swatch.ReadSwatchFile(selectedFile.FullName);
+                    colors = Swatch.ReadSwatchFile(selectedFile.FullName);
 
-                Text = string.Format("{0} - {1}", Path.GetFileName(selectedFile.FullName), Application.ProductName);
+                if (colors.Any())
+                {
+                    var index = 0;
+                    foreach (var item in colors)
+                    {
+                        Palette.Add(index, item);
+                        index++;
+                    }
+                }
+
+                Text = Path.GetFileName(selectedFile.FullName);
             }
-            else
-            {
-                _loadedPalette = null;
-                Text = Application.ProductName;
-            }
-        }
-
-        #endregion Event Handlers
-
-        private void FormSwatch_Load(object sender, EventArgs e)
-        {
-            if (_loadedPalette != null)
-                backgroundWorkerLoadColor.RunWorkerAsync(flowLayoutPanelColors);
         }
 
         private void _color_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText((sender as BufferedPanel).BackColor.ToHEX());
+            var mainForm = Application.OpenForms.OfType<FormMain>().FirstOrDefault();
+            if (mainForm != null)
+                mainForm.Color = (sender as Control).BackColor;
         }
 
         private void _color_DoubleClick(object sender, EventArgs e)
         {
             var mainForm = Application.OpenForms.OfType<FormMain>().FirstOrDefault();
             if (mainForm != null)
-            {
-                mainForm.Color = (sender as Control).BackColor;
-                mainForm.Activate();
-            }
+                mainForm.displayChild(new FormQSwatch((sender as Control).BackColor), 2);
         }
 
         private void FormSwatch_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (backgroundWorkerLoadColor.IsBusy)
-                backgroundWorkerLoadColor.CancelAsync();
+            Palette.Clear();
+            Palette = null;
+            GC.Collect();
         }
 
-        private void BackgroundWorkerLoadColor_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        private void removeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (!IsDisposed && IsHandleCreated)
-            {
-                foreach (var color in _loadedPalette)
-                {
-                    try
-                    {
-                        var _color = new BufferedPanel()
-                        {
-                            Width = 32,
-                            Height = 32,
-                            BorderStyle = BorderStyle.FixedSingle,
-                            BackColor = color,
-                            Cursor = Cursors.Hand
-                        };
-                        toolTipColor.SetToolTip(_color, color.ToHEX());
-                        _color.Click += _color_Click;
-                        _color.DoubleClick += _color_DoubleClick;
+            var control = ((sender as ToolStripMenuItem).Owner as ContextMenuStrip).SourceControl;
+            var index = control.Parent.Controls.IndexOf(control);
+            Palette.RemoveAt(index - 1);
+            control.Parent.Controls.RemoveAt(index);
+        }
 
-                        object data = new Control[] { _color };
-                        (e.Argument as FlowLayoutPanel).Invoke(new AddItemsDelegate(FlowLayoutPanel_Invoke), data);
-                    }
-                    catch (Exception ex)
+        private void FormSwatch_Shown(object sender, EventArgs e)
+        {
+            flowLayoutPanelColors.SuspendLayout();
+            if (!string.IsNullOrEmpty(File))
+                foreach (var item in Palette)
+                    flowLayoutPanelColors.Invoke(new Action(() => { flowLayoutPanelColors.Controls.Add(buildColorBox(item)); }));
+            else
+            {
+                var _color = new BufferedPanel()
+                {
+                    Width = int.Parse(comboBoxTileSize.SelectedItem.ToString()),
+                    Height = int.Parse(comboBoxTileSize.SelectedItem.ToString()),
+                    BorderStyle = BorderStyle.FixedSingle,
+                };
+                _color.SetImage<MaterialDesign>(MaterialDesign.IconType.colorize);
+                _color.BackgroundImageLayout = ImageLayout.Center;
+                _color.MouseClick += panelColor_MouseClick;
+                _color.MouseMove += panelColor_MouseDown;
+                _color.MouseUp += panelColor_MouseUp;
+
+                flowLayoutPanelColors.Invoke(new Action(() => { flowLayoutPanelColors.Controls.Add(_color); }));
+            }
+
+            flowLayoutPanelColors.ResumeLayout();
+        }
+
+        private void _color_Click_Add(object sender, EventArgs e)
+        {
+            var mainForm = Application.OpenForms.OfType<FormMain>().FirstOrDefault();
+            if (mainForm != null)
+            {
+                Palette.Add(Palette.Count, mainForm.Color);
+                flowLayoutPanelColors.Invoke(new Action(() => { flowLayoutPanelColors.Controls.Add(buildColorBox(Palette.Last())); }));
+            }
+        }
+
+        #region Color Picker
+
+        private void panelColor_MouseClick(object sender, MouseEventArgs e)
+        {
+            MouseButtons button = e.Button;
+            if (button == MouseButtons.Left)
+                Cursor = Cursors.Cross;
+        }
+
+        private void panelColor_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+                Cursor = Cursors.Cross;
+        }
+
+        private void panelColor_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                Cursor = Cursors.Default;
+                var color = getScreenColor();
+                Palette.Add(Palette.Count, color);
+                flowLayoutPanelColors.Invoke(new Action(() => { flowLayoutPanelColors.Controls.Add(buildColorBox(Palette.Last())); }));
+            }
+        }
+
+        private Color getScreenColor()
+        {
+            var color = Color.Empty;
+            using (var bitmap = new Bitmap(1, 1))
+            {
+                var mousePosition = Control.MousePosition;
+                checked
+                {
+                    mousePosition.X = (int)Math.Round(unchecked((double)mousePosition.X - (double)bitmap.Width / 2.0));
+                    mousePosition.Y = (int)Math.Round(unchecked((double)mousePosition.Y - (double)bitmap.Height / 2.0));
+                    using (var graphics = Graphics.FromImage(bitmap))
                     {
-                        Debug.WriteLine(ex.Message);
+                        var arg_A4_0 = graphics;
+                        var arg_A4_1 = mousePosition;
+                        var upperLeftDestination = new Point(0, 0);
+                        arg_A4_0.CopyFromScreen(arg_A4_1, upperLeftDestination, bitmap.Size);
+                    }
+                    color = bitmap.GetPixel((int)Math.Round((double)bitmap.Size.Width / 2.0), (int)Math.Round((double)bitmap.Size.Height / 2.0));
+                }
+            }
+            return color;
+        }
+
+        #endregion Color Picker
+
+        private void FormSwatch_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (string.IsNullOrEmpty(File) && Palette.Any())
+            {
+                if (MessageBox.Show(Messages.ConfirmExit, Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    if (saveFileDialogSave.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            switch (Path.GetExtension(saveFileDialogSave.FileName))
+                            {
+                                case ".json":
+                                    var colors = from item in Palette
+                                                 select item.Value.GetHex();
+                                    System.IO.File.WriteAllText(saveFileDialogSave.FileName, Newtonsoft.Json.JsonConvert.SerializeObject(colors));
+                                    break;
+
+                                default:
+                                    break;
+                            }
+                            File = Path.GetFileName(saveFileDialogSave.FileName);
+                            Close();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message, Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
         }
 
-        public delegate void AddItemsDelegate(params Control[] data);
+        private void checkBoxVisible_CheckedChanged(object sender, EventArgs e)
+        {
+            TopMost = checkBoxVisible.Checked;
+        }
 
-        private void FlowLayoutPanel_Invoke(params Control[] data)
+        private void comboBoxTileSize_SelectedIndexChanged(object sender, EventArgs e)
         {
             flowLayoutPanelColors.SuspendLayout();
-            foreach (Control item in data)
-                flowLayoutPanelColors.Controls.Add((item as Control));
+            foreach (Control item in flowLayoutPanelColors.Controls)
+                item.Size = new Size(int.Parse(comboBoxTileSize.SelectedItem.ToString()), int.Parse(comboBoxTileSize.SelectedItem.ToString()));
+
+            if (string.IsNullOrEmpty(File))
+            {
+                var pipe = flowLayoutPanelColors.Controls.OfType<BufferedPanel>().FirstOrDefault();
+                if (pipe != null)
+                    pipe.SetImage<MaterialDesign>(MaterialDesign.IconType.colorize);
+            }
+
             flowLayoutPanelColors.ResumeLayout();
         }
     }

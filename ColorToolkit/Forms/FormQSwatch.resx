@@ -117,15 +117,108 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;panelPrimaryInternal.Name" xml:space="preserve">
+    <value>panelPrimaryInternal</value>
+  </data>
+  <data name="&gt;&gt;panelPrimaryInternal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelPrimaryInternal.Parent" xml:space="preserve">
+    <value>panelPrimary</value>
+  </data>
+  <data name="&gt;&gt;panelPrimaryInternal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelPrimary.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panelPrimary.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 46</value>
+  </data>
+  <data name="panelPrimary.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 126</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelPrimary.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="panelPrimary.ToolTip" xml:space="preserve">
+    <value>Copy color</value>
+  </data>
+  <data name="&gt;&gt;panelPrimary.Name" xml:space="preserve">
+    <value>panelPrimary</value>
+  </data>
+  <data name="&gt;&gt;panelPrimary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelPrimary.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelPrimary.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;labelPrimary.Name" xml:space="preserve">
+    <value>labelPrimary</value>
+  </data>
+  <data name="&gt;&gt;labelPrimary.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPrimary.Parent" xml:space="preserve">
+    <value>panelPrimaryInternal</value>
+  </data>
+  <data name="&gt;&gt;labelPrimary.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panelPrimaryInternal</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelPrimaryInternal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="panelPrimaryInternal.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 80</value>
+  </data>
+  <data name="panelPrimaryInternal.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>15, 15, 15, 15</value>
+  </data>
+  <data name="panelPrimaryInternal.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 46</value>
+  </data>
+  <data name="panelPrimaryInternal.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="panelPrimaryInternal.ToolTip" xml:space="preserve">
+    <value>Copy color</value>
+  </data>
+  <data name="&gt;&gt;panelPrimaryInternal.Name" xml:space="preserve">
+    <value>panelPrimaryInternal</value>
+  </data>
+  <data name="&gt;&gt;panelPrimaryInternal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelPrimaryInternal.Parent" xml:space="preserve">
+    <value>panelPrimary</value>
+  </data>
+  <data name="&gt;&gt;panelPrimaryInternal.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="labelPrimary.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="labelPrimary.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="labelPrimary.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9.75pt</value>
   </data>
@@ -201,63 +294,6 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panelPrimaryInternal.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="panelPrimaryInternal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 80</value>
-  </data>
-  <data name="panelPrimaryInternal.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>15, 15, 15, 15</value>
-  </data>
-  <data name="panelPrimaryInternal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 46</value>
-  </data>
-  <data name="panelPrimaryInternal.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="panelPrimaryInternal.ToolTip" xml:space="preserve">
-    <value>Copy color</value>
-  </data>
-  <data name="&gt;&gt;panelPrimaryInternal.Name" xml:space="preserve">
-    <value>panelPrimaryInternal</value>
-  </data>
-  <data name="&gt;&gt;panelPrimaryInternal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelPrimaryInternal.Parent" xml:space="preserve">
-    <value>panelPrimary</value>
-  </data>
-  <data name="&gt;&gt;panelPrimaryInternal.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="panelPrimary.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panelPrimary.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 46</value>
-  </data>
-  <data name="panelPrimary.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 126</value>
-  </data>
-  <data name="panelPrimary.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="panelPrimary.ToolTip" xml:space="preserve">
-    <value>Copy color</value>
-  </data>
-  <data name="&gt;&gt;panelPrimary.Name" xml:space="preserve">
-    <value>panelPrimary</value>
-  </data>
-  <data name="&gt;&gt;panelPrimary.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelPrimary.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelPrimary.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
   <data name="comboBoxColorMode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -269,6 +305,9 @@
   </data>
   <data name="comboBoxColorMode.Items2" xml:space="preserve">
     <value>HSB</value>
+  </data>
+  <data name="comboBoxColorMode.Items3" xml:space="preserve">
+    <value>CMYK</value>
   </data>
   <data name="comboBoxColorMode.Location" type="System.Drawing.Point, System.Drawing">
     <value>234, 10</value>
@@ -291,43 +330,97 @@
   <data name="&gt;&gt;comboBoxColorMode.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="label50.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label050.Name" xml:space="preserve">
+    <value>label050</value>
   </data>
-  <data name="label50.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="label50.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 9.75pt</value>
-  </data>
-  <data name="label50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 15</value>
-  </data>
-  <data name="label50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 17</value>
-  </data>
-  <data name="label50.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label50.Text" xml:space="preserve">
-    <value>#FFEBEE</value>
-  </data>
-  <data name="label50.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label50.ToolTip" xml:space="preserve">
-    <value>Copy color</value>
-  </data>
-  <data name="&gt;&gt;label50.Name" xml:space="preserve">
-    <value>label50</value>
-  </data>
-  <data name="&gt;&gt;label50.Type" xml:space="preserve">
+  <data name="&gt;&gt;label050.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label50.Parent" xml:space="preserve">
-    <value>panel50</value>
+  <data name="&gt;&gt;label050.Parent" xml:space="preserve">
+    <value>panel050</value>
   </data>
-  <data name="&gt;&gt;label50.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;label050.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel050</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel050.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel050.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 172</value>
+  </data>
+  <data name="panel050.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>15, 15, 15, 15</value>
+  </data>
+  <data name="panel050.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 46</value>
+  </data>
+  <data name="panel050.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="panel050.ToolTip" xml:space="preserve">
+    <value>Copy color</value>
+  </data>
+  <data name="&gt;&gt;panel050.Name" xml:space="preserve">
+    <value>panel050</value>
+  </data>
+  <data name="&gt;&gt;panel050.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel050.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel050.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="label050.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label050.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="label050.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.75pt</value>
+  </data>
+  <data name="label050.Location" type="System.Drawing.Point, System.Drawing">
+    <value>236, 15</value>
+  </data>
+  <data name="label050.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 17</value>
+  </data>
+  <data name="label050.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label050.Text" xml:space="preserve">
+    <value>#FFEBEE</value>
+  </data>
+  <data name="label050.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="label050.ToolTip" xml:space="preserve">
+    <value>Copy color</value>
+  </data>
+  <data name="&gt;&gt;label050.Name" xml:space="preserve">
+    <value>label050</value>
+  </data>
+  <data name="&gt;&gt;label050.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label050.Parent" xml:space="preserve">
+    <value>panel050</value>
+  </data>
+  <data name="&gt;&gt;label050.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
@@ -364,40 +457,64 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panel50</value>
+    <value>panel050</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel50.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="&gt;&gt;label100.Name" xml:space="preserve">
+    <value>label100</value>
   </data>
-  <data name="panel50.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 172</value>
+  <data name="&gt;&gt;label100.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="panel50.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>15, 15, 15, 15</value>
+  <data name="&gt;&gt;label100.Parent" xml:space="preserve">
+    <value>panel100</value>
   </data>
-  <data name="panel50.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 46</value>
+  <data name="&gt;&gt;label100.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="panel50.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel100</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel50.ToolTip" xml:space="preserve">
+  <data name="panel100.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panel100.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 218</value>
+  </data>
+  <data name="panel100.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>15, 15, 15, 15</value>
+  </data>
+  <data name="panel100.Size" type="System.Drawing.Size, System.Drawing">
+    <value>307, 46</value>
+  </data>
+  <data name="panel100.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="panel100.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panel50.Name" xml:space="preserve">
-    <value>panel50</value>
+  <data name="&gt;&gt;panel100.Name" xml:space="preserve">
+    <value>panel100</value>
   </data>
-  <data name="&gt;&gt;panel50.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel100.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel50.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel100.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel50.ZOrder" xml:space="preserve">
-    <value>13</value>
+  <data name="&gt;&gt;panel100.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
   <data name="label100.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -477,35 +594,59 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel100.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;label200.Name" xml:space="preserve">
+    <value>label200</value>
+  </data>
+  <data name="&gt;&gt;label200.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label200.Parent" xml:space="preserve">
+    <value>panel200</value>
+  </data>
+  <data name="&gt;&gt;label200.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>panel200</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel200.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel100.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 218</value>
+  <data name="panel200.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 264</value>
   </data>
-  <data name="panel100.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panel200.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panel100.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel200.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panel100.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="panel200.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
-  <data name="panel100.ToolTip" xml:space="preserve">
+  <data name="panel200.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panel100.Name" xml:space="preserve">
-    <value>panel100</value>
+  <data name="&gt;&gt;panel200.Name" xml:space="preserve">
+    <value>panel200</value>
   </data>
-  <data name="&gt;&gt;panel100.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel200.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel100.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel200.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel100.ZOrder" xml:space="preserve">
-    <value>12</value>
+  <data name="&gt;&gt;panel200.ZOrder" xml:space="preserve">
+    <value>11</value>
   </data>
   <data name="label200.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -585,35 +726,59 @@
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel200.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;label300.Name" xml:space="preserve">
+    <value>label300</value>
+  </data>
+  <data name="&gt;&gt;label300.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label300.Parent" xml:space="preserve">
+    <value>panel300</value>
+  </data>
+  <data name="&gt;&gt;label300.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>panel300</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel300.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel200.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 264</value>
+  <data name="panel300.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 310</value>
   </data>
-  <data name="panel200.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panel300.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panel200.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel300.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panel200.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="panel300.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="panel200.ToolTip" xml:space="preserve">
+  <data name="panel300.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panel200.Name" xml:space="preserve">
-    <value>panel200</value>
+  <data name="&gt;&gt;panel300.Name" xml:space="preserve">
+    <value>panel300</value>
   </data>
-  <data name="&gt;&gt;panel200.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel300.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel200.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel300.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel200.ZOrder" xml:space="preserve">
-    <value>11</value>
+  <data name="&gt;&gt;panel300.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="label300.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -693,35 +858,59 @@
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel300.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;label400.Name" xml:space="preserve">
+    <value>label400</value>
+  </data>
+  <data name="&gt;&gt;label400.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label400.Parent" xml:space="preserve">
+    <value>panel400</value>
+  </data>
+  <data name="&gt;&gt;label400.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>panel400</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel400.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel300.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 310</value>
+  <data name="panel400.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 356</value>
   </data>
-  <data name="panel300.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panel400.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panel300.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel400.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panel300.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="panel400.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
-  <data name="panel300.ToolTip" xml:space="preserve">
+  <data name="panel400.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panel300.Name" xml:space="preserve">
-    <value>panel300</value>
+  <data name="&gt;&gt;panel400.Name" xml:space="preserve">
+    <value>panel400</value>
   </data>
-  <data name="&gt;&gt;panel300.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel400.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel300.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel400.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel300.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;panel400.ZOrder" xml:space="preserve">
+    <value>9</value>
   </data>
   <data name="label400.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -801,35 +990,59 @@
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel400.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;label900.Name" xml:space="preserve">
+    <value>label900</value>
+  </data>
+  <data name="&gt;&gt;label900.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label900.Parent" xml:space="preserve">
+    <value>panel900</value>
+  </data>
+  <data name="&gt;&gt;label900.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label14.Name" xml:space="preserve">
+    <value>label14</value>
+  </data>
+  <data name="&gt;&gt;label14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label14.Parent" xml:space="preserve">
+    <value>panel900</value>
+  </data>
+  <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel900.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel400.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 356</value>
+  <data name="panel900.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 586</value>
   </data>
-  <data name="panel400.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panel900.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panel400.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel900.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panel400.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="panel900.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
   </data>
-  <data name="panel400.ToolTip" xml:space="preserve">
+  <data name="panel900.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panel400.Name" xml:space="preserve">
-    <value>panel400</value>
+  <data name="&gt;&gt;panel900.Name" xml:space="preserve">
+    <value>panel900</value>
   </data>
-  <data name="&gt;&gt;panel400.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel900.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel400.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel900.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel400.ZOrder" xml:space="preserve">
-    <value>9</value>
+  <data name="&gt;&gt;panel900.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="label900.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -909,35 +1122,59 @@
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel900.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;label800.Name" xml:space="preserve">
+    <value>label800</value>
+  </data>
+  <data name="&gt;&gt;label800.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label800.Parent" xml:space="preserve">
+    <value>panel800</value>
+  </data>
+  <data name="&gt;&gt;label800.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>panel800</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel800.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel900.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 586</value>
+  <data name="panel800.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 540</value>
   </data>
-  <data name="panel900.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panel800.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panel900.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel800.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panel900.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+  <data name="panel800.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
-  <data name="panel900.ToolTip" xml:space="preserve">
+  <data name="panel800.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panel900.Name" xml:space="preserve">
-    <value>panel900</value>
+  <data name="&gt;&gt;panel800.Name" xml:space="preserve">
+    <value>panel800</value>
   </data>
-  <data name="&gt;&gt;panel900.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel800.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel900.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel800.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel900.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;panel800.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="label800.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1017,35 +1254,59 @@
   <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel800.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;label700.Name" xml:space="preserve">
+    <value>label700</value>
+  </data>
+  <data name="&gt;&gt;label700.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label700.Parent" xml:space="preserve">
+    <value>panel700</value>
+  </data>
+  <data name="&gt;&gt;label700.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>panel700</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel700.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel800.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 540</value>
+  <data name="panel700.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 494</value>
   </data>
-  <data name="panel800.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panel700.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panel800.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel700.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panel800.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="panel700.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="panel800.ToolTip" xml:space="preserve">
+  <data name="panel700.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panel800.Name" xml:space="preserve">
-    <value>panel800</value>
+  <data name="&gt;&gt;panel700.Name" xml:space="preserve">
+    <value>panel700</value>
   </data>
-  <data name="&gt;&gt;panel800.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel700.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel800.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel700.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel800.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;panel700.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="label700.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1125,35 +1386,59 @@
   <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel700.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;label600.Name" xml:space="preserve">
+    <value>label600</value>
+  </data>
+  <data name="&gt;&gt;label600.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label600.Parent" xml:space="preserve">
+    <value>panel600</value>
+  </data>
+  <data name="&gt;&gt;label600.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>panel600</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel600.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel700.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 494</value>
+  <data name="panel600.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 448</value>
   </data>
-  <data name="panel700.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panel600.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panel700.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel600.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panel700.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="panel600.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
-  <data name="panel700.ToolTip" xml:space="preserve">
+  <data name="panel600.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panel700.Name" xml:space="preserve">
-    <value>panel700</value>
+  <data name="&gt;&gt;panel600.Name" xml:space="preserve">
+    <value>panel600</value>
   </data>
-  <data name="&gt;&gt;panel700.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel600.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel700.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel600.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel700.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;panel600.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="label600.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1233,35 +1518,59 @@
   <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel600.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;label500.Name" xml:space="preserve">
+    <value>label500</value>
+  </data>
+  <data name="&gt;&gt;label500.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label500.Parent" xml:space="preserve">
+    <value>panel500</value>
+  </data>
+  <data name="&gt;&gt;label500.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label22.Name" xml:space="preserve">
+    <value>label22</value>
+  </data>
+  <data name="&gt;&gt;label22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label22.Parent" xml:space="preserve">
+    <value>panel500</value>
+  </data>
+  <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panel500.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel600.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 448</value>
+  <data name="panel500.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 402</value>
   </data>
-  <data name="panel600.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panel500.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panel600.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panel500.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panel600.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="panel500.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="panel600.ToolTip" xml:space="preserve">
+  <data name="panel500.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panel600.Name" xml:space="preserve">
-    <value>panel600</value>
+  <data name="&gt;&gt;panel500.Name" xml:space="preserve">
+    <value>panel500</value>
   </data>
-  <data name="&gt;&gt;panel600.Type" xml:space="preserve">
+  <data name="&gt;&gt;panel500.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel600.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panel500.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel600.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;panel500.ZOrder" xml:space="preserve">
+    <value>8</value>
   </data>
   <data name="label500.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1341,35 +1650,59 @@
   <data name="&gt;&gt;label22.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panel500.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;labelA700.Name" xml:space="preserve">
+    <value>labelA700</value>
+  </data>
+  <data name="&gt;&gt;labelA700.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelA700.Parent" xml:space="preserve">
+    <value>panelA700</value>
+  </data>
+  <data name="&gt;&gt;labelA700.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label24.Name" xml:space="preserve">
+    <value>label24</value>
+  </data>
+  <data name="&gt;&gt;label24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label24.Parent" xml:space="preserve">
+    <value>panelA700</value>
+  </data>
+  <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelA700.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panel500.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 402</value>
+  <data name="panelA700.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 770</value>
   </data>
-  <data name="panel500.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panelA700.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panel500.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelA700.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panel500.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+  <data name="panelA700.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
-  <data name="panel500.ToolTip" xml:space="preserve">
+  <data name="panelA700.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panel500.Name" xml:space="preserve">
-    <value>panel500</value>
+  <data name="&gt;&gt;panelA700.Name" xml:space="preserve">
+    <value>panelA700</value>
   </data>
-  <data name="&gt;&gt;panel500.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelA700.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel500.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelA700.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel500.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;panelA700.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="labelA700.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1449,35 +1782,59 @@
   <data name="&gt;&gt;label24.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panelA700.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;labelA400.Name" xml:space="preserve">
+    <value>labelA400</value>
+  </data>
+  <data name="&gt;&gt;labelA400.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelA400.Parent" xml:space="preserve">
+    <value>panelA400</value>
+  </data>
+  <data name="&gt;&gt;labelA400.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label26.Name" xml:space="preserve">
+    <value>label26</value>
+  </data>
+  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+    <value>panelA400</value>
+  </data>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelA400.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panelA700.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 770</value>
+  <data name="panelA400.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 724</value>
   </data>
-  <data name="panelA700.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panelA400.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panelA700.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelA400.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panelA700.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="panelA400.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="panelA700.ToolTip" xml:space="preserve">
+  <data name="panelA400.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panelA700.Name" xml:space="preserve">
-    <value>panelA700</value>
+  <data name="&gt;&gt;panelA400.Name" xml:space="preserve">
+    <value>panelA400</value>
   </data>
-  <data name="&gt;&gt;panelA700.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelA400.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelA700.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelA400.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelA700.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;panelA400.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="labelA400.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1557,35 +1914,59 @@
   <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panelA400.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;labelA200.Name" xml:space="preserve">
+    <value>labelA200</value>
+  </data>
+  <data name="&gt;&gt;labelA200.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelA200.Parent" xml:space="preserve">
+    <value>panelA200</value>
+  </data>
+  <data name="&gt;&gt;labelA200.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label28.Name" xml:space="preserve">
+    <value>label28</value>
+  </data>
+  <data name="&gt;&gt;label28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label28.Parent" xml:space="preserve">
+    <value>panelA200</value>
+  </data>
+  <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelA200.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panelA400.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 724</value>
+  <data name="panelA200.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 678</value>
   </data>
-  <data name="panelA400.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panelA200.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panelA400.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelA200.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panelA400.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="panelA200.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="panelA400.ToolTip" xml:space="preserve">
+  <data name="panelA200.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panelA400.Name" xml:space="preserve">
-    <value>panelA400</value>
+  <data name="&gt;&gt;panelA200.Name" xml:space="preserve">
+    <value>panelA200</value>
   </data>
-  <data name="&gt;&gt;panelA400.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelA200.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelA400.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelA200.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelA400.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;panelA200.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="labelA200.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1665,35 +2046,59 @@
   <data name="&gt;&gt;label28.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="panelA200.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="&gt;&gt;labelA100.Name" xml:space="preserve">
+    <value>labelA100</value>
+  </data>
+  <data name="&gt;&gt;labelA100.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelA100.Parent" xml:space="preserve">
+    <value>panelA100</value>
+  </data>
+  <data name="&gt;&gt;labelA100.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label30.Name" xml:space="preserve">
+    <value>label30</value>
+  </data>
+  <data name="&gt;&gt;label30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
+    <value>panelA100</value>
+  </data>
+  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelA100.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
   </data>
-  <data name="panelA200.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 678</value>
+  <data name="panelA100.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 632</value>
   </data>
-  <data name="panelA200.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="panelA100.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>15, 15, 15, 15</value>
   </data>
-  <data name="panelA200.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="panelA100.Size" type="System.Drawing.Size, System.Drawing">
     <value>307, 46</value>
   </data>
-  <data name="panelA200.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="panelA100.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
   </data>
-  <data name="panelA200.ToolTip" xml:space="preserve">
+  <data name="panelA100.ToolTip" xml:space="preserve">
     <value>Copy color</value>
   </data>
-  <data name="&gt;&gt;panelA200.Name" xml:space="preserve">
-    <value>panelA200</value>
+  <data name="&gt;&gt;panelA100.Name" xml:space="preserve">
+    <value>panelA100</value>
   </data>
-  <data name="&gt;&gt;panelA200.Type" xml:space="preserve">
+  <data name="&gt;&gt;panelA100.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panelA200.Parent" xml:space="preserve">
+  <data name="&gt;&gt;panelA100.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panelA200.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;panelA100.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="labelA100.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1772,36 +2177,6 @@
   </data>
   <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="panelA100.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="panelA100.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 632</value>
-  </data>
-  <data name="panelA100.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>15, 15, 15, 15</value>
-  </data>
-  <data name="panelA100.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 46</value>
-  </data>
-  <data name="panelA100.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="panelA100.ToolTip" xml:space="preserve">
-    <value>Copy color</value>
-  </data>
-  <data name="&gt;&gt;panelA100.Name" xml:space="preserve">
-    <value>panelA100</value>
-  </data>
-  <data name="&gt;&gt;panelA100.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panelA100.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;panelA100.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="checkBoxVisible.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

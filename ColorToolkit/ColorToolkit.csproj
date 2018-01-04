@@ -85,6 +85,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\ColorSpaceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorSpaceHSB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorSpaceHSB.Designer.cs">
+      <DependentUpon>ColorSpaceHSB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ColorSpaceCMYK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorSpaceCMYK.Designer.cs">
+      <DependentUpon>ColorSpaceCMYK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ColorSpaceRGB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorSpaceRGB.Designer.cs">
+      <DependentUpon>ColorSpaceRGB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ColorSpaceHEX.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ColorSpaceHEX.Designer.cs">
+      <DependentUpon>ColorSpaceHEX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions.cs" />
     <Compile Include="Forms\FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,11 +125,19 @@
     <Compile Include="Forms\FormHistory.Designer.cs">
       <DependentUpon>FormHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormSettings.designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="Messages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Messages.resx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ColorSpace.cs" />
+    <Compile Include="Models\Swatch.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,17 +169,19 @@
     <Compile Include="Forms\FormSwatch.designer.cs">
       <DependentUpon>FormSwatch.cs</DependentUpon>
     </Compile>
-    <Compile Include="References\Platform\CMYK.cs" />
-    <Compile Include="References\Platform\ColorExtensions.cs" />
-    <Compile Include="References\Platform\ColorHelper.cs" />
-    <Compile Include="References\Platform\ColorSpace.cs" />
-    <Compile Include="References\Platform\HEX.cs" />
-    <Compile Include="References\Platform\HSB.cs" />
-    <Compile Include="References\Platform\MathHelper.cs" />
-    <Compile Include="References\Platform\NumberExtensions.cs" />
-    <Compile Include="References\Platform\RGB.cs" />
-    <Compile Include="References\Platform\Swatch.cs" />
     <Compile Include="Toolkit.cs" />
+    <EmbeddedResource Include="Controls\ColorSpaceHSB.resx">
+      <DependentUpon>ColorSpaceHSB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ColorSpaceCMYK.resx">
+      <DependentUpon>ColorSpaceCMYK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ColorSpaceRGB.resx">
+      <DependentUpon>ColorSpaceRGB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ColorSpaceHEX.resx">
+      <DependentUpon>ColorSpaceHEX.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormAbout.es.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +210,12 @@
     <Content Include="Swatches\Material.ase">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Forms\FormSettings.es.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormSwatch.es.resx">
       <DependentUpon>FormSwatch.cs</DependentUpon>
     </EmbeddedResource>

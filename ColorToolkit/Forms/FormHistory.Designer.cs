@@ -47,40 +47,44 @@
             this.comboBoxColorMode.Items.AddRange(new object[] {
             resources.GetString("comboBoxColorMode.Items"),
             resources.GetString("comboBoxColorMode.Items1"),
-            resources.GetString("comboBoxColorMode.Items2")});
+            resources.GetString("comboBoxColorMode.Items2"),
+            resources.GetString("comboBoxColorMode.Items3")});
             this.comboBoxColorMode.Name = "comboBoxColorMode";
-            this.comboBoxColorMode.SelectedIndexChanged += new System.EventHandler(this.ComboBoxColorMode_SelectedIndexChanged);
+            this.comboBoxColorMode.SelectedIndexChanged += new System.EventHandler(this.comboBoxColorMode_SelectedIndexChanged);
             // 
             // checkBoxVisible
             // 
             resources.ApplyResources(this.checkBoxVisible, "checkBoxVisible");
             this.checkBoxVisible.Name = "checkBoxVisible";
             this.checkBoxVisible.UseVisualStyleBackColor = true;
-            this.checkBoxVisible.CheckedChanged += new System.EventHandler(this.CheckBoxVisible_CheckedChanged);
+            this.checkBoxVisible.CheckedChanged += new System.EventHandler(this.checkBoxVisible_CheckedChanged);
             // 
             // panelOptions
             // 
-            this.panelOptions.BackColor = System.Drawing.SystemColors.Info;
+            this.panelOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
             this.panelOptions.Controls.Add(this.buttonClear);
             this.panelOptions.Controls.Add(this.buttonRefresh);
             this.panelOptions.Controls.Add(this.checkBoxVisible);
             this.panelOptions.Controls.Add(this.comboBoxColorMode);
             resources.ApplyResources(this.panelOptions, "panelOptions");
+            this.panelOptions.ForeColor = System.Drawing.SystemColors.Window;
             this.panelOptions.Name = "panelOptions";
             // 
             // buttonClear
             // 
             resources.ApplyResources(this.buttonClear, "buttonClear");
+            this.buttonClear.ForeColor = System.Drawing.SystemColors.WindowText;
             this.buttonClear.Name = "buttonClear";
             this.buttonClear.UseVisualStyleBackColor = true;
-            this.buttonClear.Click += new System.EventHandler(this.ButtonClear_Click);
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // buttonRefresh
             // 
             resources.ApplyResources(this.buttonRefresh, "buttonRefresh");
+            this.buttonRefresh.ForeColor = System.Drawing.SystemColors.WindowText;
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.UseVisualStyleBackColor = true;
-            this.buttonRefresh.Click += new System.EventHandler(this.ButtonRefresh_Click);
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // FormHistory
             // 

@@ -15,9 +15,14 @@ See the [changelog](CHANGELOG.md) for changes.
 - [x] UI Refresh
 - [x] Color History
 - [x] Drag & Drop
-- [ ] CYMK Color Space
-- [ ] Export color list
-- [ ] Palette creation
+- [x] CMYK Color Space
+- [x] Export color list
+- [x] Palette creation
+- [ ] Printable format
+- [ ] HTML format
+- [ ] Extended formats
+- [ ] Palette from bitmap
+- [ ] Export QSwatch
 
 ## Table of contents
 

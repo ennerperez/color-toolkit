@@ -2,6 +2,21 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.0.8]
+### Changed
+- Code enhancements
+- Color extensions
+
+### Fixed
+- Memory leaks
+- Color calls
+
+### Added
+- CMYK ColorSpace
+- Settings dialog
+- Swatch tile sizes
+- Swatch creation window
+
 ## [1.0.7]
 ### Changed
 - Code enhancements

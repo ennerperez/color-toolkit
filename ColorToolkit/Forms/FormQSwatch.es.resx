@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -129,13 +129,7 @@
   <data name="panelPrimary.ToolTip" xml:space="preserve">
     <value>Copiar color</value>
   </data>
-  <data name="label50.ToolTip" xml:space="preserve">
-    <value>Copiar color</value>
-  </data>
   <data name="label4.ToolTip" xml:space="preserve">
-    <value>Copiar color</value>
-  </data>
-  <data name="panel50.ToolTip" xml:space="preserve">
     <value>Copiar color</value>
   </data>
   <data name="label100.ToolTip" xml:space="preserve">
@@ -262,6 +256,12 @@
     <value>Paleta rápida</value>
   </data>
   <data name="$this.ToolTip" xml:space="preserve">
+    <value>Copiar color</value>
+  </data>
+  <data name="panel050.ToolTip" xml:space="preserve">
+    <value>Copiar color</value>
+  </data>
+  <data name="label050.ToolTip" xml:space="preserve">
     <value>Copiar color</value>
   </data>
 </root>

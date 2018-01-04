@@ -31,35 +31,29 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelColor = new System.Windows.Forms.Panel();
-            this.labelHEX = new System.Windows.Forms.LinkLabel();
-            this.textBoxHEX = new System.Windows.Forms.TextBox();
-            this.labelRGB = new System.Windows.Forms.LinkLabel();
-            this.textBoxR = new System.Windows.Forms.NumericUpDown();
-            this.textBoxG = new System.Windows.Forms.NumericUpDown();
-            this.textBoxB = new System.Windows.Forms.NumericUpDown();
             this.colorDialogPicker = new System.Windows.Forms.ColorDialog();
             this.openFileDialogMain = new System.Windows.Forms.OpenFileDialog();
             this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
-            this.labelHSB = new System.Windows.Forms.LinkLabel();
             this.toolStripMenu = new System.Windows.Forms.ToolStrip();
-            this.toolStripButtonClose = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonAbout = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonQSwatch = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonOpen = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonFile = new System.Windows.Forms.ToolStripDropDownButton();
+            this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButtonQSwatch = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonHistory = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonSettings = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonTopMost = new System.Windows.Forms.ToolStripButton();
-            this.textBoxS = new System.Windows.Forms.NumericUpDown();
-            this.textBoxV = new System.Windows.Forms.NumericUpDown();
-            this.textBoxH = new System.Windows.Forms.NumericUpDown();
-            this.toolStripButtonUpdates = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxB)).BeginInit();
+            this.bufferedPanelSpaces = new System.Windows.Forms.BufferedPanel();
+            this.colorSpaceCMYK = new Toolkit.Controls.ColorSpaceCMYK();
+            this.colorSpaceHSB = new Toolkit.Controls.ColorSpaceHSB();
+            this.colorSpaceRGB = new Toolkit.Controls.ColorSpaceRGB();
+            this.colorSpaceHEX = new Toolkit.Controls.ColorSpaceHEX();
             this.toolStripMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxH)).BeginInit();
+            this.bufferedPanelSpaces.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelColor
@@ -69,92 +63,11 @@
             this.panelColor.Cursor = System.Windows.Forms.Cursors.Default;
             this.panelColor.Name = "panelColor";
             this.toolTipMain.SetToolTip(this.panelColor, resources.GetString("panelColor.ToolTip"));
-            this.panelColor.DoubleClick += new System.EventHandler(this.PanelColor_DoubleClick);
-            this.panelColor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PanelColor_MouseClick);
-            this.panelColor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelColor_MouseDown);
-            this.panelColor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelColor_MouseMove);
-            this.panelColor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelColor_MouseUp);
-            // 
-            // labelHEX
-            // 
-            this.labelHEX.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.labelHEX.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            resources.ApplyResources(this.labelHEX, "labelHEX");
-            this.labelHEX.Name = "labelHEX";
-            this.labelHEX.TabStop = true;
-            this.toolTipMain.SetToolTip(this.labelHEX, resources.GetString("labelHEX.ToolTip"));
-            this.labelHEX.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LabelHEX_LinkClicked);
-            // 
-            // textBoxHEX
-            // 
-            resources.ApplyResources(this.textBoxHEX, "textBoxHEX");
-            this.textBoxHEX.Name = "textBoxHEX";
-            this.textBoxHEX.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxHEX_KeyDown);
-            this.textBoxHEX.Leave += new System.EventHandler(this.TextBoxHEX_Leave);
-            // 
-            // labelRGB
-            // 
-            this.labelRGB.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.labelRGB.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            resources.ApplyResources(this.labelRGB, "labelRGB");
-            this.labelRGB.Name = "labelRGB";
-            this.labelRGB.TabStop = true;
-            this.toolTipMain.SetToolTip(this.labelRGB, resources.GetString("labelRGB.ToolTip"));
-            this.labelRGB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LabelRGB_LinkClicked);
-            // 
-            // textBoxR
-            // 
-            this.textBoxR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBoxR, "textBoxR");
-            this.textBoxR.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.textBoxR.Name = "textBoxR";
-            this.textBoxR.Value = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.textBoxR.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxRGB_KeyDown);
-            this.textBoxR.Leave += new System.EventHandler(this.TextBoxRGB_Leave);
-            // 
-            // textBoxG
-            // 
-            this.textBoxG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBoxG, "textBoxG");
-            this.textBoxG.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.textBoxG.Name = "textBoxG";
-            this.textBoxG.Value = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.textBoxG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxRGB_KeyDown);
-            this.textBoxG.Leave += new System.EventHandler(this.TextBoxRGB_Leave);
-            // 
-            // textBoxB
-            // 
-            this.textBoxB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBoxB, "textBoxB");
-            this.textBoxB.Maximum = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.textBoxB.Name = "textBoxB";
-            this.textBoxB.Value = new decimal(new int[] {
-            255,
-            0,
-            0,
-            0});
-            this.textBoxB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxRGB_KeyDown);
-            this.textBoxB.Leave += new System.EventHandler(this.TextBoxRGB_Leave);
+            this.panelColor.DoubleClick += new System.EventHandler(this.panelColor_DoubleClick);
+            this.panelColor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseClick);
+            this.panelColor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
+            this.panelColor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseMove);
+            this.panelColor.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseUp);
             // 
             // colorDialogPicker
             // 
@@ -165,17 +78,7 @@
             // 
             resources.ApplyResources(this.openFileDialogMain, "openFileDialogMain");
             this.openFileDialogMain.Multiselect = true;
-            this.openFileDialogMain.FileOk += new System.ComponentModel.CancelEventHandler(this.OpenFileDialogMain_FileOk);
-            // 
-            // labelHSB
-            // 
-            resources.ApplyResources(this.labelHSB, "labelHSB");
-            this.labelHSB.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.labelHSB.LinkColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelHSB.Name = "labelHSB";
-            this.labelHSB.TabStop = true;
-            this.toolTipMain.SetToolTip(this.labelHSB, resources.GetString("labelHSB.ToolTip"));
-            this.labelHSB.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LabelHSB_LinkClicked);
+            this.openFileDialogMain.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialogMain_FileOk);
             // 
             // toolStripMenu
             // 
@@ -186,25 +89,15 @@
             this.toolStripMenu.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStripMenu.ImageScalingSize = new System.Drawing.Size(48, 48);
             this.toolStripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButtonClose,
             this.toolStripButtonAbout,
-            this.toolStripButtonQSwatch,
-            this.toolStripButtonOpen,
+            this.toolStripButtonFile,
             this.toolStripSeparator1,
+            this.toolStripButtonQSwatch,
             this.toolStripButtonHistory,
-            this.toolStripButtonTopMost,
-            this.toolStripButtonUpdates});
+            this.toolStripButtonSettings,
+            this.toolStripButtonTopMost});
             this.toolStripMenu.Name = "toolStripMenu";
             this.toolStripMenu.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            // 
-            // toolStripButtonClose
-            // 
-            this.toolStripButtonClose.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.toolStripButtonClose, "toolStripButtonClose");
-            this.toolStripButtonClose.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonClose.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripButtonClose.Name = "toolStripButtonClose";
-            this.toolStripButtonClose.Click += new System.EventHandler(this.ToolStripButtonClose_Click);
             // 
             // toolStripButtonAbout
             // 
@@ -213,7 +106,53 @@
             this.toolStripButtonAbout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonAbout.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonAbout.Name = "toolStripButtonAbout";
-            this.toolStripButtonAbout.Click += new System.EventHandler(this.ToolStripButtonAbout_Click);
+            this.toolStripButtonAbout.Click += new System.EventHandler(this.toolStripButtonAbout_Click);
+            // 
+            // toolStripButtonFile
+            // 
+            resources.ApplyResources(this.toolStripButtonFile, "toolStripButtonFile");
+            this.toolStripButtonFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonFile.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newToolStripMenuItem,
+            this.openToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.saveAsToolStripMenuItem,
+            this.saveToolStripMenuItem});
+            this.toolStripButtonFile.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonFile.Name = "toolStripButtonFile";
+            this.toolStripButtonFile.ShowDropDownArrow = false;
+            // 
+            // newToolStripMenuItem
+            // 
+            resources.ApplyResources(this.newToolStripMenuItem, "newToolStripMenuItem");
+            this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+            this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.toolStripButtonOpen_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            resources.ApplyResources(this.toolStripSeparator3, "toolStripSeparator3");
+            // 
+            // saveAsToolStripMenuItem
+            // 
+            resources.ApplyResources(this.saveAsToolStripMenuItem, "saveAsToolStripMenuItem");
+            this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
+            // 
+            // saveToolStripMenuItem
+            // 
+            resources.ApplyResources(this.saveToolStripMenuItem, "saveToolStripMenuItem");
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
             // 
             // toolStripButtonQSwatch
             // 
@@ -221,20 +160,7 @@
             this.toolStripButtonQSwatch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonQSwatch.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonQSwatch.Name = "toolStripButtonQSwatch";
-            this.toolStripButtonQSwatch.Click += new System.EventHandler(this.ToolStripButtonQSwatch_Click);
-            // 
-            // toolStripButtonOpen
-            // 
-            resources.ApplyResources(this.toolStripButtonOpen, "toolStripButtonOpen");
-            this.toolStripButtonOpen.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonOpen.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripButtonOpen.Name = "toolStripButtonOpen";
-            this.toolStripButtonOpen.Click += new System.EventHandler(this.ToolStripButtonOpen_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            resources.ApplyResources(this.toolStripSeparator1, "toolStripSeparator1");
+            this.toolStripButtonQSwatch.Click += new System.EventHandler(this.toolStripButtonQSwatch_Click);
             // 
             // toolStripButtonHistory
             // 
@@ -242,7 +168,16 @@
             this.toolStripButtonHistory.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonHistory.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonHistory.Name = "toolStripButtonHistory";
-            this.toolStripButtonHistory.Click += new System.EventHandler(this.ToolStripButtonHistory_Click);
+            this.toolStripButtonHistory.Click += new System.EventHandler(this.toolStripButtonHistory_Click);
+            // 
+            // toolStripButtonSettings
+            // 
+            this.toolStripButtonSettings.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            resources.ApplyResources(this.toolStripButtonSettings, "toolStripButtonSettings");
+            this.toolStripButtonSettings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButtonSettings.Margin = new System.Windows.Forms.Padding(0);
+            this.toolStripButtonSettings.Name = "toolStripButtonSettings";
+            this.toolStripButtonSettings.Click += new System.EventHandler(this.toolStripButtonSettings_Click);
             // 
             // toolStripButtonTopMost
             // 
@@ -253,80 +188,53 @@
             this.toolStripButtonTopMost.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButtonTopMost.Margin = new System.Windows.Forms.Padding(0);
             this.toolStripButtonTopMost.Name = "toolStripButtonTopMost";
-            this.toolStripButtonTopMost.Click += new System.EventHandler(this.ToolStripButtonTopMost_Click);
+            this.toolStripButtonTopMost.Click += new System.EventHandler(this.toolStripButtonTopMost_Click);
             // 
-            // textBoxS
+            // bufferedPanelSpaces
             // 
-            this.textBoxS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBoxS, "textBoxS");
-            this.textBoxS.Name = "textBoxS";
-            this.textBoxS.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.textBoxS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxHSB_KeyDown);
-            this.textBoxS.Leave += new System.EventHandler(this.TextBoxHSB_Leave);
+            this.bufferedPanelSpaces.Controls.Add(this.colorSpaceCMYK);
+            this.bufferedPanelSpaces.Controls.Add(this.colorSpaceHSB);
+            this.bufferedPanelSpaces.Controls.Add(this.colorSpaceRGB);
+            this.bufferedPanelSpaces.Controls.Add(this.colorSpaceHEX);
+            resources.ApplyResources(this.bufferedPanelSpaces, "bufferedPanelSpaces");
+            this.bufferedPanelSpaces.Name = "bufferedPanelSpaces";
             // 
-            // textBoxV
+            // colorSpaceCMYK
             // 
-            this.textBoxV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBoxV, "textBoxV");
-            this.textBoxV.Name = "textBoxV";
-            this.textBoxV.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.textBoxV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxHSB_KeyDown);
-            this.textBoxV.Leave += new System.EventHandler(this.TextBoxHSB_Leave);
+            this.colorSpaceCMYK.Color = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.colorSpaceCMYK, "colorSpaceCMYK");
+            this.colorSpaceCMYK.Name = "colorSpaceCMYK";
+            this.colorSpaceCMYK.ColorChanged += new System.EventHandler(this.colorSpace_ColorChanged);
             // 
-            // textBoxH
+            // colorSpaceHSB
             // 
-            this.textBoxH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.textBoxH, "textBoxH");
-            this.textBoxH.Maximum = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.textBoxH.Name = "textBoxH";
-            this.textBoxH.Value = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.textBoxH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextBoxHSB_KeyDown);
-            this.textBoxH.Leave += new System.EventHandler(this.TextBoxHSB_Leave);
+            this.colorSpaceHSB.Color = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.colorSpaceHSB, "colorSpaceHSB");
+            this.colorSpaceHSB.Name = "colorSpaceHSB";
+            this.colorSpaceHSB.ColorChanged += new System.EventHandler(this.colorSpace_ColorChanged);
             // 
-            // toolStripButtonUpdates
+            // colorSpaceRGB
             // 
-            this.toolStripButtonUpdates.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            resources.ApplyResources(this.toolStripButtonUpdates, "toolStripButtonUpdates");
-            this.toolStripButtonUpdates.Checked = global::Toolkit.Properties.Settings.Default.CheckForUpdates;
-            this.toolStripButtonUpdates.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolStripButtonUpdates.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButtonUpdates.Margin = new System.Windows.Forms.Padding(0);
-            this.toolStripButtonUpdates.Name = "toolStripButtonUpdates";
-            this.toolStripButtonUpdates.Click += new System.EventHandler(this.ToolStripButtonUpdates_Click);
+            this.colorSpaceRGB.Color = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.colorSpaceRGB, "colorSpaceRGB");
+            this.colorSpaceRGB.Name = "colorSpaceRGB";
+            this.colorSpaceRGB.ColorChanged += new System.EventHandler(this.colorSpace_ColorChanged);
+            // 
+            // colorSpaceHEX
+            // 
+            this.colorSpaceHEX.Color = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.colorSpaceHEX, "colorSpaceHEX");
+            this.colorSpaceHEX.Name = "colorSpaceHEX";
+            this.colorSpaceHEX.ColorChanged += new System.EventHandler(this.colorSpace_ColorChanged);
             // 
             // FormMain
             // 
             this.AllowDrop = true;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.Controls.Add(this.bufferedPanelSpaces);
             this.Controls.Add(this.panelColor);
-            this.Controls.Add(this.textBoxH);
-            this.Controls.Add(this.textBoxR);
             this.Controls.Add(this.toolStripMenu);
-            this.Controls.Add(this.textBoxV);
-            this.Controls.Add(this.textBoxB);
-            this.Controls.Add(this.textBoxS);
-            this.Controls.Add(this.textBoxG);
-            this.Controls.Add(this.textBoxHEX);
-            this.Controls.Add(this.labelHSB);
-            this.Controls.Add(this.labelRGB);
-            this.Controls.Add(this.labelHEX);
             this.DataBindings.Add(new System.Windows.Forms.Binding("TopMost", global::Toolkit.Properties.Settings.Default, "TopMost", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
@@ -335,44 +243,37 @@
             this.Load += new System.EventHandler(this.FormMain_Load);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.FormMain_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.FormMain_DragEnter);
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxB)).EndInit();
             this.toolStripMenu.ResumeLayout(false);
             this.toolStripMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textBoxH)).EndInit();
+            this.bufferedPanelSpaces.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panelColor;
-        private System.Windows.Forms.LinkLabel labelHEX;
-        private System.Windows.Forms.TextBox textBoxHEX;
-        private System.Windows.Forms.LinkLabel labelRGB;
-        private System.Windows.Forms.NumericUpDown textBoxR;
-        private System.Windows.Forms.NumericUpDown textBoxG;
-        private System.Windows.Forms.NumericUpDown textBoxB;
         private System.Windows.Forms.ColorDialog colorDialogPicker;
         private System.Windows.Forms.OpenFileDialog openFileDialogMain;
         private System.Windows.Forms.ToolTip toolTipMain;
         private System.Windows.Forms.ToolStrip toolStripMenu;
-        private System.Windows.Forms.ToolStripButton toolStripButtonOpen;
-        private System.Windows.Forms.ToolStripButton toolStripButtonClose;
         private System.Windows.Forms.ToolStripButton toolStripButtonAbout;
         private System.Windows.Forms.ToolStripButton toolStripButtonQSwatch;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButtonHistory;
         private System.Windows.Forms.ToolStripButton toolStripButtonTopMost;
-        private System.Windows.Forms.LinkLabel labelHSB;
-        private System.Windows.Forms.NumericUpDown textBoxS;
-        private System.Windows.Forms.NumericUpDown textBoxV;
-        private System.Windows.Forms.NumericUpDown textBoxH;
-        private System.Windows.Forms.ToolStripButton toolStripButtonUpdates;
+        private System.Windows.Forms.ToolStripButton toolStripButtonSettings;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripButtonFile;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.BufferedPanel bufferedPanelSpaces;
+        private Controls.ColorSpaceRGB colorSpaceRGB;
+        private Controls.ColorSpaceHEX colorSpaceHEX;
+        private Controls.ColorSpaceHSB colorSpaceHSB;
+        private Controls.ColorSpaceCMYK colorSpaceCMYK;
     }
 }
 
