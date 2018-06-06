@@ -14,5 +14,8 @@
     <Setting Name="Opacity" Type="System.Double" Scope="User">
       <Value Profile="(Default)">0.25</Value>
     </Setting>
+    <Setting Name="BackgroundColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">53, 53, 53</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
